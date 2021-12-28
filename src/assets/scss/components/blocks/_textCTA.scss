@@ -1,0 +1,34 @@
+.cta-text-block {
+  .text-block {
+    box-shadow: 0px 20px 40px #2699fb33;
+    min-height: 250px;
+    background-color: $neutral-surface;
+    padding: 30px 0;
+    text-align: center;
+    @include large-screen {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .tb-heading {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0;
+    }
+    .tb-body {
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: $secondary-brighter-blue-700;
+      margin: 30px 0;
+
+      @include large-screen {
+        max-width: 485px;
+        margin: 30px auto;
+      }
+    }
+
+    .btn {
+      margin-top: 0;
+    }
+  }
+}

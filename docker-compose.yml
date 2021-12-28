@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  gatsby:
+    container_name: "${gatbsy_container}"
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./:/app
+    env_file:
+      - .env.development

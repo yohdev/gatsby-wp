@@ -1,0 +1,33 @@
+.logo-banner {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include large-screen {
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @include large-screen {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 50%;
+    }
+  }
+
+  .text-container {
+    padding: 40px 80px;
+    .lb-heading {
+    }
+
+    .lb-body {
+    }
+  }
+}
