@@ -15,17 +15,17 @@ const Header = ({ pageContext, toggleBackdrop, ...props }) => {
     }
   `)
   return (
-      <header id="masthead" class="">
-        <div class="w-100 navbar-wrapper bg-primary">
-            <nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark">
-                <div class="container">
+      <header id="masthead" className="">
+        <div className="w-100 navbar-wrapper bg-primary">
+            <nav className="navbar navbar-expand-sm fixed-top bg-dark navbar-dark">
+                <div className="container">
                       <Link
                       to="/"
                       className="navbar-brand"
                       dangerouslySetInnerHTML={{ __html: wp.generalSettings.title }}
                     />
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                     </button>
                     <Menu />
                   </div>

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
-import Seo from "../../components/Seo"
+import Seo from 'gatsby-plugin-wpgraphql-seo';
 import Comments from "../../components/Comments"
 import ContentTypePagination from "../../components/ContentTypePagination"
 import AuthorBio from "../../components/AuthorBio"
@@ -27,7 +27,7 @@ const post = ({ data }) => {
     <Layout
       bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
     >
-      <Seo title={title} description={excerpt} socialImage={featuredImage?.node} uri={uri} />
+      <Seo post={page} />
 
       <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
