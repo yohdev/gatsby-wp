@@ -7,6 +7,26 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+let excludes = '';
+
+const data = useStaticQuery(graphql`
+query NoIndex {
+  pages {
+    edges {
+      node {
+        seo {
+          metaRobotsNoindex
+        }
+        slug
+      }
+    }
+  }
+}
+`);
+if (data.pages.edges.node.seo === 'noindex'){
+  excludes = node.slug;
+};
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress Twenty Twenty`,
@@ -19,7 +39,13 @@ module.exports = {
     `gatsby-plugin-notifications`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `./path/to/sitemap-alternate.xml`,
+        exclude: [excludes]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
