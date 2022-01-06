@@ -53,6 +53,35 @@ export const fragments = graphql`
   fragment PostContent on WpPost {
     title
     uri
+    seo {
+      title
+      metaDesc
+      focuskw
+      metaKeywords
+      metaRobotsNoindex
+      metaRobotsNofollow
+      opengraphTitle
+      opengraphDescription
+      opengraphImage {
+          altText
+          sourceUrl
+          srcSet
+      }
+      twitterTitle
+      twitterDescription
+      twitterImage {
+          altText
+          sourceUrl
+          srcSet
+      }
+      canonical
+      cornerstone
+      schema {
+          articleType
+          pageType
+          raw
+      }
+    }
     content
     date(formatString: "LL")
     excerpt
@@ -98,6 +127,35 @@ export const fragments = graphql`
   fragment PageContent on WpPage {
     title
     uri
+    seo {
+      title
+      metaDesc
+      focuskw
+      metaKeywords
+      metaRobotsNoindex
+      metaRobotsNofollow
+      opengraphTitle
+      opengraphDescription
+      opengraphImage {
+          altText
+          sourceUrl
+          srcSet
+      }
+      twitterTitle
+      twitterDescription
+      twitterImage {
+          altText
+          sourceUrl
+          srcSet
+      }
+      canonical
+      cornerstone
+      schema {
+          articleType
+          pageType
+          raw
+      }
+    }
     content
     databaseId
     featuredImage {

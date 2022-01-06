@@ -7,6 +7,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress Twenty Twenty`,
@@ -19,6 +20,12 @@ module.exports = {
     `gatsby-plugin-notifications`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: []
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
