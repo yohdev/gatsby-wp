@@ -7,17 +7,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-if(process.env.NODE_ENV !== 'development'){ 
-  config.plugins.push({ 
-    resolve: 'gatsby-plugin-yoast-sitemap',
-    options: {
-      baseUrl: 'https://yohdev-staging.yohdigital.net',
-      gatsbyUrl: 'https://gatsby-wp.yohdigital.net',
-        }
-      }
-  ); 
-}
-
 module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress Twenty Twenty`,
@@ -85,4 +74,15 @@ module.exports = {
       },
     },
   ],
+}
+
+if(process.env.NODE_ENV !== 'development'){ 
+  plugins.push({ 
+    resolve: 'gatsby-plugin-yoast-sitemap',
+    options: {
+      baseUrl: 'https://yohdev-staging.yohdigital.net',
+      gatsbyUrl: 'https://gatsby-wp.yohdigital.net',
+        }
+      }
+  ); 
 }
