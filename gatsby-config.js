@@ -76,8 +76,8 @@ module.exports = {
     { 
       resolve: 'gatsby-plugin-yoast-sitemap',
       options: {
-        baseUrl: 'https://yohdev-staging.yohdigital.net',
-        gatsbyUrl: 'https://gatsby-wp.yohdigital.net',
+        baseUrl: 'yohdev-staging.yohdigital.net',
+        gatsbyUrl: 'gatsby-wp.yohdigital.net',
           }
     }
   ],
