@@ -24,6 +24,7 @@
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sass": "^5.4.0",
     "gatsby-plugin-sharp": "^3.5.0",
+    "gatsby-plugin-sitemap": "^5.4.0",
     "gatsby-plugin-wpgraphql-seo": "^1.4.0",
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-source-wordpress": "^6.2.0",
