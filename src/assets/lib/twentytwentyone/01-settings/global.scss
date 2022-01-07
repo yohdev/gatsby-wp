@@ -3,6 +3,16 @@
 // Vertical Rhythm Multiplier
 $baseline-unit: 10px;
 
+//Theme Colors
+$primary: #39306F;
+$secondary: #10D1D3;
+$success: #10D1D3;
+$info: #9185DE;
+$warning: #D2D36F;
+$danger: #F46254;
+$light: #F7F7F7;
+$dark: #000000;
+
 :root {
 
 	/* Font Family */
@@ -78,8 +88,8 @@ $baseline-unit: 10px;
 	--global--color-white-50: rgba(255, 255, 255, 0.5); // Used for disabled buttons
 	--global--color-white-90: rgba(255, 255, 255, 0.9); // Used in form fields.
 
-	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
-	--global--color-secondary: var(--global--color-gray); /* Headings */
+	--global--color-primary: var($primary); /* Body text color, site title, footer text color. */
+	--global--color-secondary: var($secondary); /* Headings */
 	--global--color-primary-hover: var(--global--color-primary);
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
 	--global--color-border: var(--global--color-primary); /* Used for borders (separators) */

@@ -18,14 +18,14 @@ const page = ({ data }) => {
         className={`post-${databaseId} post page type-page status-publish hentry`}
         id={`post-${databaseId}`}
       >
-        <header className="entry-header has-text-align-center header-footer-group">
+        {/* <header className="entry-header has-text-align-center header-footer-group">
           <div className="entry-header-inner section-inner medium">
             <h1
               className="entry-title"
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </div>
-        </header>
+        </header> */}
 
         <FeaturedMedia image={featuredImage} />
 
