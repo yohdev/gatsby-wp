@@ -1,0 +1,55 @@
+.video {
+  text-align: center;
+
+  @include large-screen {
+    padding: 50px 0;
+  }
+  .vid-img-container {
+    img {
+      @include large-screen {
+        max-width: 50%;
+      }
+    }
+  }
+
+  .vid-heading {
+    padding: 30px 0;
+  }
+
+  .video-container {
+    margin-bottom: 30px;
+
+    iframe {
+      max-width: 320px;
+      height: 180px;
+
+      @include large-screen {
+        max-width: 640px;
+        height: 360px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .vid-body {
+    @include large-screen {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  &.on-primary {
+    // These importants are needed as part of a utility class
+    h2 {
+      color: $neutral-surface !important;
+    }
+
+    p {
+      color: $neutral-surface !important;
+    }
+    .btn-secondary {
+      background-color: $secondary-brighter-blue-700;
+      border-color: $secondary-brighter-blue-700;
+    }
+  }
+}

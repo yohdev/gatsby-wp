@@ -17,6 +17,8 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@wordpress/base-styles": "^4.0.4",
+    "@wordpress/block-library": "^6.0.18",
     "dotenv": "^9.0.2",
     "gatsby": "^3.9.0",
     "gatsby-plugin-image": "^1.5.0",
