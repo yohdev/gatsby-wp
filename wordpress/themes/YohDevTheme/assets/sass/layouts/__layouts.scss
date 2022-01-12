@@ -1,0 +1,18 @@
+
+@import 'singlePost';
+@import 'canterCare';
+// Specific Layout/Template Styles
+// ----------------------------------------------------------------------------
+
+.all-posts {
+    right: 32px;
+    top: 9px;
+
+    @include large-screen {
+        right: 64px;
+        top: inherit;
+    }
+    
+}
+
+// @import 'layout-name';

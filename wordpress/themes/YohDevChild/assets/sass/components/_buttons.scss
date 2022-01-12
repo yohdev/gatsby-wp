@@ -1,0 +1,29 @@
+.buttons {
+  .trans-CTA {
+    .transactional-variations,
+    .transitional-variations {
+      @include large-screen {
+        display: grid;
+        grid-template-columns: 1fr auto;
+      }
+    }
+  }
+
+  .link-text {
+    .link-variations {
+      @include large-screen {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  .link-cta-variations {
+    .default,
+    .hover {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+}

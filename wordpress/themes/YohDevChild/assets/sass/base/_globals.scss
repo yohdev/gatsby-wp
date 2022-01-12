@@ -1,0 +1,307 @@
+// Global Styles
+// ----------------------------------------------------------------------------
+//Font Styles
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Work+Sans:ital@0;1&display=swap');
+@import url('https://use.typekit.net/lki6wqj.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: $secondary-font;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1180px !important;
+}
+
+.yohdev {
+  h1 {
+    color: $neutral-black;
+    font-family: $primary-font;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    line-height: 60px;
+
+    @include medium-screen {
+      font-size: 56px;
+      line-height: 80px;
+    }
+
+    @include large-screen {
+      font-size: 64px;
+      line-height: 80px;
+    }
+  }
+
+  h2 {
+    color: $neutral-black;
+    font-family: $primary-font;
+    font-size: 32px;
+    font-style: normal;
+    letter-spacing: 0.05px;
+    line-height: 52px;
+
+    @include large-screen {
+      font-size: 40px;
+      line-height: 64px;
+      letter-spacing: 0.06px;
+    }
+  }
+
+  h3 {
+    color: $neutral-black;
+    font-family: $secondary-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 30px;
+
+    @include large-screen {
+      font-size: 32px;
+    }
+  }
+
+  h4 {
+    color: $neutral-black;
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 29px;
+
+    @include large-screen {
+      font-size: 24px;
+    }
+  }
+
+  h5 {
+    color: $neutral-black;
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+
+  h6 {
+    font-family: $body-font;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  p {
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: $neutral-black;
+    letter-spacing: 0px;
+    line-height: 22px;
+  }
+
+  a {
+    /* color: $primary-var; */
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    /* text-decoration: underline; */
+
+    &:hover {
+      // color: $primary-400;
+    }
+  }
+}
+
+.btn {
+  text-decoration: none;
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: $neutral-surface;
+  letter-spacing: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+
+  &.cta-text-link {
+    border-radius: 0;
+    font-size: 16px;
+
+    padding: 0;
+
+    &.primary-red {
+      color: $primary-red;
+      &:hover {
+        color: $primary-red-700;
+        text-decoration: underline;
+      }
+    }
+
+    &.primary-blue {
+      color: $secondary-brighter-blue-500;
+      &:hover {
+        color: $secondary-brighter-blue-700;
+        text-decoration: underline;
+      }
+    }
+
+    .fa {
+      position: relative;
+      left: 8px;
+      bottom: 1px;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: $primary-red;
+  border-color: $primary-red;
+
+  &:hover {
+    background-color: $primary-red-700;
+    color: $neutral-surface;
+    border-color: $primary-red-700;
+  }
+
+  &:focus {
+    background-color: $primary-red !important;
+    outline: 4px auto !important;
+    box-shadow: none !important;
+    border: 2px solid $primary-red-300 !important;
+  }
+
+  &.disabled {
+    background-color: $secondary-brighter-red-300 !important;
+    border-color: $secondary-brighter-red-300 !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $primary-blue;
+  border-color: $primary-blue;
+
+  &:hover {
+    background-color: $primary-blue-700;
+    color: $neutral-surface;
+    border-color: $primary-blue-700;
+  }
+
+  &:active {
+    background-color: $primary-blue !important;
+    color: $neutral-surface;
+    border-color: $btn-secondary-pressed !important;
+    outline: none;
+  }
+
+  &:focus {
+    background-color: $primary-blue !important;
+    outline: 4px auto !important;
+    box-shadow: none !important;
+    border: 2px solid $primary-blue-300 !important;
+  }
+
+  &.disabled {
+    background-color: $secondary-brighter-blue-300 !important;
+    border-color: $secondary-brighter-blue-300 !important;
+  }
+}
+
+.btn-info {
+  background-color: $gray;
+  border-color: $gray;
+
+  &:hover {
+    background-color: $gray;
+    border-color: $gray;
+  }
+}
+
+.text-link {
+  font-family: $secondary-font;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 70px;
+  letter-spacing: 0px;
+  text-decoration: none;
+
+  &.primary-red {
+    color: $primary-red;
+
+    &:hover {
+      color: $primary-red;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $primary-red-700;
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      color: $text-link-primary-disabled !important;
+    }
+  }
+
+  &.primary-blue {
+    color: $secondary-brighter-blue-500;
+
+    &:hover {
+      color: $primary-blue;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $primary-blue-700;
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      color: $text-link-secondary-disabled !important;
+    }
+  }
+}
+
+.bg-main {
+  background-color: $primary;
+}
+
+.container {
+  padding-left: 35px;
+  padding-right: 35px;
+  max-width: 1400px;
+
+  @include large-screen {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+span {
+  // display: block;
+  font-family: $secondary-font;
+  &.button-header {
+    font-size: 26px;
+    font-weight: 700;
+    color: $neutral-black;
+    line-height: 70px;
+    letter-spacing: 0px;
+  }
+}
+
+.overylay {
+  opacity: 0.8;
+}

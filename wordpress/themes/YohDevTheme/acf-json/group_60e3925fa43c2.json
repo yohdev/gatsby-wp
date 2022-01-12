@@ -1,0 +1,69 @@
+{
+    "key": "group_60e3925fa43c2",
+    "title": "Block - Reviews",
+    "fields": [
+        {
+            "key": "field_60e39a050727b",
+            "label": "Review Header",
+            "name": "review_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60ec7c30b4a91",
+            "label": "Block Settings",
+            "name": "block_settings",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_60e8ef1c0369e",
+                "field_60e917e9e5237",
+                "field_60e8edbb09048",
+                "field_60e8ed9209047",
+                "field_60e8e98814aa7",
+                "field_61131b2c249ec"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/yohdev-reviews"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1628642770
+}

@@ -1,0 +1,28 @@
+.sidebar {
+  max-width: 100%;
+  border: 2px solid $primary;
+  border-radius: 25px;
+  padding-top: 10px;
+  margin-left: auto;
+
+  @include large-screen {
+    max-width: 358px;
+  }
+
+  .sidebar-cta {
+    max-width: 100%;
+    margin-left: auto;
+    text-align: center;
+    background-color: $primary-400;
+    padding: 2rem 1rem 3rem 1rem;
+    border-radius: 25px;
+
+    @include large-screen {
+      max-width: 350px;
+    }
+
+    .cta-title {
+      text-align: center;
+    }
+  }
+}

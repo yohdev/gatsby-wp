@@ -1,0 +1,44 @@
+.social {
+  .social-variations {
+    @include large-screen {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .icon-content {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+    .icon-holder {
+      width: 100%;
+      max-width: 195px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        font-size: 25px;
+        color: $white-2;
+
+        &:hover {
+          color: rgba($neutral-surface, 0.6);
+        }
+      }
+
+      &.bg-on-surface {
+        border: 2px solid rgba($primary-blue-300, 0.8);
+        border-radius: 15px;
+
+        a {
+          font-size: 25px;
+          color: $white-2;
+
+          &:hover {
+            color: rgba($primary-blue-300, 0.6);
+          }
+        }
+      }
+    }
+  }
+}

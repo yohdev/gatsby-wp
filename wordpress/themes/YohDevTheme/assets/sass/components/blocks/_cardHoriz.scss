@@ -1,0 +1,20 @@
+.yohdev-card-horiz {
+  /* background-color: $primary-blue-100; */
+  max-width: 700px;
+  padding: 20px;
+  box-shadow: $shadow;
+
+  .heading {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: $neutral-black;
+  }
+
+  .body {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: $neutral-black;
+  }
+}

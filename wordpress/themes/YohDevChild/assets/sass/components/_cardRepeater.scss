@@ -1,0 +1,59 @@
+.image-card-repeater {
+  text-align: center;
+  position: relative;
+  @include large-screen {
+    padding: 60px 0 80px 0;
+  }
+
+  &.on-primary {
+    .cr-header,
+    .cr-body {
+      color: $neutral-surface;
+    }
+  }
+
+  .cr-content {
+    position: relative;
+    /* z-index: 222; */
+  }
+
+  .cr-body {
+    @include large-screen {
+      max-width: 750px;
+      margin: 50px auto;
+    }
+  }
+
+  .image-cards {
+    position: relative;
+    /* z-index: 222; */
+  }
+
+  .repeater-card {
+    text-align: center;
+    background-color: $neutral-surface;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    border: 1px solid $gray;
+    padding: 60px;
+    margin-bottom: 30px;
+
+    @include large-screen {
+      min-height: 325px;
+    }
+
+    .rc-image {
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+
+    .rc-heading {
+      color: $primary-blue-700;
+      margin-bottom: 30px;
+    }
+
+    .re-body {
+      color: $neutral-black !important;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.card-blog {
+  max-width: 630px;
+  min-height: 375px;
+  border-radius: 45px 45px 45px 45px;
+  box-shadow: $shadow;
+
+  .cb-image {
+    border-radius: 45px 45px 0 0;
+    background-size: cover;
+    background-position: center center;
+    @include large-screen {
+      height: 375px;
+    }
+  }
+  .cb-content {
+    padding: 20px;
+    .cb-heading {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 0;
+      margin: 30px 0;
+    }
+
+    .cb-body {
+      font-size: 14px;
+      color: $neutral-black;
+      line-height: 22px;
+      letter-spacing: 0;
+    }
+
+    .cb-link-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      .date {
+        font-family: $notation-font;
+        font-size: 14px;
+        font-weight: 700;
+        color: $gray;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+    }
+  }
+}

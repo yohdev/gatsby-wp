@@ -1,0 +1,28 @@
+/*
+ Theme Name:   YohDevChild
+ Theme URI:    http://yohdev.com/yohdev-starter
+ Description:  child theme by yohDev
+ Author:       yohdigitalagency
+ Author URI:   http://yohdigital.com
+ Template:     YohDevTheme
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  YohDevChild
+*/
+// Vendor files - defaults from parent, add project specific ones to /assets/source/vendor
+@import '__vendor';
+
+// Variables, fonts, mixins, helpers... common styles used across project
+@import 'base/__base';
+
+// Reusable components
+@import 'components/__components';
+
+// Declarations specific to the project,
+// Organized according to the items/sections represented
+@import 'layouts/__layouts';
+
+// Reusable components
+@import 'gutenburg/__blocks';
