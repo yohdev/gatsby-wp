@@ -1,0 +1,9 @@
+steps:
+- name: "gcr.io/cloud-builders/gcloud"
+  id: Updating staging server
+  entrypoint: /bin/sh
+  args:
+  - '-c'
+  - |
+    set -x && \
+    gcloud beta compute ssh --zone "us-east1-b" "yohdev-development"  --project "yoh-wordpress-docker" && ls 

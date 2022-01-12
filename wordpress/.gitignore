@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+style-rtl.css
+style.css.map
+.DS_Store
+twentynineteen
+twentytwenty
+akismet
+hello.php
+themes/YohDevTheme/vendor
