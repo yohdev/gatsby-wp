@@ -36,8 +36,10 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: process.env.WPGRAPHQL_URL,
+        url: 'http://localhost:8080/?graphql',
         verbose: true,
+        protocol: `http`,
+        hostingWPCOM: false,
         develop: {
           hardCacheMediaFiles: true,
         },

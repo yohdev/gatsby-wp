@@ -1,0 +1,60 @@
+version: '3'
+services:
+  db:
+    container_name: "${db_container}"
+    image: mariadb:latest 
+    volumes:
+      - wp_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+    restart: unless-stopped
+    networks:
+      - internal
+  wp:
+    container_name: "${wp_container}"
+    image: wordpress:latest
+    ports:
+      - 8080:8080
+    volumes:
+      - ./wordpress/config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+      - ./wordpress/plugins:/var/www/html/wp-content/plugins/ 
+      - ./wordpress/themes:/var/www/html/wp-content/themes/ 
+      - ./wordpress/uploads:/var/www/html/wp-content/uploads/ 
+    environment:
+      WORDPRESS_DB_HOST: "${WORDPRESS_DB_HOST}"
+      WORDPRESS_DB_NAME: "${WORDPRESS_DB_NAME}"
+      WORDPRESS_DB_USER: "${WORDPRESS_DB_USER}"
+      WORDPRESS_DB_PASSWORD: "${WORDPRESS_DB_PASSWORD}"
+      WORDPRESS_CONFIG_EXTRA: |
+                    define('WP_HOME', '${HOST_URL}');
+                    define('WP_SITEURL', '${HOST_URL}');
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - internal
+  gatsby:
+    container_name: "${gatbsy_container}"
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    build:
+      dockerfile: Dockerfile
+      context: ./gatsby
+    volumes:
+      - /app/node_modules
+      - ./gatsby:/app
+    env_file:
+      - .env
+    networks:
+      - internal
+    depends_on:
+      - wp
+volumes:
+  wp_data:
+networks:
+  internal:
+    driver: bridge

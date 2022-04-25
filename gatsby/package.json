@@ -11,7 +11,7 @@
     "develop": "gatsby develop",
     "clean": "gatsby clean",
     "build": "gatsby build",
-    "cdev": "gatsby clean && gatsby develop",
+    "cdev": "gatsby clean && gatsby develop -H 0.0.0.0",
     "cbuild": "gatsby clean && gatsby build",
     "start": "npm run develop",
     "serve": "gatsby serve"
