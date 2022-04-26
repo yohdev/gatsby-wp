@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
+import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ContentTypePagination from "../../components/ContentTypePagination"
 
 
@@ -12,6 +13,7 @@ const partner = ({ data }) => {
     <Layout
     bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
     >
+    <Seo post={partner} />
     <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
@@ -41,6 +43,35 @@ export const query = graphql`
       title
       content
       databaseId
+      seo {
+        title
+        metaDesc
+        focuskw
+        metaKeywords
+        metaRobotsNoindex
+        metaRobotsNofollow
+        opengraphTitle
+        opengraphDescription
+        opengraphImage {
+            altText
+            sourceUrl
+            srcSet
+        }
+        twitterTitle
+        twitterDescription
+        twitterImage {
+            altText
+            sourceUrl
+            srcSet
+        }
+        canonical
+        cornerstone
+        schema {
+            articleType
+            pageType
+            raw
+        }
+      }
     }
     nextPage: wpPartner(id: { eq: $nextPage }) {
       title
