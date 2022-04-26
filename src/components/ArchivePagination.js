@@ -36,7 +36,7 @@ const renderNextLink = ({ hasNextPage, currentPage, archivePath }) => {
     return (
       <Link
         className={"next page-numbers"}
-        to={`${archivePath}page/${currentPage + 1}`}
+        to={`${archivePath}/page/${currentPage + 1}`}
       >
         <span className="nav-next-text">
           Older <span className="nav-short">Posts</span>
@@ -66,7 +66,7 @@ const renderPagesInBetween = ({ currentPage, pageCount, archivePath }) => {
       }
     }
 
-    const to = isFirst ? archivePath : `${archivePath}page/${page}`
+    const to = isFirst ? archivePath : `${archivePath}/page/${page}`
 
     return {
       tag: Link,
