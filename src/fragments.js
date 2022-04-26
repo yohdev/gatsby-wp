@@ -50,6 +50,30 @@ export const fragments = graphql`
     }
   }
 
+  fragment PostPreviewContent2 on WpPartner {
+    uri
+    title
+    databaseId
+    excerpt
+    date(formatString: "LL")
+    featuredImage {
+      node {
+        altText
+        localFile {
+          ...Thumbnail
+        }
+      }
+    }
+    author {
+      node {
+        name
+        firstName
+        lastName
+        uri
+      }
+    }
+  }
+
   fragment PostContent on WpPost {
     title
     uri
