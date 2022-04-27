@@ -1,0 +1,27 @@
+.blog-hero {
+  background-color: $primary;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+
+  .hero-title {
+    @include medium-screen {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $light;
+    }
+  }
+
+  .subtitle {
+    color: $light;
+
+    @include medium-screen {
+      font-size: 28px;
+    }
+  }
+
+  .btn {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
