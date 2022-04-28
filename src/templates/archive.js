@@ -35,15 +35,15 @@ const Archive = (props) => {
       <div className="blog-hero">
         <Container>
           <Row>
-            <Col md={7}>
+            <Col md={6}>
               <h1 className="hero-title">YohDevTheme Blog</h1>
               <span className="subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing.
               </span>
-              <InputGroup className="mb-3">
+              <InputGroup className="mt-3">
                 <FormControl
-                  placeholder="Recipient's username"
-                  aria-label="Recipient's username"
+                  placeholder="Search Blog"
+                  aria-label="Search Blog"
                   aria-describedby="basic-addon2"
                 />
                 <Button
@@ -51,7 +51,7 @@ const Archive = (props) => {
                   id="button-addon2"
                   class="btn btn-secondary"
                 >
-                  Button
+                  Search
                 </Button>
               </InputGroup>
             </Col>
@@ -59,17 +59,28 @@ const Archive = (props) => {
         </Container>
       </div>
 
-      {nodes &&
-        nodes.map((post, index) => {
-          return (
-            <PostPreview
-              key={index}
-              post={post}
-              isLast={index === nodes.length - 1}
-            />
-          )
-        })}
-      <Button>Submit</Button>
+      <section className="blog-content">
+        <Container>
+          <Row>
+            <Col md={8}>
+              <div className="left-side">
+                {nodes &&
+                  nodes.map((post, index) => {
+                    return (
+                      <PostPreview
+                        key={index}
+                        post={post}
+                        isLast={index === nodes.length - 1}
+                      />
+                    )
+                  })}
+              </div>
+            </Col>
+            <Col md={4}></Col>
+          </Row>
+        </Container>
+      </section>
+
       <ArchivePagination {...pageInfo} archivePath={archivePath} />
     </Layout>
   )

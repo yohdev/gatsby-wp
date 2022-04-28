@@ -16,12 +16,68 @@
     color: $light;
 
     @include medium-screen {
-      font-size: 28px;
+      font-size: 24px;
     }
   }
 
   .btn {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+
+.blog-content {
+  padding: 30px 0;
+
+  @include medium-screen {
+    padding: 60px 0;
+  }
+  .left-side {
+    .post {
+      .meta-container {
+        @include medium-screen {
+        }
+        .post-meta {
+          list-style: none;
+          padding-left: 0;
+          li {
+            @include medium-screen {
+              &:not(:last-of-type) {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+        .date {
+          @include medium-screen {
+            margin-right: 20px;
+          }
+        }
+
+        .author-img-container {
+        }
+      }
+
+      .entry-header {
+        margin-top: 0;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .entry-content {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        p {
+          word-wrap: break-word;
+          @include medium-screen {
+            font-size: 20px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
   }
 }
