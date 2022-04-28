@@ -14,6 +14,7 @@ import {
   Col,
   FormControl,
   InputGroup,
+  ListGroup,
 } from "react-bootstrap"
 
 const Archive = (props) => {
@@ -76,7 +77,30 @@ const Archive = (props) => {
                   })}
               </div>
             </Col>
-            <Col md={4}></Col>
+            <Col md={4}>
+              <div className="right-side">
+                <h3 className="heading">Categories</h3>
+                <ListGroup variant="flush">
+                  <ListGroup.Item>Category One</ListGroup.Item>
+                  <ListGroup.Item>Category Two</ListGroup.Item>
+                  <ListGroup.Item>
+                    Category Three
+                    <ListGroup variant="flush">
+                      <ListGroup.Item>Sub Category One</ListGroup.Item>
+                      <ListGroup.Item>Sub Category Two</ListGroup.Item>
+                      <ListGroup.Item>Sub Category Three</ListGroup.Item>
+                    </ListGroup>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    Category Four
+                    <ListGroup variant="flush">
+                      <ListGroup.Item>Sub Category One</ListGroup.Item>
+                      <ListGroup.Item>Sub Category Two</ListGroup.Item>
+                    </ListGroup>
+                  </ListGroup.Item>
+                </ListGroup>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>

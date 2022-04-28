@@ -34,6 +34,8 @@
   }
   .left-side {
     .post {
+      max-width: 700px;
+
       .meta-container {
         @include medium-screen {
         }
@@ -76,6 +78,33 @@
             font-size: 20px;
             line-height: 1.6;
           }
+        }
+      }
+    }
+    .post-separator {
+      max-width: 700px;
+    }
+  }
+
+  .right-side {
+    .heading {
+      font-weight: 700;
+      @include medium-screen {
+        font-size: 30px;
+      }
+    }
+
+    .list-group {
+      .list-group-item {
+        border: none;
+        padding-left: 0;
+
+        .list-group-item {
+          padding-left: 20px;
+          margin-bottom: 0;
+        }
+
+        .list-group {
         }
       }
     }
