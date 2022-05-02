@@ -69,7 +69,7 @@ const Archive = (props) => {
       <section className="blog-content">
         <Container>
           <Row>
-            <Col md={9}>
+            <Col md={8} lg={9}>
               <div className="left-side">
                 {nodes &&
                   nodes.map((post, index) => {
@@ -83,7 +83,7 @@ const Archive = (props) => {
                   })}
               </div>
             </Col>
-            <Col md={3}>
+            <Col md={4} lg={3}>
               <div className="right-side">
                 <h3 className="heading">Categories</h3>
                 <div className="category-list-container mb-5">

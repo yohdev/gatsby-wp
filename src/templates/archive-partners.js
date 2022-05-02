@@ -1,26 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Seo from 'gatsby-plugin-wpgraphql-seo';
+import Seo from "gatsby-plugin-wpgraphql-seo"
 import PostPreview from "../components/PostPreview"
 import ArchivePagination from "../components/ArchivePagination"
-
 
 const partnersarchive = (props) => {
   const {
     data: {
       allWpPartner: { nodes, pageInfo },
-      wp: { seo }
+      wp: { seo },
     },
     pageContext: { archiveType, archivePath, uri },
   } = props
 
   return (
-    <Layout
-      bodyClass="home blog wp-embed-responsive has-no-pagination showing-comments hide-avatars footer-top-visible customize-support">
-      <Seo title="Blog" postSchema={JSON.parse(seo.contentTypes.post.schema.raw)}/>
+    <Layout bodyClass="home blog wp-embed-responsive has-no-pagination showing-comments hide-avatars footer-top-visible customize-support">
+      <Seo
+        title="Blog"
+        postSchema={JSON.parse(seo.contentTypes.post.schema.raw)}
+      />
 
-        {nodes &&
+      {nodes &&
         nodes.map((post, index) => {
           return (
             <PostPreview
@@ -30,19 +31,18 @@ const partnersarchive = (props) => {
             />
           )
         })}
-
       <ArchivePagination {...pageInfo} archivePath={archivePath} />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query partnerArchive($offset: Int!, $perPage: Int!, $userDatabaseId: Int){
+  query partnerArchive($offset: Int!, $perPage: Int!, $userDatabaseId: Int) {
     allWpPartner(
       limit: $perPage
       skip: $offset
-      filter: {author: {node: {databaseId: {eq: $userDatabaseId}}}}
-      sort: {fields: date, order: DESC}
+      filter: { author: { node: { databaseId: { eq: $userDatabaseId } } } }
+      sort: { fields: date, order: DESC }
     ) {
       nodes {
         ...PostPreviewContent2
@@ -68,4 +68,4 @@ export const query = graphql`
   }
 `
 
-export default partnersarchive;
+export default partnersarchive

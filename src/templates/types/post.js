@@ -1,14 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
-import Seo from 'gatsby-plugin-wpgraphql-seo';
+import Seo from "gatsby-plugin-wpgraphql-seo"
 import Comments from "../../components/Comments"
 import ContentTypePagination from "../../components/ContentTypePagination"
 import AuthorBio from "../../components/AuthorBio"
 import PostMeta from "../../components/PostMeta"
 import PostCategories from "../../components/PostCategories"
 import FeaturedMedia from "../../components/FeaturedMedia"
-
+import { Container } from "react-bootstrap"
 const post = ({ data }) => {
   const { nextPage, previousPage, page } = data
   const {
@@ -33,18 +33,25 @@ const post = ({ data }) => {
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
       >
+        <div className="single-post-hero">
+          <Container>
+            <div className="hero-content">
+              <h1
+                className="hero-title entry-title"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+              <PostMeta title={title} author={author} date={date} />
+            </div>
+          </Container>
+        </div>
         <header className="entry-header has-text-align-center header-footer-group">
           <div className="entry-header-inner section-inner medium">
             <PostCategories categories={categories} />
-            <h1
-              className="entry-title"
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
+
             <div
               className="intro-text section-inner max-percentage small"
               dangerouslySetInnerHTML={{ __html: excerpt }}
             />
-            <PostMeta title={title} author={author} date={date} />
           </div>
         </header>
 
@@ -87,4 +94,4 @@ export const query = graphql`
   }
 `
 
-export default post;
+export default post
