@@ -12,10 +12,16 @@ import {
   Container,
   Row,
   Col,
+  Form,
   FormControl,
   InputGroup,
   ListGroup,
 } from "react-bootstrap"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 const Archive = (props) => {
   const {
@@ -63,7 +69,7 @@ const Archive = (props) => {
       <section className="blog-content">
         <Container>
           <Row>
-            <Col md={8}>
+            <Col md={9}>
               <div className="left-side">
                 {nodes &&
                   nodes.map((post, index) => {
@@ -77,28 +83,78 @@ const Archive = (props) => {
                   })}
               </div>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
               <div className="right-side">
                 <h3 className="heading">Categories</h3>
-                <ListGroup variant="flush">
-                  <ListGroup.Item>Category One</ListGroup.Item>
-                  <ListGroup.Item>Category Two</ListGroup.Item>
-                  <ListGroup.Item>
-                    Category Three
-                    <ListGroup variant="flush">
-                      <ListGroup.Item>Sub Category One</ListGroup.Item>
-                      <ListGroup.Item>Sub Category Two</ListGroup.Item>
-                      <ListGroup.Item>Sub Category Three</ListGroup.Item>
-                    </ListGroup>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    Category Four
-                    <ListGroup variant="flush">
-                      <ListGroup.Item>Sub Category One</ListGroup.Item>
-                      <ListGroup.Item>Sub Category Two</ListGroup.Item>
-                    </ListGroup>
-                  </ListGroup.Item>
-                </ListGroup>
+                <div className="category-list-container mb-5">
+                  <ListGroup variant="flush">
+                    <ListGroup.Item>
+                      <a href="#">Category One</a>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <a href="#">Category Two</a>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <a href="#">Category Three</a>
+                      <ListGroup variant="flush">
+                        <ListGroup.Item>
+                          <a href="#">Sub Category One</a>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          <a href="#">Sub Category Two</a>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          <a href="#">Sub Category Three</a>
+                        </ListGroup.Item>
+                      </ListGroup>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <a href="#">Category Four</a>
+                      <ListGroup variant="flush">
+                        <ListGroup.Item>
+                          <a href="#">Sub Category One</a>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                          <a href="#">Sub Category Two</a>
+                        </ListGroup.Item>
+                      </ListGroup>
+                    </ListGroup.Item>
+                  </ListGroup>
+                </div>
+                <div className="advantage-container mb-5">
+                  <h3 className="heading">Get an advantage</h3>
+                  <p className="text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                  <Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Control
+                        className="email-form"
+                        type="email"
+                        placeholder="Email*"
+                      />
+                    </Form.Group>
+                  </Form>
+                  <Form>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check
+                        type="checkbox"
+                        label="I’d like to receive news and information from StackPath and understand I can unsubscribe at anytime."
+                        isInValid="false"
+                      />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                      Submit
+                    </Button>
+                  </Form>
+                </div>
+                <div className="social-container">
+                  <h3 className="heading">Connect with us</h3>
+                  <div className="social-nav">
+                    <FontAwesomeIcon icon={["fab", "apple"]} />
+                    <FontAwesomeIcon icon={faCoffee} />
+                  </div>
+                </div>
               </div>
             </Col>
           </Row>

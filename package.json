@@ -17,6 +17,10 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@wordpress/base-styles": "^4.0.4",
     "@wordpress/block-library": "^6.0.18",
     "bootstrap": "^5.1.3",
