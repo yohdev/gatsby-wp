@@ -2,35 +2,36 @@ const { resolve } = require(`path`)
 const chunk = require(`lodash/chunk`)
 
 module.exports = async ({ actions, graphql }, options) => {
-  const { perPage, blogURI } = options
+  const { perPage, cptURI } = options
 
   const { data } = await graphql(/* GraphQL */ `
     {
-      allWpPost(sort: { fields: modifiedGmt, order: DESC }) {
+      allWpPartner(sort: { fields: modifiedGmt, order: DESC }) {
         nodes {
           uri
           id
+          date
         }
       }
     }
   `)
 
-  const chunkedContentNodes = chunk(data.allWpPost.nodes, perPage)
+  const chunkedContentNodes = chunk(data.allWpPartner.nodes, perPage)
 
   await Promise.all(
     chunkedContentNodes.map(async (nodesChunk, index) => {
       const firstNode = nodesChunk[0]
 
-      const path = index === 0 ? blogURI : `${blogURI}/page/${index + 1}/`
+      const path = index === 0 ? cptURI : `${cptURI}/page/${index + 1}/`
 
         await actions.createPage({
-        component: resolve(`./src/templates/archive.js`),
+        component: resolve(`./src/templates/archive-partners.js`),
         path: path,
         context: {
           firstId: firstNode.id,
-          archivePath: blogURI,
+          archivePath: cptURI,
           uri: path,
-          archiveType: "post",
+          archiveType: "partners",
           offset: perPage * index,
           pageNumber: index + 1,
           totalPages: chunkedContentNodes.length,

@@ -2,6 +2,7 @@ const path = require(`path`)
 const glob = require(`glob`)
 
 const createBlog = require(`./create/createBlog`)
+const createPartnerArchive = require(`./create/createPartnerArchive`)
 const createContentTypes = require(`./create/createContentTypes`)
 const createCategories = require(`./create/createCategories`)
 const createAuthors = require(`./create/createAuthors`)
@@ -24,10 +25,12 @@ exports.createPages = async (props) => {
 
   const perPage = wpSettings.wp.readingSettings.postsPerPage || 10
   const blogURI = "/blog"
+  const cptURI = "/partners"
   const templates = getTemplates()
 
   await createContentTypes(props, { templates })
   await createBlog(props, { perPage, blogURI })
+  await createPartnerArchive(props, { perPage, cptURI })
   await createCategories(props, { perPage })
   await createAuthors(props, { perPage })
 }
