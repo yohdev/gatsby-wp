@@ -16,12 +16,18 @@ import {
   FormControl,
   InputGroup,
   ListGroup,
+  Link,
 } from "react-bootstrap"
+import GetAnAdvantage from "../components/GetAnAdvantage"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { faCoffee, faFeed } from "@fortawesome/free-solid-svg-icons"
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
 
 const Archive = (props) => {
   const {
@@ -121,38 +127,22 @@ const Archive = (props) => {
                     </ListGroup.Item>
                   </ListGroup>
                 </div>
-                <div className="advantage-container mb-5">
-                  <h3 className="heading">Get an advantage</h3>
-                  <p className="text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <Form>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Control
-                        className="email-form"
-                        type="email"
-                        placeholder="Email*"
-                      />
-                    </Form.Group>
-                  </Form>
-                  <Form>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check
-                        type="checkbox"
-                        label="I’d like to receive news and information from StackPath and understand I can unsubscribe at anytime."
-                        isInValid="false"
-                      />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                      Submit
-                    </Button>
-                  </Form>
-                </div>
+                <GetAnAdvantage />
                 <div className="social-container">
                   <h3 className="heading">Connect with us</h3>
                   <div className="social-nav">
-                    <FontAwesomeIcon icon={["fab", "apple"]} />
-                    <FontAwesomeIcon icon={faCoffee} />
+                    <a href="#">
+                      <FontAwesomeIcon icon={faFeed} />
+                    </a>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </a>
                   </div>
                 </div>
               </div>

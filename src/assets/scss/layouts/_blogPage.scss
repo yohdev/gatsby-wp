@@ -142,5 +142,15 @@
         margin-top: 0;
       }
     }
+
+    .social-container {
+      a {
+        font-size: 28px;
+        color: $primary;
+        &:not(:last-of-type) {
+          margin-right: 15px;
+        }
+      }
+    }
   }
 }

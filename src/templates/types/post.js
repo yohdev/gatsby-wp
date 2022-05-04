@@ -44,24 +44,14 @@ const post = ({ data }) => {
             </div>
           </Container>
         </div>
-        <header className="entry-header has-text-align-center header-footer-group">
-          <div className="entry-header-inner section-inner medium">
-            <PostCategories categories={categories} />
-
-            <div
-              className="intro-text section-inner max-percentage small"
-              dangerouslySetInnerHTML={{ __html: excerpt }}
-            />
-          </div>
-        </header>
-
-        <FeaturedMedia image={featuredImage} />
 
         <div className="post-inner thin">
-          <div
-            className="entry-content"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          <Container>
+            <div
+              className="entry-content"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </Container>
         </div>
 
         <div className="section-inner">
