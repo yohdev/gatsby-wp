@@ -8,7 +8,9 @@ import AuthorBio from "../../components/AuthorBio"
 import PostMeta from "../../components/PostMeta"
 import PostCategories from "../../components/PostCategories"
 import FeaturedMedia from "../../components/FeaturedMedia"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
+import GetAnAdvantage from "../../components/GetAnAdvantage"
+import PostsRelatedTopics from "../../components/PostsRelatedTopics"
 const post = ({ data }) => {
   const { nextPage, previousPage, page } = data
   const {
@@ -45,7 +47,7 @@ const post = ({ data }) => {
           </Container>
         </div>
 
-        <div className="post-inner thin">
+        <div className="post-inner thin py-5">
           <Container>
             <div
               className="entry-content"
@@ -55,15 +57,29 @@ const post = ({ data }) => {
         </div>
 
         <div className="section-inner">
-          <AuthorBio author={author} />
-          <ContentTypePagination
-            previousPage={previousPage}
-            nextPage={nextPage}
-            contentType={"Post"}
-          />
-          <Comments />
+          <Container>
+            <AuthorBio author={author} />
+            <ContentTypePagination
+              previousPage={previousPage}
+              nextPage={nextPage}
+              contentType={"Post"}
+            />
+            <Comments />
+          </Container>
         </div>
       </article>
+      <div className="post-bottom-content">
+        <Container>
+          <Row>
+            <Col md={6}>
+              <GetAnAdvantage />
+            </Col>
+            <Col md={6}>
+              <PostsRelatedTopics />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </Layout>
   )
 }
