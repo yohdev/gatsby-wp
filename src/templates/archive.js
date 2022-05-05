@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 // import PostEntry from "../../components/post-entry"
 import Layout from "../components/Layout"
 import Seo from "gatsby-plugin-wpgraphql-seo"
@@ -16,7 +16,6 @@ import {
   FormControl,
   InputGroup,
   ListGroup,
-  Link,
 } from "react-bootstrap"
 import GetAnAdvantage from "../components/GetAnAdvantage"
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -34,9 +33,12 @@ const Archive = (props) => {
     data: {
       allWpPost: { nodes, pageInfo },
       wp: { seo },
+      allWpCategory: { edges },
     },
     pageContext: { archiveType, archivePath, uri },
   } = props
+
+  console.log(edges)
 
   return (
     <Layout bodyClass="home blog wp-embed-responsive has-no-pagination showing-comments hide-avatars footer-top-visible customize-support">
@@ -94,37 +96,27 @@ const Archive = (props) => {
                 <h3 className="heading">Categories</h3>
                 <div className="category-list-container mb-5">
                   <ListGroup variant="flush">
-                    <ListGroup.Item>
-                      <a href="#">Category One</a>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                      <a href="#">Category Two</a>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                      <a href="#">Category Three</a>
-                      <ListGroup variant="flush">
-                        <ListGroup.Item>
-                          <a href="#">Sub Category One</a>
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                          <a href="#">Sub Category Two</a>
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                          <a href="#">Sub Category Three</a>
-                        </ListGroup.Item>
-                      </ListGroup>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                      <a href="#">Category Four</a>
-                      <ListGroup variant="flush">
-                        <ListGroup.Item>
-                          <a href="#">Sub Category One</a>
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                          <a href="#">Sub Category Two</a>
-                        </ListGroup.Item>
-                      </ListGroup>
-                    </ListGroup.Item>
+                    {edges &&
+                      edges.map((item, index) => {
+                        const category = item.node
+
+                        if (category.parentId === null) {
+                          return (
+                            <ListGroup.Item>
+                              <Link to={category.uri}>{category.name} </Link>
+                              {category.wpChildren.nodes.map((child, index) => {
+                                return (
+                                  <ListGroup>
+                                    <ListGroup.Item>
+                                      <Link to={child.uri}>{child.name}</Link>
+                                    </ListGroup.Item>
+                                  </ListGroup>
+                                )
+                              })}
+                            </ListGroup.Item>
+                          )
+                        }
+                      })}
                   </ListGroup>
                 </div>
                 <GetAnAdvantage />
@@ -182,6 +174,22 @@ export const query = graphql`
         hasPreviousPage
         currentPage
         pageCount
+      }
+    }
+    allWpCategory {
+      edges {
+        node {
+          id
+          name
+          uri
+          wpChildren {
+            nodes {
+              name
+              uri
+            }
+          }
+          parentId
+        }
       }
     }
     wp {
