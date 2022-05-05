@@ -27,6 +27,7 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
+import CategoriesList from "../components/CategoriesList"
 
 const Archive = (props) => {
   const {
@@ -37,8 +38,6 @@ const Archive = (props) => {
     },
     pageContext: { archiveType, archivePath, uri },
   } = props
-
-  console.log(edges)
 
   return (
     <Layout bodyClass="home blog wp-embed-responsive has-no-pagination showing-comments hide-avatars footer-top-visible customize-support">
@@ -94,31 +93,7 @@ const Archive = (props) => {
             <Col md={4} lg={3}>
               <div className="right-side">
                 <h3 className="heading">Categories</h3>
-                <div className="category-list-container mb-5">
-                  <ListGroup variant="flush">
-                    {edges &&
-                      edges.map((item, index) => {
-                        const category = item.node
-
-                        if (category.parentId === null) {
-                          return (
-                            <ListGroup.Item>
-                              <Link to={category.uri}>{category.name} </Link>
-                              {category.wpChildren.nodes.map((child, index) => {
-                                return (
-                                  <ListGroup>
-                                    <ListGroup.Item>
-                                      <Link to={child.uri}>{child.name}</Link>
-                                    </ListGroup.Item>
-                                  </ListGroup>
-                                )
-                              })}
-                            </ListGroup.Item>
-                          )
-                        }
-                      })}
-                  </ListGroup>
-                </div>
+                <CategoriesList categories={edges} />
                 <GetAnAdvantage />
                 <div className="social-container">
                   <h3 className="heading">Connect with us</h3>
@@ -189,6 +164,11 @@ export const query = graphql`
             }
           }
           parentId
+          posts {
+            nodes {
+              id
+            }
+          }
         }
       }
     }

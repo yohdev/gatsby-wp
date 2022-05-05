@@ -15,8 +15,6 @@ const partnersarchive = (props) => {
     pageContext: { archiveType, archivePath, uri },
   } = props
 
-  console.log(edges)
-
   return (
     <Layout bodyClass="home blog wp-embed-responsive has-no-pagination showing-comments hide-avatars footer-top-visible customize-support">
       <Seo
