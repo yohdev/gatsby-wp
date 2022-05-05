@@ -5,6 +5,12 @@
     display: flex;
     align-items: center;
     .hero-content {
+      .breadcrumb {
+        color: $light;
+        a {
+          color: $light;
+        }
+      }
       .hero-title {
         font-weight: 700;
         color: $light;

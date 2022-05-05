@@ -38,6 +38,9 @@ const post = ({ data }) => {
         <div className="single-post-hero">
           <Container>
             <div className="hero-content">
+              <div className="breadcrumb">
+                <a href="#">Blog</a>&nbsp; / &nbsp;<a href="#">Announcements</a>
+              </div>
               <h1
                 className="hero-title entry-title"
                 dangerouslySetInnerHTML={{ __html: title }}
