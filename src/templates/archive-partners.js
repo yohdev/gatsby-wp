@@ -10,7 +10,6 @@ const partnersarchive = (props) => {
     data: {
       allWpPartner: { nodes, pageInfo },
       wp: { seo },
-      allWpCategory: { edges },
     },
     pageContext: { archiveType, archivePath, uri },
   } = props
