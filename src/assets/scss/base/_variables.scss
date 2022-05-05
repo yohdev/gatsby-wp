@@ -17,26 +17,26 @@ $screen-lg: 992px;
 // Extra large devices (large desktops, 1200px and up)
 $screen-xl: 1200px;
 
-$main-font: 'Poppins', sans-serif;
+$main-font: "Poppins", sans-serif;
 
 //Fonts
-$primary-font: 'Poppins', sans-serif;
-$secondary-font: 'Work Sans', sans-serif;
-$secondary-font-bold: 'Work Sans' Bold, sans-serif;
-$notation-font: 'Roboto', sans-serif;
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "Work Sans", sans-serif;
+$secondary-font-bold: "Work Sans" Bold, sans-serif;
+$notation-font: "Roboto", sans-serif;
 
 // Colors
 // These are just some placeholder colors, change to client colors
 // ----------------------------------------------------------------------------
 
 //Theme Colors
-$primary: #39306F;
-$secondary: #10D1D3;
-$success: #10D1D3;
-$info: #9185DE;
-$warning: #D2D36F;
-$danger: #F46254;
-$light: #F7F7F7;
+$primary: #39306f;
+$secondary: #10d1d3;
+$success: #10d1d3;
+$info: #9185de;
+$warning: #d2d36f;
+$danger: #f46254;
+$light: #f7f7f7;
 $dark: #000000;
 
 //Primary Colors
@@ -156,7 +156,6 @@ $neutral-grey: #969799;
 $neutral-black: #070d0d;
 $neutral-surface: #fafcff;
 
-
 //Alternate colors
 $alt-gray-dark: #0e0e0f;
 $alt-red: #f46254;
@@ -172,7 +171,7 @@ $light-gray: #f4f4f4;
 $text-gray: #7f7e7c;
 $text-gray-2: #707479;
 $bg-grey: #f0f0f0;
-$neutral-gray : #dbdbdb;
+$neutral-gray: #dbdbdb;
 
 //CTA colors
 $cta-main: $alt-red;
@@ -191,17 +190,26 @@ $text-link-secondary-disabled: #a5b6cc;
 //Shadow
 $shadow: 0px 3px 6px #00000029;
 
-$colors: (primary-red, $primary-red), (primary-red-100, $primary-red-100), (primary-red-300, $primary-red-300), (primary-blue, $primary-blue), (primary-blue-100, $primary-blue-100), (primary-blue-300, $primary-blue-300), (primary-bondi, $primary-bondi), (primary-bondi-300, $primary-bondi-300), (primary-bondi-100, $primary-bondi-100), (neutral-surface, $neutral-surface), (neutral-black, $neutral-black), (accent-orange-200, $accent-orange-200), (secondary-brighter-red, $secondary-brighter-red), (secondary-brighter-blue, $secondary-brighter-blue), (secondary-grape, $secondary-grape), (accent-orange, $accent-orange), (accent-green, $accent-green), (accent-blue, $accent-blue);
+$colors: (primary-red, $primary-red), (primary-red-100, $primary-red-100),
+  (primary-red-300, $primary-red-300), (primary-blue, $primary-blue),
+  (primary-blue-100, $primary-blue-100), (primary-blue-300, $primary-blue-300),
+  (primary-bondi, $primary-bondi), (primary-bondi-300, $primary-bondi-300),
+  (primary-bondi-100, $primary-bondi-100), (neutral-surface, $neutral-surface),
+  (neutral-black, $neutral-black), (accent-orange-200, $accent-orange-200),
+  (secondary-brighter-red, $secondary-brighter-red),
+  (secondary-brighter-blue, $secondary-brighter-blue),
+  (secondary-grape, $secondary-grape), (accent-orange, $accent-orange),
+  (accent-green, $accent-green), (accent-blue, $accent-blue);
 
 //bootstrap theme-colors
 
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
 );

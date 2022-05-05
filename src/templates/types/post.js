@@ -1,14 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
-import Seo from 'gatsby-plugin-wpgraphql-seo';
+import Seo from "gatsby-plugin-wpgraphql-seo"
 import Comments from "../../components/Comments"
 import ContentTypePagination from "../../components/ContentTypePagination"
 import AuthorBio from "../../components/AuthorBio"
 import PostMeta from "../../components/PostMeta"
 import PostCategories from "../../components/PostCategories"
 import FeaturedMedia from "../../components/FeaturedMedia"
-
+import { Container, Row, Col } from "react-bootstrap"
+import GetAnAdvantage from "../../components/GetAnAdvantage"
+import PostsRelatedTopics from "../../components/PostsRelatedTopics"
 const post = ({ data }) => {
   const { nextPage, previousPage, page } = data
   const {
@@ -33,40 +35,54 @@ const post = ({ data }) => {
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
       >
-        <header className="entry-header has-text-align-center header-footer-group">
-          <div className="entry-header-inner section-inner medium">
-            <PostCategories categories={categories} />
-            <h1
-              className="entry-title"
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
+        <div className="single-post-hero">
+          <Container>
+            <div className="hero-content">
+              <div className="breadcrumb">
+                <a href="#">Blog</a>&nbsp; / &nbsp;<a href="#">Announcements</a>
+              </div>
+              <h1
+                className="hero-title entry-title"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+              <PostMeta title={title} author={author} date={date} />
+            </div>
+          </Container>
+        </div>
+
+        <div className="post-inner thin py-5">
+          <Container>
             <div
-              className="intro-text section-inner max-percentage small"
-              dangerouslySetInnerHTML={{ __html: excerpt }}
+              className="entry-content"
+              dangerouslySetInnerHTML={{ __html: content }}
             />
-            <PostMeta title={title} author={author} date={date} />
-          </div>
-        </header>
-
-        <FeaturedMedia image={featuredImage} />
-
-        <div className="post-inner thin">
-          <div
-            className="entry-content"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          </Container>
         </div>
 
         <div className="section-inner">
-          <AuthorBio author={author} />
-          <ContentTypePagination
-            previousPage={previousPage}
-            nextPage={nextPage}
-            contentType={"Post"}
-          />
-          <Comments />
+          <Container>
+            <AuthorBio author={author} />
+            <ContentTypePagination
+              previousPage={previousPage}
+              nextPage={nextPage}
+              contentType={"Post"}
+            />
+            <Comments />
+          </Container>
         </div>
       </article>
+      <div className="post-bottom-content">
+        <Container>
+          <Row>
+            <Col md={6}>
+              <GetAnAdvantage />
+            </Col>
+            <Col md={6}>
+              <PostsRelatedTopics />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </Layout>
   )
 }
@@ -87,4 +103,4 @@ export const query = graphql`
   }
 `
 
-export default post;
+export default post

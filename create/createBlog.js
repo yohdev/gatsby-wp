@@ -23,7 +23,7 @@ module.exports = async ({ actions, graphql }, options) => {
 
       const path = index === 0 ? blogURI : `${blogURI}/page/${index + 1}/`
 
-        await actions.createPage({
+      await actions.createPage({
         component: resolve(`./src/templates/archive.js`),
         path: path,
         context: {

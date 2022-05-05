@@ -1,0 +1,16 @@
+.related-container {
+  max-width: 400px;
+  .heading {
+    font-weight: 700;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: $primary;
+
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+}

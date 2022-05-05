@@ -1,4 +1,5 @@
 @use 'sass:math';
+
 @import "~@wordpress/base-styles/colors";
 @import "~@wordpress/base-styles/variables";
 @import "~@wordpress/base-styles/mixins";
@@ -7,22 +8,20 @@
 @import "~@wordpress/base-styles/z-index";
 @import "~@wordpress/base-styles/_default-custom-properties";
 
-@import '~@wordpress/block-library/src/style';
-@import '~@wordpress/block-library/src/theme';
+@import "~@wordpress/block-library/src/style";
+@import "~@wordpress/block-library/src/theme";
 
-
-@import '../lib/twentytwentyone/style.scss';
-
+@import "../lib/twentytwentyone/style.scss";
 
 // Variables, fonts, mixins, helpers... common styles used across project
-@import 'base/__base';
+@import "base/__base";
 
 // Reusable components
-@import 'components/__components';
+@import "components/__components";
 
 // Reusable components
-@import 'admin/__admin.scss';
+@import "admin/__admin.scss";
 
 // Declarations specific to the project,
 // Organized according to the items/sections represented
-@import 'layouts/__layouts';
+@import "layouts/__layouts";

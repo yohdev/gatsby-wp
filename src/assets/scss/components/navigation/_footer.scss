@@ -175,3 +175,21 @@
     }
   }
 }
+
+#site-footer {
+  margin: 20px 0;
+  .section-inner {
+    .footer-credits {
+      @include medium-screen {
+        display: flex;
+        justify-content: center;
+      }
+
+      p {
+        &:first-of-type {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

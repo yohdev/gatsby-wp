@@ -1,20 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
-import Seo from 'gatsby-plugin-wpgraphql-seo';
+import Seo from "gatsby-plugin-wpgraphql-seo"
 import ContentTypePagination from "../../components/ContentTypePagination"
 
-
 const partner = ({ data }) => {
-  const { nextPage, previousPage, partner } = data;
-  const { uri, title, content, databaseId } = partner;
+  const { nextPage, previousPage, partner } = data
+  const { uri, title, content, databaseId } = partner
 
   return (
     <Layout
-    bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
+      bodyClass={`post-template-default single single-post postid-${databaseId} single-format-standard wp-embed-responsive singular has-post-thumbnail has-single-pagination showing-comments footer-top-visible customize-support`}
     >
-    <Seo post={partner} />
-    <article
+      <Seo post={partner} />
+      <article
         className={`post-${databaseId} post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized`}
         id={`post-${databaseId}`}
       >
@@ -26,23 +25,30 @@ const partner = ({ data }) => {
             />
           </div>
         </header>
-      <ContentTypePagination
-        previousPage={previousPage}
-        nextPage={nextPage}
-        contentType={"Partner"}
-      />
-    </article>
+        <ContentTypePagination
+          previousPage={previousPage}
+          nextPage={nextPage}
+          contentType={"Partner"}
+        />
+      </article>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query partner($id: String!, $nextPage: String, $previousPage: String){
-    partner: wpPartner(id: { eq: $id })  {
+  query partner($id: String!, $nextPage: String, $previousPage: String) {
+    partner: wpPartner(id: { eq: $id }) {
       uri
       title
       content
       databaseId
+      author {
+        node {
+          avatar {
+            url
+          }
+        }
+      }
       seo {
         title
         metaDesc
@@ -53,23 +59,23 @@ export const query = graphql`
         opengraphTitle
         opengraphDescription
         opengraphImage {
-            altText
-            sourceUrl
-            srcSet
+          altText
+          sourceUrl
+          srcSet
         }
         twitterTitle
         twitterDescription
         twitterImage {
-            altText
-            sourceUrl
-            srcSet
+          altText
+          sourceUrl
+          srcSet
         }
         canonical
         cornerstone
         schema {
-            articleType
-            pageType
-            raw
+          articleType
+          pageType
+          raw
         }
       }
     }
@@ -84,4 +90,4 @@ export const query = graphql`
   }
 `
 
-export default partner;
+export default partner

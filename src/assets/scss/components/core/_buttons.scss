@@ -74,6 +74,17 @@
   }
 }
 
+.btn-primary-alt {
+  background: none;
+  border: 1px solid $primary;
+  color: $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $light;
+  }
+}
+
 .btn-primary {
   // background-color: $primary-red;
   // border-color: $primary-red;
