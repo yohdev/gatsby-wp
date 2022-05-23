@@ -11,10 +11,10 @@ const SearchResults = props => {
     onSelect
   } = props;
 
+
   const posts = nodes[0].node.searchResults;
 
-
-  // Default props
+  // // Default props
   const minCharacters = props.minCharacters || 2;
   const contentCharacters = props.contentCharacters || 200;
   const maxResults = props.maxResults || 10;
@@ -28,10 +28,23 @@ const SearchResults = props => {
     results = idx.search(`*${query}*`).slice(0, maxResults);
   }
 
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+    if (typeof window !== "undefined") {
+    window.history.replaceState({}, document.title);
+    };
+    };
   useEffect(() => {
     const idx = getIndex();
     setIdx(idx);
-  });
+
+    if (typeof window !== "undefined" && window.history.state) {
+      const passedState = window.history.state.query;
+      if(passedState){
+        setQuery(passedState)
+      }
+    }
+  },[query]);
 
   const getIndex = () => {
     return lunr(function() {
@@ -53,16 +66,16 @@ const SearchResults = props => {
 
   return (
     <div className={`container`}>
-      <input
+    <input
         name='query'
-        onChange={e => setQuery(e.target.value)}
+        onChange={handleChange}
         autoComplete='off'
         placeholder={placeholder}
         className={`input`}
       />
-
-      {query.length >= minCharacters && (
+      {query && query.length >= minCharacters && (
         <ul className={`suggests`}>
+         Search results for: {query}
           {results &&
             results.map(o => {
               const post = posts.filter(post => post.id === o.ref)[0];
