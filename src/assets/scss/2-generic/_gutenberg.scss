@@ -1,0 +1,110 @@
+.home-page-wrap {
+	.entry-content {
+
+		> * {
+			// margin: $margin-top auto $margin-bottom auto;
+		}
+
+		> *:not(.alignfull) {
+			// max-width: $site_width;
+			padding: 0 $padding-right 0 $padding-left;
+		}
+
+		> .alignwide {
+			max-width: $wide_width;
+		}
+	}
+}
+
+  .has-background {
+	  max-width: 100%;
+  }
+  
+  //Background Colors
+  .has-primary-background-color {
+	background-color: $primary;
+  }
+  
+  .has-secondary-background-color {
+	background-color: $secondary;
+  }
+  
+  .has-accent-background-color {
+	background-color: $accent;
+  }
+  
+  .has-warning-background-color {
+	background-color: $warning;
+  }
+  
+  .has-danger-background-color {
+	background-color: $danger;
+  }
+  
+  .has-gray-background-color {
+	background-color: $gray;
+  }
+
+  .has-dark-background-color {
+	  background-color: $dark;
+  }
+  
+  //Text Colors
+  .has-primary-color {
+	color: $primary;
+  }
+  
+  .has-secondary-color {
+	color: $secondary;
+  }
+  
+  .has-accent-color {
+	color: $accent;
+  }
+  
+  .has-warning-color {
+	color: $warning;
+  }
+  
+  .has-danger-color {
+	color: $danger;
+  }
+  
+  .has-gray-color {
+	color: $gray;
+  }
+  
+  .has-dark-color {
+	color: $black;
+  }
+
+  .has-light-color {
+	  color: $light;
+  }
+  
+  //WP Button Block
+  .wp-block-buttons {
+	.is-style-outline {
+	  > .wp-block-button__link {
+		padding: $btn-spacing;
+		border-radius: $btn-radius;
+  
+		&:hover {
+		  background-color: $secondary;
+		  color: $white;
+		  border-color: $secondary;
+		}
+	  }
+	}
+  }
+  
+  .wp-block-button__link {
+	padding: $btn-spacing;
+	border-radius: $btn-radius;
+	margin: 16px 0;
+  
+	&:hover {
+	  background-color: $white;
+	  color: $dark;
+	}
+  }

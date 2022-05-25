@@ -1,0 +1,139 @@
+/*----------------
+		Font
+------------------*/
+
+// Global theme font.
+$font__main: "Poppins", sans-serif;
+$font__secondary: "Work Sans", sans-serif;
+$font__notation: "Roboto", sans-serif;
+
+// Global code font
+$font__code: "Lato", sans-serif, monospace;
+
+// Fallback font when font is not loaded via WebFonts JS.
+$font__fallback: sans-serif;
+
+// Base line height.
+$font__base-line-height: 30px;
+
+/*---------------------------------
+		Body Text Font Sizes
+-----------------------------------*/
+
+$body-text: (
+  "h1": (
+    "small": (
+      font-size: 40px,
+      line-height: 1.27,
+      font-weight: 700,
+    ),
+    "medium": (
+      font-size: 56px,
+    ),
+    "large": (
+      font-size: 64px,
+    ),
+  ),
+  "h2": (
+    "small": (
+      font-size: 32px,
+      line-height: 1,
+      font-weight: 700,
+      margin: 16px 0,
+    ),
+    "medium": (
+      font-size: 40px,
+      line-height: 1,
+      font-weight: 700,
+      margin: 16px 0,
+    ),
+    "large": (
+      font-size: 48px,
+      line-height: 1,
+      font-weight: 700,
+      margin: 16px 0,
+    ),
+  ),
+  "h3": (
+    "small": (
+      font-size: 24px,
+      line-height: 1.27,
+    ),
+    "large": (
+      font-size: 32px,
+      line-height: 1.27,
+    ),
+  ),
+  "h4": (
+    "small": (
+      font-family: $font__secondary,
+      font-size: 18px,
+      line-height: 1.142,
+      font-weight: 700,
+    ),
+  ),
+  "h5": (
+    "small": (
+      font-family: $font__secondary,
+      font-size: 18px,
+      line-height: 1.43,
+    ),
+  ),
+  "h6": (
+    "small": (
+      font-family: $font__secondary,
+      font-size: 16px,
+      line-height: 1.681,
+      font-style: italic,
+    ),
+  ),
+  "p": (
+    "small": (
+      margin-bottom: 8px,
+    ),
+  ),
+  "body": (
+    "small": (
+      font-family: $font__secondary,
+      font-size: 16px,
+      line-height: 1.43,
+    ),
+    "large": (
+      line-height: 1.43,
+    ),
+  ),
+  "l": (
+    "small": (
+      font-size: 18px,
+    ),
+  ),
+  "m": (
+    "small": (
+      font-size: 16px,
+    ),
+  ),
+  "s": (
+    "small": (
+      font-size: 12px,
+    ),
+  ),
+  "xs": (
+    "small": (
+      font-size: 11px,
+    ),
+  ),
+);
+
+.is-style {
+  &-main-font {
+    font-family: $font__main !important;
+  }
+
+  &-secondary-font {
+    font-family: $font__secondary;
+  }
+
+  &-notation-font {
+    font-family: $font__notation;
+  }
+}
