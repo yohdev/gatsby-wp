@@ -1,0 +1,28 @@
+
+/* stylelint-disable */
+/* Nav item */
+
+.nav-item {
+	margin: .5rem 1rem;
+	align-self: center;
+
+	@include large-screen {
+		margin-right: 16px;
+	}
+}
+.nav-item:hover .dropdown-menu:not(.show) {
+	display: block;
+}
+
+.custom-logo-link {
+	img {
+		max-width: 100px;
+		margin-right: 20px;
+
+		@include medium-screen {
+			max-width: 150px;
+		}
+	}
+}
+
+/* stylelint-enable */
