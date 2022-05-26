@@ -1,271 +1,271 @@
-.hero-wrapper {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  min-height: 450px;
-  position: relative;
-  display: flex;
-  align-items: center;
+// .hero-wrapper {
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: top center;
+//   min-height: 450px;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
 
-  @include medium-screen {
-    min-height: 500px;
-    background-position: center center;
-    padding: 140px;
-  }
+//   @include medium-screen {
+//     min-height: 500px;
+//     background-position: center center;
+//     padding: 140px;
+//   }
 
-  .hero-cta-holder {
-    position: relative;
+//   .hero-cta-holder {
+//     position: relative;
 
-    @include large-screen {
-      /* padding-top: 30px; */
-    }
+//     @include large-screen {
+//       /* padding-top: 30px; */
+//     }
 
-    @include xlarge-screen {
-      /* padding-top: 80px; */
-    }
+//     @include xlarge-screen {
+//       /* padding-top: 80px; */
+//     }
 
-    @include xlarge-screen {
-      width: 80%;
-    }
-    .hero-cta {
-      background: rgba($neutral-surface, 0);
-      // box-shadow: 9px 6px 6px #00000029;
-      border-radius: 8px;
-      padding: 20px;
-      width: 94%;
-      text-align: center;
+//     @include xlarge-screen {
+//       width: 80%;
+//     }
+//     .hero-cta {
+//       background: rgba($neutral-surface, 0);
+//       // box-shadow: 9px 6px 6px #00000029;
+//       border-radius: 8px;
+//       padding: 20px;
+//       width: 94%;
+//       text-align: center;
 
-      @include large-screen {
-        background: rgba($neutral-surface, 0);
-        position: relative;
-        top: 0;
-        text-align: left;
-        width: 100%;
-        padding: 60px 40px;
-      }
+//       @include large-screen {
+//         background: rgba($neutral-surface, 0);
+//         position: relative;
+//         top: 0;
+//         text-align: left;
+//         width: 100%;
+//         padding: 60px 40px;
+//       }
 
-      /* @include xlarge-screen {
-        padding: 60px 40px 30px 40px;
-      } */
+//       /* @include xlarge-screen {
+//         padding: 60px 40px 30px 40px;
+//       } */
 
-      .hero-subtitle {
-        font-family: $secondary-font;
-        font-weight: 700;
-        line-height: 40px;
-        letter-spacing: 0.04px;
-        color: $dark;
-        margin-bottom: 30px;
+//       .hero-subtitle {
+//         font-family: $secondary-font;
+//         font-weight: 700;
+//         line-height: 40px;
+//         letter-spacing: 0.04px;
+//         color: $dark;
+//         margin-bottom: 30px;
 
-        @include medium-screen {
-          letter-spacing: 0.07px;
-          line-height: 42px;
-          margin-bottom: 30px;
-        }
-      }
+//         @include medium-screen {
+//           letter-spacing: 0.07px;
+//           line-height: 42px;
+//           margin-bottom: 30px;
+//         }
+//       }
 
-      .hero-title {
-        font-family: $primary-font;
-        font-size: 40px;
-        line-height: 27px;
-        letter-spacing: 0;
+//       .hero-title {
+//         font-family: $primary-font;
+//         font-size: 40px;
+//         line-height: 27px;
+//         letter-spacing: 0;
 
-        @include small-screen {
-          font-size: 32px;
-          letter-spacing: 0px;
-          line-height: 64px;
-        }
+//         @include small-screen {
+//           font-size: 32px;
+//           letter-spacing: 0px;
+//           line-height: 64px;
+//         }
 
-        @include medium-screen {
-          font-size: 56px;
-          letter-spacing: 0px;
-          line-height: 64px;
-        }
+//         @include medium-screen {
+//           font-size: 56px;
+//           letter-spacing: 0px;
+//           line-height: 64px;
+//         }
 
-        @include large-screen {
-          font-size: 86px;
-        }
-      }
+//         @include large-screen {
+//           font-size: 86px;
+//         }
+//       }
 
-      .hero-body {
-        font-family: $secondary-font;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: 0;
+//       .hero-body {
+//         font-family: $secondary-font;
+//         font-size: 16px;
+//         font-weight: 400;
+//         line-height: 18px;
+//         letter-spacing: 0;
 
-        @include medium-screen {
-          font-size: 24px;
-          letter-spacing: 0px;
-          line-height: 30px;
-        }
-      }
-    }
-  }
+//         @include medium-screen {
+//           font-size: 24px;
+//           letter-spacing: 0px;
+//           line-height: 30px;
+//         }
+//       }
+//     }
+//   }
 
-  .hero-overlay {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.55);
-    max-height: 300px;
+//   .hero-overlay {
+//     height: 100%;
+//     width: 100%;
+//     z-index: 1;
+//     background-color: rgba(0, 0, 0, 0.55);
+//     max-height: 300px;
 
-    @include medium-screen {
-      min-height: 375px;
-    }
-  }
+//     @include medium-screen {
+//       min-height: 375px;
+//     }
+//   }
 
-  .hero-text {
-    position: relative;
-    z-index: 2;
+//   .hero-text {
+//     position: relative;
+//     z-index: 2;
 
-    h1 {
-      color: $white;
-      text-align: center;
-      position: relative;
-      top: 125px;
-    }
-  }
+//     h1 {
+//       color: $white;
+//       text-align: center;
+//       position: relative;
+//       top: 125px;
+//     }
+//   }
 
-  &.alt {
-    /* background-image: url('../YohDevChild/assets/images/hero-default@2x.jpg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: auto;
-    min-height: 450px;
-    margin-bottom: 0;
-    position: relative;
+//   &.alt {
+//     /* background-image: url('../YohDevChild/assets/images/hero-default@2x.jpg'); */
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     height: auto;
+//     min-height: 450px;
+//     margin-bottom: 0;
+//     position: relative;
 
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba($neutral-surface, 0.5);
-    }
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+//       width: 100%;
+//       height: 100%;
+//       background: rgba($neutral-surface, 0.5);
+//     }
 
-    @include medium-screen {
-      height: 500px;
-      background-position: center top;
-      /* background-image: url('../YohDevChild/assets/images/hero-default-lrg.jpg'); */
-    }
+//     @include medium-screen {
+//       height: 500px;
+//       background-position: center top;
+//       /* background-image: url('../YohDevChild/assets/images/hero-default-lrg.jpg'); */
+//     }
 
-    .alt-hero-cta {
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      /* z-index: 333; */
+//     .alt-hero-cta {
+//       text-align: center;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       /* z-index: 333; */
 
-      .alt-hero-title {
-        font-size: 40px;
-        line-height: 80px;
-        letter-spacing: 0;
-      }
+//       .alt-hero-title {
+//         font-size: 40px;
+//         line-height: 80px;
+//         letter-spacing: 0;
+//       }
 
-      .btn {
-        margin-top: 0;
-      }
-    }
-  }
+//       .btn {
+//         margin-top: 0;
+//       }
+//     }
+//   }
 
-  /* Canter Care Hero */
+//   /* Canter Care Hero */
 
-  &.canter-care {
-    // background-image: url('../YohDevChild/assets/images/hero-canter-care-mobile.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    height: auto;
-    min-height: 250px;
-    margin-bottom: 430px;
-    position: relative;
+//   &.canter-care {
+//     // background-image: url('../YohDevChild/assets/images/hero-canter-care-mobile.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: top center;
+//     height: auto;
+//     min-height: 250px;
+//     margin-bottom: 430px;
+//     position: relative;
 
-    @include small-screen {
-      height: 350px;
-    }
+//     @include small-screen {
+//       height: 350px;
+//     }
 
-    @include large-screen {
-      // background-image: url('../YohDevChild/assets/images/canter-care-hero.jpg');
-      margin-bottom: 0;
-      min-height: 700px;
-    }
+//     @include large-screen {
+//       // background-image: url('../YohDevChild/assets/images/canter-care-hero.jpg');
+//       margin-bottom: 0;
+//       min-height: 700px;
+//     }
 
-    .hero-cta-holder {
-      .hero-cta {
-        text-align: center;
-        .canter-care-logo {
-          max-width: 86px;
-          margin: auto;
-          padding: 1rem 0;
+//     .hero-cta-holder {
+//       .hero-cta {
+//         text-align: center;
+//         .canter-care-logo {
+//           max-width: 86px;
+//           margin: auto;
+//           padding: 1rem 0;
 
-          @include small-screen {
-            max-width: initial;
-            margin: 1rem auto 0 auto;
-          }
-        }
-        .hero-title {
-          font-family: $primary-font;
-          color: $primary-bondi-800;
-          line-height: 1.2;
-          margin-top: 20px;
-          font-size: 24px;
-          span {
-            font-family: inherit;
-            color: $primary-bondi-600;
+//           @include small-screen {
+//             max-width: initial;
+//             margin: 1rem auto 0 auto;
+//           }
+//         }
+//         .hero-title {
+//           font-family: $primary-font;
+//           color: $primary-bondi-800;
+//           line-height: 1.2;
+//           margin-top: 20px;
+//           font-size: 24px;
+//           span {
+//             font-family: inherit;
+//             color: $primary-bondi-600;
 
-            @include large-screen {
-              display: inline-flex;
-              margin-left: 5px;
-            }
-          }
+//             @include large-screen {
+//               display: inline-flex;
+//               margin-left: 5px;
+//             }
+//           }
 
-          @include large-screen {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 41px;
-            letter-spacing: 0;
-            margin-top: 0;
-            margin-bottom: 30px;
-          }
+//           @include large-screen {
+//             font-size: 36px;
+//             font-weight: 700;
+//             line-height: 41px;
+//             letter-spacing: 0;
+//             margin-top: 0;
+//             margin-bottom: 30px;
+//           }
 
-          @include xlarge-screen {
-            margin-bottom: 16px;
-          }
-        }
+//           @include xlarge-screen {
+//             margin-bottom: 16px;
+//           }
+//         }
 
-        .hero-subtitle {
-          font-size: 18px;
-          line-height: 24px;
-          color: #0c2e3b;
-          width: 245px;
-          margin: 0 auto;
-          @include medium-screen {
-            font-size: initial;
-            width: 100%;
-          }
+//         .hero-subtitle {
+//           font-size: 18px;
+//           line-height: 24px;
+//           color: #0c2e3b;
+//           width: 245px;
+//           margin: 0 auto;
+//           @include medium-screen {
+//             font-size: initial;
+//             width: 100%;
+//           }
 
-          @include large-screen {
-            font-size: 22px;
-            line-height: 42px;
-            letter-spacing: 0;
-          }
-        }
+//           @include large-screen {
+//             font-size: 22px;
+//             line-height: 42px;
+//             letter-spacing: 0;
+//           }
+//         }
 
-        .hero-body {
-          font-family: $primary-font;
-          font-size: 18px;
-          line-height: 25px;
-          color: $neutral-black;
+//         .hero-body {
+//           font-family: $primary-font;
+//           font-size: 18px;
+//           line-height: 25px;
+//           color: $neutral-black;
 
-          @include xlarge-screen {
-            margin-top: 32px;
-          }
-        }
-      }
-    }
-  }
-}
+//           @include xlarge-screen {
+//             margin-top: 32px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
