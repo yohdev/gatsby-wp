@@ -13,19 +13,6 @@
 
 @import "../lib/twentytwentyone/style.scss";
 
-// Variables, fonts, mixins, helpers... common styles used across project
-@import "base/__base";
-
-// Reusable components
-@import "components/__components";
-
-// Reusable components
-@import "admin/__admin.scss";
-
-// Declarations specific to the project,
-// Organized according to the items/sections represented
-@import "layouts/__layouts";
-
 // Essentials
 @import "essentials";
 
@@ -42,3 +29,13 @@
 @import "blocks.scss";
 @import "4-layouts/pages/_pages";
 @import "4-layouts/patterns/_patterns";
+
+// Components
+.wp-block-cover.hide-on-mobile {
+  display: none;
+}
+@media (min-width: 480px) {
+  .wp-block-cover.hide-on-mobile {
+    display: block;
+  }
+}

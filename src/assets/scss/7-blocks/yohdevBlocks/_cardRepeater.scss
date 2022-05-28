@@ -27,7 +27,7 @@
   .left {
     flex: 2;
     h2 {
-      font-family: $primary-font;
+      font-family: $font__secondary;
     }
   }
 
@@ -42,7 +42,7 @@
 }
 
 .yohdev-card {
-  background-color: $neutral-surface;
+  background-color: $light;
   padding: 25px;
   box-shadow: $shadow;
   border-radius: 8px;
@@ -67,7 +67,7 @@
 
   .card-body-text {
     padding: 0;
-    color: $neutral-black;
+    color: $black;
   }
 }
 
@@ -82,7 +82,6 @@
   &.on-primary {
     .cr-header,
     .cr-body {
-      color: $neutral-surface;
     }
   }
 
@@ -91,7 +90,7 @@
 
   /* .repeater-card {
     text-align: center;
-    background-color: $neutral-surface;
+    background-color: $light;
     border-radius: 15px;
     box-shadow: $shadow;
     border: 1px solid $gray;
@@ -115,7 +114,6 @@
 
   &.single-post {
     text-align: left;
-    background-color: $secondary-brighter-blue-300;
     padding: 30px 0;
 
     .content {
