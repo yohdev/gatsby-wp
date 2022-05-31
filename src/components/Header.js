@@ -31,7 +31,6 @@ const Header = ({ pageContext, toggleBackdrop, ...props }) => {
                     </button>
                     <Menu />
                   </div>
-                  <SearchForm/>
             </nav>	 
         </div>
     </header>

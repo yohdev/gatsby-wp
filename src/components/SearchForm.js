@@ -3,8 +3,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import {
-  Button
-} from "react-bootstrap";
+  Button,
+  Container,
+  Row,
+  Col,
+  Form,
+  FormControl,
+  InputGroup,
+  ListGroup,
+} from "react-bootstrap"
 
 const SearchForm = ({ onUpdate }) => {
 
@@ -29,23 +36,18 @@ const SearchForm = ({ onUpdate }) => {
 console.log(query)
 
   return (
-    <div className={`container`}>
-      <input
-        name='query'
-        onChange={e => setQuery(e.target.value)}
-        autoComplete='off'
-        placeholder={placeholder}
-        className={`input`}
-      />
-      <Link
-        to="/search"
-        state={{query}}
-      >
-      <Button variant="primary" type="submit">
-          Submit
-      </Button>
-      </Link>
-    </div>
+    <React.Fragment>
+        <Form className="form-inline my-2 my-lg-0">
+          <Form.Group className="ms-sm-2" controlId="formBasicEmail">
+            <Form.Control type="text" placeholder="Search.."  onChange={e => setQuery(e.target.value)} />
+          </Form.Group>
+          <Link to="/search" state={{query}}>
+              <Button variant="primary" type="submit" className="my-2 my-sm-0">
+                Submit
+              </Button>
+          </Link>
+        </Form>
+    </React.Fragment>
   );
 };
 
