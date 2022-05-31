@@ -4,36 +4,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import {
   Button,
-  Container,
-  Row,
-  Col,
   Form,
-  FormControl,
-  InputGroup,
-  ListGroup,
 } from "react-bootstrap"
 
 const SearchForm = ({ onUpdate }) => {
-
-  // const {
-  //   data: {
-  //     allWp: { edges: nodes }
-  //   },
-  //   onSelect
-  // } = props;
-
-
-
 
   // Default props
   const placeholder = "Search...";
 
   const [query, setQuery] = useState("");
-
-//   useEffect(()=>{
-//     setQuery(query);
-// },[query])
-console.log(query)
 
   return (
     <React.Fragment>

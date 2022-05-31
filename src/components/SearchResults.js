@@ -2,6 +2,16 @@
    
 import React, { useEffect, useState } from "react";
 import lunr from "lunr";
+import {
+  Button,
+  Container,
+  Row,
+  Col,
+  Form,
+  FormControl,
+  InputGroup,
+  ListGroup,
+} from "react-bootstrap"
 
 const SearchResults = props => {
   const {
@@ -65,14 +75,14 @@ const SearchResults = props => {
   };
 
   return (
-    <div className={`container`}>
-    <input
-        name='query'
-        onChange={handleChange}
-        autoComplete='off'
-        placeholder={placeholder}
-        className={`input`}
-      />
+    <React.Fragment>
+      <Container>
+        <Form className="form-inline my-2 my-lg-0">
+          <Form.Group className="ms-sm-2" controlId="formBasicSearch">
+            <Form.Control type="text" placeholder="Search.."  onChange={e => setQuery(e.target.value)} />
+          </Form.Group>
+        </Form>
+    
       {query && query.length >= minCharacters && (
         <ul className={`suggests`}>
          Search results for: {query}
@@ -104,7 +114,8 @@ const SearchResults = props => {
             })}
         </ul>
       )}
-    </div>
+      </Container>
+    </React.Fragment>
   );
 };
 
