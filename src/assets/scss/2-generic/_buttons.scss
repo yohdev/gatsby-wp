@@ -32,13 +32,13 @@
 
 		.wp-block-button__link {
 			border: 1px solid $secondary;
-			background-color: $secondary !important;
-			color: $white !important;
+			background-color: $secondary;
+			color: $white; 
             @include button;
 
 			&:hover {
-				border: 1px solid darken($secondary, 10%) !important;
-				background-color: darken($secondary, 20%) !important;
+				border: 1px solid darken($secondary, 10%); 
+				background-color: darken($secondary, 20%); 
 			}
 		}
 	}

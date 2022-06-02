@@ -180,5 +180,5 @@
 //Button
 @mixin button {
   padding: $btn-spacing;
-  border-radius: $btn-radius !important;
+  border-radius: $btn-radius;
 }

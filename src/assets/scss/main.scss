@@ -1,18 +1,5 @@
 @use 'sass:math';
 
-@import "~@wordpress/base-styles/colors";
-@import "~@wordpress/base-styles/variables";
-@import "~@wordpress/base-styles/mixins";
-@import "~@wordpress/base-styles/breakpoints";
-@import "~@wordpress/base-styles/animations";
-@import "~@wordpress/base-styles/z-index";
-@import "~@wordpress/base-styles/_default-custom-properties";
-
-@import "~@wordpress/block-library/src/style";
-@import "~@wordpress/block-library/src/theme";
-
-@import "../lib/twentytwentyone/style.scss";
-
 // Essentials
 @import "essentials";
 
@@ -20,15 +7,15 @@
 @import "2-generic/generic";
 
 // Layouts.
-@import "4-layouts/posts/meta";
-@import "4-layouts/posts/post-card";
-@import "4-layouts/posts/pagination";
-@import "4-layouts/header/nav/navigation";
-@import "4-layouts/footer/footer";
-@import "4-layouts/search-form";
-@import "blocks.scss";
-@import "4-layouts/pages/_pages";
-@import "4-layouts/patterns/_patterns";
+// @import "4-layouts/posts/meta";
+// @import "4-layouts/posts/post-card";
+// @import "4-layouts/posts/pagination";
+// @import "4-layouts/header/nav/navigation";
+// @import "4-layouts/footer/footer";
+// @import "4-layouts/search-form";
+// @import "blocks.scss";
+// @import "4-layouts/pages/_pages";
+// @import "4-layouts/patterns/_patterns";
 
 // Components
 .wp-block-cover.hide-on-mobile {
