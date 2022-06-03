@@ -1,0 +1,42 @@
+// Site variables.
+
+// mq breakpoints Look into what this is doing.
+$mq-breakpoints: (
+  small: 600px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1240px,
+) !default;
+
+//Breakpoints for YohDev Mixins
+// Small devices (landscape phones, 576px and up)
+$screen-sm: 576px;
+
+// Medium devices (tablets, 768px and up)
+$screen-md: 768px;
+
+// Large devices (desktops, 992px and up)
+$screen-lg: 992px;
+
+// Extra large devices (large desktops, 1200px and up)
+$screen-xl: 1200px;
+
+//Site Widths
+$site_width: 1180px;
+$wide_width: $screen-lg;
+
+//container widths for column block
+$small-container: 540px;
+$medium-container: 740px;
+$large-container: 1024px;
+
+//spacing (not really using at the moment
+$padding-left: 15px;
+$padding-right: 15px;
+
+//buttons (for button block)
+$btn-radius: 3px;
+$btn-spacing: 8px 30px;
+
+//Shadow
+$shadow: 0px 3px 6px #00000029;
