@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "./UniversalLink"
+import { Container, Navbar, Toggle, Nav, NavDropdown } from "react-bootstrap"
 
 const Menu = () => {
   const { wpMenu } = useStaticQuery(graphql`
@@ -28,22 +29,15 @@ const Menu = () => {
   if (!wpMenu?.menuItems?.nodes || wpMenu.menuItems.nodes === 0) return null
 
   return (
-
-
-    <div
-      className="collapse navbar-collapse"
-      aria-label="Horizontal"
-      role="navigation"
-      id="navbarNav"
-    >
-      <ul className="navbar-nav ms-auto" id="menu-main-nav">
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="ms-auto">
         {wpMenu.menuItems.nodes.map((menuItem, i) => {
           const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
 
           const itemId = "menu-item-" + menuItem.databaseId
 
           return (
-            <li
+            <Nav.Link
               id={itemId}
               key={i + menuItem.url}
               className={
@@ -57,11 +51,11 @@ const Menu = () => {
               >
                 {menuItem.label}
               </UniversalLink>
-            </li>
+            </Nav.Link>
           )
         })}
-      </ul>
-    </div>
+      </Nav>
+    </Navbar.Collapse>
   )
 }
 

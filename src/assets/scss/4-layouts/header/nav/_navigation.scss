@@ -26,6 +26,41 @@
 
 /* stylelint-enable */
 
+.navbar {
+  width: 100%;
+  background: $dark;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: $white;
+  padding: 20px 0;
+  // @include medium-screen {
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  // }
+
+  .navbar-nav {
+    .nav-link {
+      a {
+        font-family: $font__secondary;
+        font-size: 16px;
+        font-weight: 400;
+        color: $light;
+        line-height: 36px;
+        letter-spacing: -0.24px;
+        text-transform: uppercase;
+        &:hover {
+          // background-color: $gray-2;
+          border-radius: 6px;
+          text-decoration: none;
+        }
+
+        &:active {
+          // color: $primary-red-700 !important;
+        }
+      }
+    }
+  }
+}
+
 .navbar-wrapper {
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
