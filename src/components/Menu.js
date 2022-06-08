@@ -40,20 +40,19 @@ const Menu = () => {
             <Nav.Link
               id={itemId}
               key={i + menuItem.url}
+              href={path}
               className={
                 "menu-item menu-item-type-custom menu-item-object-custom menu-item-home " +
                 itemId
               }
             >
-              <UniversalLink
-                to={path}
-                activeClassName={"current-menu-item current_page_item nav-link"}
-              >
-                {menuItem.label}
-              </UniversalLink>
+              {menuItem.label}
             </Nav.Link>
           )
         })}
+        <button href="/" className="btn gradient-btn">
+          Contact Us
+        </button>
       </Nav>
     </Navbar.Collapse>
   )

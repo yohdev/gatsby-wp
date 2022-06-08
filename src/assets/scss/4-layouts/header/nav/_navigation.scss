@@ -1,28 +1,28 @@
 /* stylelint-disable */
 /* Nav item */
 
-.nav-item {
-  margin: 0.5rem 1rem;
-  align-self: center;
+// .nav-item {
+//   margin: 0.5rem 1rem;
+//   align-self: center;
 
-  @include large-screen {
-    margin-right: 16px;
-  }
-}
-.nav-item:hover .dropdown-menu:not(.show) {
-  display: block;
-}
+//   @include large-screen {
+//     margin-right: 16px;
+//   }
+// }
+// .nav-item:hover .dropdown-menu:not(.show) {
+//   display: block;
+// }
 
-.custom-logo-link {
-  img {
-    max-width: 100px;
-    margin-right: 20px;
+// .custom-logo-link {
+//   img {
+//     max-width: 100px;
+//     margin-right: 20px;
 
-    @include medium-screen {
-      max-width: 150px;
-    }
-  }
-}
+//     @include medium-screen {
+//       max-width: 150px;
+//     }
+//   }
+// }
 
 /* stylelint-enable */
 
@@ -32,177 +32,185 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   color: $white;
   padding: 20px 0;
+  border-bottom: 1px solid $gray-300;
   // @include medium-screen {
   //   padding-top: 0;
   //   padding-bottom: 0;
   // }
 
   .navbar-nav {
-    .nav-link {
-      a {
-        font-family: $font__secondary;
-        font-size: 16px;
-        font-weight: 400;
-        color: $light;
-        line-height: 36px;
-        letter-spacing: -0.24px;
-        text-transform: uppercase;
-        &:hover {
-          // background-color: $gray-2;
-          border-radius: 6px;
-          text-decoration: none;
-        }
-
-        &:active {
-          // color: $primary-red-700 !important;
-        }
-      }
-    }
-  }
-}
-
-.navbar-wrapper {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  color: $white;
-
-  .nav-container {
-    max-width: 1180px;
-    margin: auto;
-  }
-
-  a {
-    text-decoration: none;
-    color: $secondary;
-  }
-
-  .navbar {
-    @include medium-screen {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
-  .custom-logo-link {
-    img {
-      width: 120px;
-      height: auto;
-      position: relative;
-      left: 14px;
-
-      @include medium-screen {
-        left: 0px;
-      }
-    }
-  }
-
-  .navbar-brand {
-    margin-left: 1rem;
-    font-family: $font__main;
-    font-size: 20px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
-
-    @include medium-screen {
-      font-size: 28px;
-      margin-left: inherit;
-    }
-  }
-
-  .navbar-toggler {
-    color: rgba(255, 255, 255, 1);
-    margin-right: 0;
-    border: none;
-
-    @include large-screen {
-      margin-right: inherit;
-    }
-  }
-
-  .container {
-    min-width: 100%;
-    padding: 0;
-
-    @include medium-screen {
-      min-width: inherit;
-      padding: inherit;
-      max-width: 1180px;
-      padding: 0.5rem 0;
-    }
-  }
-  .navbar-collapse {
-    position: relative;
-    top: 22px;
-    padding: 30px 1rem;
-
-    @include medium-screen {
-      position: static;
-      background-color: inherit;
-    }
-
-    .navbar-nav {
-      align-items: center;
-
-      @include large-screen {
-        align-items: baseline;
-      }
-
-      .menu-item {
-        margin-bottom: 20px;
-
-        @include medium-screen {
-          margin-bottom: 0px;
-          margin-right: 1.25rem;
-        }
-
-        // These importants are needed to override bootstraps inherit property on the nav-link class
-
-        &.active {
-          .nav-link {
-            // background-color: $light-gray;
-            // color: $primary-red-700 !important;
-            border-radius: 6px;
-          }
-        }
-      }
-    }
-
+    align-items: center;
     .nav-link {
       font-family: $font__secondary;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 10px;
-      padding: 10px 25px;
-
-      @include medium-screen {
-        // color: inherit;
-        font-size: 22px;
-      }
-
-      @include medium-screen {
-        font-size: 14px;
-      }
-
+      font-size: 16px;
+      font-weight: 300;
+      color: $light;
+      line-height: 36px;
+      letter-spacing: -0.24px;
+      text-transform: uppercase;
       &:hover {
-        // background-color: $gray-2;
+        color: $secondary;
         border-radius: 6px;
-        text-decoration: none;
+        text-decoration: none !important;
       }
 
       &:active {
-        // color: $primary-red-700 !important;
+        color: $secondary !important;
+      }
+
+      @include medium-screen {
+        margin-right: 15px;
       }
     }
   }
-
-  .btn {
-    margin: 0;
-  }
 }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+// .navbar-wrapper {
+//   width: 100%;
+//   background: rgba(0, 0, 0, 0.7);
+//   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+//   color: $white;
+
+//   .nav-container {
+//     max-width: 1180px;
+//     margin: auto;
+//   }
+
+//   a {
+//     text-decoration: none;
+//     color: $secondary;
+//   }
+
+//   .navbar {
+//     @include medium-screen {
+//       padding-top: 0;
+//       padding-bottom: 0;
+//     }
+//   }
+
+//   .custom-logo-link {
+//     img {
+//       width: 120px;
+//       height: auto;
+//       position: relative;
+//       left: 14px;
+
+//       @include medium-screen {
+//         left: 0px;
+//       }
+//     }
+//   }
+
+//   .navbar-brand {
+//     margin-left: 1rem;
+//     font-family: $font__main;
+//     font-size: 20px;
+//     font-weight: 400;
+//     font-style: normal;
+//     letter-spacing: normal;
+//     line-height: normal;
+//     text-align: left;
+
+//     @include medium-screen {
+//       font-size: 28px;
+//       margin-left: inherit;
+//     }
+//   }
+
+//   .navbar-toggler {
+//     color: rgba(255, 255, 255, 1);
+//     margin-right: 0;
+//     border: none;
+
+//     @include large-screen {
+//       margin-right: inherit;
+//     }
+//   }
+
+//   .container {
+//     min-width: 100%;
+//     padding: 0;
+
+//     @include medium-screen {
+//       min-width: inherit;
+//       padding: inherit;
+//       max-width: 1180px;
+//       padding: 0.5rem 0;
+//     }
+//   }
+//   .navbar-collapse {
+//     position: relative;
+//     top: 22px;
+//     padding: 30px 1rem;
+
+//     @include medium-screen {
+//       position: static;
+//       background-color: inherit;
+//     }
+
+//     .navbar-nav {
+//       align-items: center;
+
+//       @include large-screen {
+//         align-items: baseline;
+//       }
+
+//       .menu-item {
+//         margin-bottom: 20px;
+
+//         @include medium-screen {
+//           margin-bottom: 0px;
+//           margin-right: 1.25rem;
+//         }
+
+//         // These importants are needed to override bootstraps inherit property on the nav-link class
+
+//         &.active {
+//           .nav-link {
+//             // background-color: $light-gray;
+//             // color: $primary-red-700 !important;
+//             border-radius: 6px;
+//           }
+//         }
+//       }
+//     }
+
+//     .nav-link {
+//       font-family: $font__secondary;
+//       font-size: 18px;
+//       font-weight: 700;
+//       line-height: 10px;
+//       padding: 10px 25px;
+
+//       @include medium-screen {
+//         // color: inherit;
+//         font-size: 22px;
+//       }
+
+//       @include medium-screen {
+//         font-size: 14px;
+//       }
+
+//       &:hover {
+//         // background-color: $gray-2;
+//         border-radius: 6px;
+//         text-decoration: none;
+//       }
+
+//       &:active {
+//         // color: $primary-red-700 !important;
+//       }
+//     }
+//   }
+
+//   .btn {
+//     margin: 0;
+//   }
+// }
 
 //navbar active overide
 .navbar-dark .navbar-nav .active > .nav-link {
