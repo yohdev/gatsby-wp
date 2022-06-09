@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Menu from "./Menu"
-import ToggleIcon from "../assets/svg/toggle.inline.svg"
-import { Container, Navbar, Toggle, Nav, NavDropdown } from "react-bootstrap"
+import { Container, Navbar } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
 
 const Header = ({ pageContext, toggleBackdrop, ...props }) => {
@@ -20,9 +19,9 @@ const Header = ({ pageContext, toggleBackdrop, ...props }) => {
     <header id="masthead" className="">
       <Navbar expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Link to="/">
             <img src={logo} alt="" />
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Menu />
         </Container>
