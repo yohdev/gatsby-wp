@@ -48,6 +48,10 @@
   .has-dark-background-color {
 	  background-color: $dark;
   }
+
+  .has-light-background-color {
+	background-color: $light;
+}
   
   //Text Colors
   .has-primary-color {
@@ -78,7 +82,8 @@
 	color: $black;
   }
 
-  .has-light-color {
+  .has-light-color, 
+  .has-white-color {
 	  color: $light;
   }
   
