@@ -79,7 +79,7 @@ const SearchResults = props => {
       <Container>
         <Form className="form-inline my-2 my-lg-0">
           <Form.Group className="ms-sm-2" controlId="formBasicSearch">
-            <Form.Control type="text" placeholder="Search.."  onChange={e => setQuery(e.target.value)} />
+            <Form.Control type="text" placeholder="Search.."  onChange={e => handleChange(e.target.value)} />
           </Form.Group>
         </Form>
     
