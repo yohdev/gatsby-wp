@@ -1,3 +1,60 @@
+.footer {
+  background-color: $gray-150;
+  padding-top: 10%;
+  padding-bottom: 20px;
+
+  .footer-block {
+    width: 50%;
+    margin: 0 auto 20px auto;
+
+    @include medium-screen {
+      margin: 0;
+    }
+    .footer-block-title {
+      font-size: 16px;
+      color: $primary;
+      line-height: 23px;
+      letter-spacing: 0;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .footer-links {
+      a {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        color: $dark;
+        line-height: 23px;
+        letter-spacing: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .gradient-btn {
+      margin-bottom: 15px;
+    }
+
+    .address,
+    .email,
+    .phone {
+      display: block;
+      font-size: 16px;
+      font-weight: 300;
+      color: $dark;
+      line-height: 23px;
+      letter-spacing: 0;
+      margin-bottom: 5px;
+    }
+
+    .email {
+      text-decoration: underline;
+    }
+  }
+}
+
 .footer-wrapper {
   background-color: $dark;
   color: $white;

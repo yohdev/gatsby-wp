@@ -2,100 +2,109 @@
 /* stylelint-disable */
 .editor-styles-wrapper .wp-block-button,
 .wp-block-button {
+  // Style variation for 'layout-border-white-no-fill'
+  &.is-style-fill {
+    .wp-block-button__link {
+      @include button;
+    }
+  }
 
-    // Style variation for 'layout-border-white-no-fill'
-	&.is-style-fill {
+  // Style variation for 'layout-border-blue-fill'
+  &.is-style-layout-primary-fill {
+    .wp-block-button__link {
+      border: 1px solid $primary;
+      background-color: $primary !important;
+      color: $white !important;
+      @include button;
 
-		.wp-block-button__link {
-			@include button;
-		}
-	}
+      &:hover {
+        border: 1px solid lighten($primary, 10%) !important;
+        background-color: lighten($primary, 20%) !important;
+      }
+    }
+  }
 
-	// Style variation for 'layout-border-blue-fill'
-	&.is-style-layout-primary-fill {
+  // Style variation for 'layout-border-secondary-no-fill'
+  &.is-style-layout-secondary-fill {
+    .wp-block-button__link {
+      border: 1px solid $secondary;
+      background-color: $secondary;
+      color: $white;
+      @include button;
 
-		.wp-block-button__link {
-			border: 1px solid $primary;
-			background-color: $primary !important;
-			color: $white !important;
-            @include button;
+      &:hover {
+        border: 1px solid darken($secondary, 10%);
+        background-color: darken($secondary, 20%);
+      }
+    }
+  }
 
-			&:hover {
-				border: 1px solid lighten($primary, 10%) !important;
-				background-color: lighten($primary, 20%) !important;
-			}
-		}
-	}
+  // Style variation for 'layout-border-white-no-fill'
+  &.is-style-layout-border-white-no-fill {
+    .wp-block-button__link {
+      border: 1px solid $white;
+      background-color: transparent !important;
+      color: $white !important;
+      @include button;
 
-    // Style variation for 'layout-border-secondary-no-fill'
-	&.is-style-layout-secondary-fill {
+      &:hover {
+        background-color: $white !important;
+        color: $primary !important;
+      }
+    }
+  }
 
-		.wp-block-button__link {
-			border: 1px solid $secondary;
-			background-color: $secondary;
-			color: $white; 
-            @include button;
+  // Style variation for 'layout-border-white-no-fill'
+  &.is-style-layout-border-dark-no-fill {
+    .wp-block-button__link {
+      border: 1px solid $primary;
+      background-color: transparent !important;
+      color: $primary !important;
+      @include button;
 
-			&:hover {
-				border: 1px solid darken($secondary, 10%); 
-				background-color: darken($secondary, 20%); 
-			}
-		}
-	}
-
-	// Style variation for 'layout-border-white-no-fill'
-	&.is-style-layout-border-white-no-fill {
-
-		.wp-block-button__link {
-			border: 1px solid $white;
-			background-color: transparent !important;
-			color: $white !important;
-            @include button;
-
-			&:hover {
-				background-color: $white !important;
-				color: $primary !important;
-			}
-		}
-	}
-
-	// Style variation for 'layout-border-white-no-fill'
-	&.is-style-layout-border-dark-no-fill {
-
-		.wp-block-button__link {
-			border: 1px solid $primary;
-			background-color: transparent !important;
-			color: $primary !important;
-			@include button;
-
-			&:hover {
-				border: 1px solid lighten($dark, 70%) !important;
-				background-color: lighten($dark, 80%) !important;
-			}
-		}
-	}
+      &:hover {
+        border: 1px solid lighten($dark, 70%) !important;
+        background-color: lighten($dark, 80%) !important;
+      }
+    }
+  }
 }
 
 // Style variation block settings preview styles.
 .block-editor-block-styles__item[aria-label="White outline - to be used with dark background"] {
-	.block-editor-block-styles__item-preview,
-	.block-editor-block-list__layout.is-root-container {
-		background-color: $primary;
+  .block-editor-block-styles__item-preview,
+  .block-editor-block-list__layout.is-root-container {
+    background-color: $primary;
 
-		.wp-block-button.is-style-layout-border-white-no-fill {
-			.wp-block-button__link {
-				background-color: $primary;
-			}
-		}
-	}
+    .wp-block-button.is-style-layout-border-white-no-fill {
+      .wp-block-button__link {
+        background-color: $primary;
+      }
+    }
+  }
 }
 
 .slick-slider {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .slick-dots {
-	position: relative !important;
+  position: relative !important;
 }
 
 /* stylelint-enable */
+
+.gradient-btn {
+  background: transparent linear-gradient(282deg, #39306f 0%, #10d1d3 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 23px;
+  padding: 5px 20px;
+  font-weight: 300;
+  color: $light;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $light;
+    text-decoration: none;
+  }
+}
