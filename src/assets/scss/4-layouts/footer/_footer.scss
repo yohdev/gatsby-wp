@@ -1,56 +1,153 @@
-.footer {
+.footer-container {
   background-color: $gray-150;
-  padding-top: 10%;
-  padding-bottom: 20px;
 
-  .footer-block {
-    width: 50%;
-    margin: 0 auto 20px auto;
+  .prefooter {
+    padding-top: 50px;
+    background: linear-gradient(180deg, $secondary 70%, $gray-150 30%);
 
-    @include medium-screen {
-      margin: 0;
+    .heading-container {
+      text-align: center;
+      span {
+        display: block;
+        font-family: $font__notation;
+        font-size: 30px;
+        font-weight: 700;
+        color: $dark;
+        @include medium-screen {
+          font-size: 45px;
+          line-height: 52px;
+        }
+      }
     }
-    .footer-block-title {
-      font-size: 16px;
-      color: $primary;
-      line-height: 23px;
-      letter-spacing: 0;
-      display: block;
-      margin-bottom: 15px;
+
+    .prefooter-block-container {
+      .prefooter-block {
+        position: relative;
+
+        &.left {
+          margin-bottom: 20px;
+
+          @include medium-screen {
+            margin-bottom: 0;
+          }
+        }
+        .block-border {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -10px;
+          width: 20px;
+          height: 100%;
+          background-color: $primary;
+          border-radius: 5px;
+        }
+
+        .block-content {
+          position: relative;
+          z-index: 2;
+          background-color: $light;
+          padding: 20px;
+          position: relative;
+          border-radius: 5px;
+          box-shadow: $shadow;
+          .icon {
+            width: 88px;
+            height: 88px;
+            background-color: $primary;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .fa-list-check,
+            .fa-circle-question {
+              color: $light;
+              width: 49px;
+              height: 48px;
+            }
+          }
+
+          .heading {
+            font-family: $font__main;
+            font-size: 28px;
+            font-weight: 700;
+            color: $primary;
+            line-height: 36px;
+            letter-spacing: 0;
+          }
+
+          .text {
+            font-family: $font__secondary;
+            font-size: 16px;
+            font-weight: 300;
+          }
+        }
+      }
     }
-    .footer-links {
-      a {
+  }
+
+  .footer-bottom {
+    padding-top: 8%;
+    padding-bottom: 20px;
+
+    .footer-block {
+      width: 50%;
+      margin: 0 auto 20px auto;
+
+      @include medium-screen {
+        margin: 0;
+        width: 100%;
+        margin: 0;
+      }
+      .footer-block-title {
+        font-size: 16px;
+        color: $primary;
+        line-height: 23px;
+        letter-spacing: 0;
+        display: block;
+        margin-bottom: 15px;
+      }
+      .footer-links {
+        a {
+          display: block;
+          font-size: 16px;
+          font-weight: 300;
+          color: $dark;
+          line-height: 23px;
+          letter-spacing: 0;
+
+          &:not(:last-of-type) {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      .gradient-btn {
+        margin-bottom: 15px;
+      }
+
+      .address,
+      .email,
+      .phone {
         display: block;
         font-size: 16px;
         font-weight: 300;
         color: $dark;
         line-height: 23px;
         letter-spacing: 0;
+        margin-bottom: 5px;
+      }
 
-        &:not(:last-of-type) {
-          margin-bottom: 5px;
-        }
+      .email {
+        text-decoration: underline;
       }
     }
+  }
 
-    .gradient-btn {
-      margin-bottom: 15px;
-    }
-
-    .address,
-    .email,
-    .phone {
-      display: block;
-      font-size: 16px;
+  .copyright-container {
+    .copyright {
+      font-size: 14px;
       font-weight: 300;
-      color: $dark;
-      line-height: 23px;
-      letter-spacing: 0;
-      margin-bottom: 5px;
-    }
-
-    .email {
-      text-decoration: underline;
     }
   }
 }
