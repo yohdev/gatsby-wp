@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "./UniversalLink"
+import SearchForm from "./SearchForm"
 
 const Menu = () => {
   const { wpMenu } = useStaticQuery(graphql`
@@ -61,6 +62,7 @@ const Menu = () => {
           )
         })}
       </ul>
+      <SearchForm/>
     </div>
   )
 }

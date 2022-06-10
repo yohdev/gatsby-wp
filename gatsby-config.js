@@ -50,6 +50,7 @@ module.exports = {
         // since we can get block data on the `block` field
         // we don't need these fields
         excludeFieldNames: [`blocksJSON`, `saveContent`],
+        includedRoutes: ["**/searchResults"],
         type: {
           Post: {
             limit:

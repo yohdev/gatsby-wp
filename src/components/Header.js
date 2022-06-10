@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useEffect, useState } from "react";
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Menu from "./Menu"
 import ToggleIcon from "../assets/svg/toggle.inline.svg"
+import SearchForm from "./SearchForm"
 
 const Header = ({ pageContext, toggleBackdrop, ...props }) => {
+
   const { wp } = useStaticQuery(graphql`
     {
       wp {
