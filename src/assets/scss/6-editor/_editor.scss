@@ -1,0 +1,119 @@
+@import '../essentials';
+// Generic.
+@import '../2-generic/elements';
+@import '../2-generic/buttons';
+@import '../2-generic/editor-color-classes';
+
+@import '../blocks.scss';
+@import '../../library/css/bootstrap-scss/bootstrap-utilities.scss';
+
+.wp-block {
+  max-width: 1366px;
+  margin: 15px 0;
+  padding: 15px;
+
+  .is-style-column {
+    &-medium-center,
+    &-small-center {
+      margin: auto;
+    }
+  }
+}
+
+.acf-block-preview {
+  .yohdev-horizontal-card {
+    border-top: 1.5px solid $dark;
+    border-bottom: 1.5px solid $dark;
+    max-width: 750px;
+    position: relative;
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+
+      .img-hover {
+        opacity: 1;
+        transition-duration: 0.4s;
+      }
+
+      .card-content {
+        .heading,
+        .card-text {
+          color: $white;
+          transition-duration: 0.4s;
+        }
+
+        .icon {
+          .temp-icon {
+            position: relative;
+            right: 20px;
+            transition: ease-in 0.4s;
+          }
+        }
+      }
+    }
+    .img-hover {
+      opacity: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .card-content {
+      position: relative;
+
+      padding: 20px;
+      z-index: 111;
+
+      @include small-screen {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .number {
+        font-size: 30px;
+        font-weight: 700;
+        color: $secondary;
+        line-height: 36px;
+        letter-spacing: 0;
+        padding-right: 10px;
+
+        @include medium-screen {
+          padding-right: 0;
+        }
+      }
+
+      .heading {
+        font-size: 30px;
+        font-weight: 700;
+        color: $dark;
+        line-height: 36px;
+        letter-spacing: 0;
+        margin-top: 0;
+      }
+
+      .card-text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $dark;
+        line-height: 23px;
+        letter-spacing: 0;
+        max-width: 430px;
+      }
+
+      .icon {
+        .temp-icon {
+          width: 67px;
+          height: 67px;
+          background-color: $white;
+          border-radius: 50px;
+          box-shadow: 0px 3px 6px #00000029;
+        }
+      }
+    }
+  }
+}
