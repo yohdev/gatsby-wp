@@ -1,0 +1,49 @@
+@import '../1-tools/mixins';
+
+//YohDev Columns
+.yohdev-columns {
+    padding: 2rem 15px;
+    margin: auto;
+    max-width: $site_width;
+
+    &.alignfull {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+//Full Wudth
+.is-style-full {
+    max-width: 100% !important;
+}
+
+.is-style-column {
+    &-small {
+        max-width: $small-container !important;
+    }
+
+    &-medium {
+        max-width: $medium-container !important;
+    }
+
+    &-large {
+        max-width: $large-container !important;
+    }
+}
+
+//should be moved to _cover.scss
+.is-style-cover-container {
+    min-height: auto !important;
+    padding: 0;
+}
+
+//Cloumns Editor Styles
+.editor-styles-wrapper .wp-block {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.editor-styles-wrapper  .is-style-column-small-center,
+.editor-styles-wrapper  .is-style-column-medium-center {
+    margin: 0 auto !important;
+}

@@ -1,6 +1,6 @@
-# Gatsby Starter - WordPress Twenty Twenty
+# Gatsby Starter - YohDevTheme
 
-A port of the WordPress Twenty Twenty theme to Gatsby. 
+A port of the WordPress YohDevTheme to Gatsby. 
 
 ---
 
