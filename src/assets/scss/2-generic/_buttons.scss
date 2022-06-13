@@ -2,72 +2,78 @@
 /* stylelint-disable */
 .editor-styles-wrapper .wp-block-button,
 .wp-block-button {
-  // Style variation for 'layout-border-white-no-fill'
-  &.is-style-fill {
-    .wp-block-button__link {
-      @include button;
-    }
-  }
 
-  // Style variation for 'layout-border-blue-fill'
-  &.is-style-layout-primary-fill {
-    .wp-block-button__link {
-      border: 1px solid $primary;
-      background-color: $primary !important;
-      color: $white !important;
-      @include button;
+    // Style variation for 'layout-border-white-no-fill'
+	&.is-style-fill {
 
-      &:hover {
-        border: 1px solid lighten($primary, 10%) !important;
-        background-color: lighten($primary, 20%) !important;
-      }
-    }
-  }
+		.wp-block-button__link {
+			@include button;
+		}
+	}
 
-  // Style variation for 'layout-border-secondary-no-fill'
-  &.is-style-layout-secondary-fill {
-    .wp-block-button__link {
-      border: 1px solid $secondary;
-      background-color: $secondary !important;
-      color: $white !important;
-      @include button;
+	// Style variation for 'layout-border-blue-fill'
+	&.is-style-layout-primary-fill {
 
-      &:hover {
-        border: 1px solid darken($secondary, 10%) !important;
-        background-color: darken($secondary, 20%) !important;
-      }
-    }
-  }
+		.wp-block-button__link {
+			border: 1px solid $primary;
+			background-color: $primary !important;
+			color: $white !important;
+            @include button;
 
-  // Style variation for 'layout-border-white-no-fill'
-  &.is-style-layout-border-white-no-fill {
-    .wp-block-button__link {
-      border: 1px solid $white;
-      background-color: transparent !important;
-      color: $white !important;
-      @include button;
+			&:hover {
+				border: 1px solid lighten($primary, 10%) !important;
+				background-color: lighten($primary, 20%) !important;
+			}
+		}
+	}
 
-      &:hover {
-        background-color: $white !important;
-        color: $primary !important;
-      }
-    }
-  }
+    // Style variation for 'layout-border-secondary-no-fill'
+	&.is-style-layout-secondary-fill {
 
-  // Style variation for 'layout-border-white-no-fill'
-  &.is-style-layout-border-dark-no-fill {
-    .wp-block-button__link {
-      border: 1px solid $primary;
-      background-color: transparent !important;
-      color: $primary !important;
-      @include button;
+		.wp-block-button__link {
+			border: 1px solid $secondary;
+			background-color: $secondary;
+			color: $white; 
+            @include button;
 
-      &:hover {
-        border: 1px solid lighten($dark, 70%) !important;
-        background-color: lighten($dark, 80%) !important;
-      }
-    }
-  }
+			&:hover {
+				border: 1px solid darken($secondary, 10%); 
+				background-color: darken($secondary, 20%); 
+			}
+		}
+	}
+
+	// Style variation for 'layout-border-white-no-fill'
+	&.is-style-layout-border-white-no-fill {
+
+		.wp-block-button__link {
+			border: 1px solid $white;
+			background-color: transparent !important;
+			color: $white !important;
+            @include button;
+
+			&:hover {
+				background-color: $white !important;
+				color: $primary !important;
+			}
+		}
+	}
+
+	// Style variation for 'layout-border-white-no-fill'
+	&.is-style-layout-border-dark-no-fill {
+
+		.wp-block-button__link {
+			border: 1px solid $primary;
+			background-color: transparent !important;
+			color: $primary !important;
+			@include button;
+
+			&:hover {
+				border: 1px solid lighten($dark, 70%) !important;
+				background-color: lighten($dark, 80%) !important;
+			}
+		}
+	}
 }
 
 // Style variation block settings preview styles.
