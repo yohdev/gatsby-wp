@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "./UniversalLink"
-import { Container, Navbar, Toggle, Nav, NavDropdown } from "react-bootstrap"
+import { Container, Navbar, Button, Nav } from "react-bootstrap"
 
 const Menu = () => {
   const { wpMenu } = useStaticQuery(graphql`
@@ -37,22 +37,23 @@ const Menu = () => {
           const itemId = "menu-item-" + menuItem.databaseId
 
           return (
-            <Nav.Link
+            <UniversalLink
+              to={path}
               id={itemId}
               key={i + menuItem.url}
-              href={path}
               className={
-                "menu-item menu-item-type-custom menu-item-object-custom menu-item-home " +
+                "nav-link menu-item-type-custom menu-item-object-custom menu-item-home " +
                 itemId
               }
+              activeClassName={"current-menu-item current_page_item nav-link"}
             >
               {menuItem.label}
-            </Nav.Link>
+            </UniversalLink>
           )
         })}
-        <button href="/" className="btn gradient-btn">
+        <Button to="/" className="btn gradient-btn">
           Contact Us
-        </button>
+        </Button>
       </Nav>
     </Navbar.Collapse>
   )
