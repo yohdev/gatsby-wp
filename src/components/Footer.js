@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col } from "react-bootstrap"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { Container, Row, Col, Button } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faListCheck } from "@fortawesome/free-solid-svg-icons"
@@ -32,9 +33,9 @@ const Footer = ({}) => {
                     Let us know what you need, and we'll find the best solution
                     to satisfy your business goals.
                   </p>
-                  <button className="btn gradient-btn">
+                  <Button to="/" className="btn gradient-btn">
                     Fill The Assessment Out
-                  </button>
+                  </Button>
                 </div>
               </div>
             </Col>
@@ -50,9 +51,9 @@ const Footer = ({}) => {
                     Let us know what you need, and we'll find the best solution
                     to satisfy your business goals.
                   </p>
-                  <button className="btn gradient-btn">
+                  <Button to="/" className="btn gradient-btn">
                     Fill The Assessment Out
-                  </button>
+                  </Button>
                 </div>
               </div>
             </Col>
@@ -64,7 +65,11 @@ const Footer = ({}) => {
           <Row className="justify-content-md-between">
             <Col md={2} sm={12}>
               <div className="footer-block one">
-                <img src={logo} alt="Logo" className="img-fluid" />
+                <StaticImage
+                  src="../assets/images/logo.svg"
+                  className="img-fluid"
+                  alt="logo"
+                />
               </div>
             </Col>
             <Col md={2} sm={12}>
@@ -100,9 +105,9 @@ const Footer = ({}) => {
             </Col>
             <Col md={3} sm={12}>
               <div className="footer-block five">
-                <a href="/" className="btn gradient-btn">
+                <Button to="/" className="btn gradient-btn">
                   Contact Us
-                </a>
+                </Button>
                 <span className="address">Winston-Salem NC, 27103</span>
                 <Link to="mailto:hello@yohdev.com" className="email">
                   hello@yohdev.com
