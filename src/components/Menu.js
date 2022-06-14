@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "./UniversalLink"
 import { Container, Navbar, Button, Nav } from "react-bootstrap"
 
+
+
 const Menu = () => {
   const { wpMenu } = useStaticQuery(graphql`
     {

@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useEffect, useState } from "react";
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Menu from "./Menu"
 import { Container, Navbar } from "react-bootstrap"
 
+
 const Header = ({ pageContext, toggleBackdrop, ...props }) => {
+
   const { wp } = useStaticQuery(graphql`
     {
       wp {
