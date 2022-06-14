@@ -78,24 +78,34 @@
 
 // Style variation block settings preview styles.
 .block-editor-block-styles__item[aria-label="White outline - to be used with dark background"] {
-	.block-editor-block-styles__item-preview,
-	.block-editor-block-list__layout.is-root-container {
-		background-color: $primary;
+  .block-editor-block-styles__item-preview,
+  .block-editor-block-list__layout.is-root-container {
+    background-color: $primary;
 
-		.wp-block-button.is-style-layout-border-white-no-fill {
-			.wp-block-button__link {
-				background-color: $primary;
-			}
-		}
-	}
+    .wp-block-button.is-style-layout-border-white-no-fill {
+      .wp-block-button__link {
+        background-color: $primary;
+      }
+    }
+  }
 }
 
 .slick-slider {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .slick-dots {
-	position: relative !important;
+  position: relative !important;
 }
 
 /* stylelint-enable */
+
+.gradient-btn {
+  background: transparent linear-gradient(282deg, #39306f 0%, #10d1d3 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 23px;
+  padding: 5px 20px;
+  font-weight: 300;
+  color: $light;
+  text-transform: uppercase;
+}
