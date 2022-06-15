@@ -11,7 +11,10 @@ const Home = () => {
         heading="Who's Your Dev?"
         subtitle="YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals."
       />
-      <YohdevSection />
+      <YohdevSection
+        heading="Our Services"
+        subtitle="We provide web development, devops, UIUX, and IT service."
+      />
     </div>
   )
 }
