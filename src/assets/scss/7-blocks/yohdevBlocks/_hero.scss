@@ -1,36 +1,39 @@
 .hero {
-  min-height: 770px;
-  display: flex;
-  background-repeat: no-repeat;
-  background-position: center;
-  @include medium-screen {
-    padding-top: 10%;
-  }
-
-  .left {
-  }
-
-  .right {
-    .heading {
-      font-family: $font__main;
-      font-weight: 800;
-      color: $light;
-      letter-spacing: 0;
-      @include medium-screen {
-        font-size: 60px;
-        line-height: 66px;
-      }
+  &.frontpage {
+    min-height: 770px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include medium-screen {
+      padding-top: 10%;
     }
 
-    .subtitle {
-      font-size: 22px;
-      color: $light;
-      line-height: 36px;
-      letter-spacing: -0.22px;
-      // max-width: 560px;
+    .left {
+    }
 
-      @include medium-screen {
-        padding: 0 40px;
+    .right {
+      .heading {
+        font-family: $font__main;
+        font-weight: 800;
+        color: $light;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        @include medium-screen {
+          font-size: 60px;
+          line-height: 66px;
+        }
+      }
+
+      .subtitle {
+        font-size: 22px;
+        color: $light;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+        margin-bottom: 30px;
+
+        @include medium-screen {
+          padding: 0 40px;
+        }
       }
     }
   }

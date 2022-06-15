@@ -10,7 +10,7 @@ const sectionStyle = {
 
 const Hero = (props) => {
   return (
-    <section className="hero" style={sectionStyle}>
+    <section className="hero frontpage" style={sectionStyle}>
       <Container>
         <Row className="align-items-md-center">
           <Col lg={6} className="left">
