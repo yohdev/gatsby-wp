@@ -1,0 +1,46 @@
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid $dark;
+
+  &:last-of-type {
+    border-bottom: 1px solid $dark;
+  }
+
+  .digit {
+    span {
+      font-family: $font__main;
+      font-size: 30px;
+      font-weight: 700;
+      color: $secondary;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
+  }
+
+  .service-card-text {
+    font-family: $font__secondary;
+    font-size: 16px;
+    font-weight: 300;
+    color: $dark;
+    line-height: 23px;
+    letter-spacing: 0;
+    max-width: 430px;
+    margin-bottom: 0;
+  }
+
+  .arrow {
+    .arrow-icon {
+      display: block;
+      background-image: url("../images/yohArrowRight.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 67px;
+      height: 67px;
+      background-color: $light;
+      border-radius: 50%;
+      box-shadow: $shadow;
+    }
+  }
+}

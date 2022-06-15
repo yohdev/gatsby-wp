@@ -1,6 +1,9 @@
 .yohdev-section-container {
-  height: 500px;
   @include medium-screen {
     padding: 50px 0;
+  }
+
+  &.services {
+    background-color: #f0f0f0;
   }
 }
