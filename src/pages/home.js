@@ -69,6 +69,8 @@ const Home = () => {
           <Row className="justify-content-md-evenly">
             <Col md={4}>
               <ContentCard
+                arrow="true"
+                numArrow="true"
                 number="01"
                 heading="Research &amp; Discovery"
                 text="Based on your requirements, we conduct research to discover the best
@@ -78,6 +80,8 @@ const Home = () => {
             </Col>
             <Col md={4}>
               <ContentCard
+                arrow="true"
+                numArrow="true"
                 number="02"
                 heading="UX/UI Design"
                 text="Based on your requirements, we conduct research to discover the best
@@ -87,6 +91,8 @@ const Home = () => {
             </Col>
             <Col md={4}>
               <ContentCard
+                arrow="true"
+                numArrow="true"
                 number="03"
                 heading="Development"
                 text="Based on your requirements, we conduct research to discover the best
@@ -96,6 +102,8 @@ const Home = () => {
             </Col>
             <Col md={4}>
               <ContentCard
+                arrow="true"
+                numArrow="true"
                 number="04"
                 heading="Testing"
                 text="Based on your requirements, we conduct research to discover the best
@@ -105,6 +113,7 @@ const Home = () => {
             </Col>
             <Col md={4}>
               <ContentCard
+                numArrow="true"
                 number="05"
                 heading="Deployment &amp; Monitoring"
                 text="Based on your requirements, we conduct research to discover the best
