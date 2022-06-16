@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import ImageCard from "../components/reusuables/cards/ImageCard"
 import ServiceCard from "../components/reusuables/cards/ServiceCard"
 import ContentCard from "../components/reusuables/cards/ContentCard"
+import CarouselSection from "../components/reusuables/sections/CarouselSection"
 
 const Home = () => {
   return (
@@ -62,6 +63,9 @@ const Home = () => {
         sectionHeading="true"
         heading="Our Workflow"
         color="white"
+        text="From the moment we start working together, the journey to
+              outstanding results begins and in 5 steps, you'll soon be able to
+              reach your business goals faster and more efficiently."
         button="true"
         btnText="Contact Us"
       >
@@ -123,6 +127,17 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+      </YohdevSection>
+      <YohdevSection
+        style="carousel"
+        sectionHeading="true"
+        heading="Featured Work"
+        text="We ensure high quality of work to make our clients be
+      satisfy."
+        button="true"
+        btnText="Contact Us"
+      >
+        <CarouselSection />
       </YohdevSection>
     </div>
   )

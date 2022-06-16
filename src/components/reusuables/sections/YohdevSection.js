@@ -8,13 +8,9 @@ const YohdevSection = (props) => {
     <section className={`yohdev-section-container ${props.style}`}>
       <Container>
         {props.sectionHeading == "true" ? (
-          <div className={`text-container text-center mb-5 ${props.color}`}>
+          <div className={`text-container mb-5 ${props.color}`}>
             <SectionHeader className="test" heading={props.heading} />
-            <p className={`section-text`}>
-              From the moment we start working together, the journey to
-              outstanding results begins and in 5 steps, you'll soon be able to
-              reach your business goals faster and more efficiently.
-            </p>
+            <p className={`section-text`}>{props.text}</p>
           </div>
         ) : (
           ""

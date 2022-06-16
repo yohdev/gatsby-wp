@@ -1,0 +1,15 @@
+.carousel-container {
+  .carousel-card {
+    background-color: $white;
+
+    .card-img {
+    }
+
+    .carousel-card-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+}
