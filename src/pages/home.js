@@ -2,10 +2,10 @@ import React from "react"
 import Hero from "../components/Hero"
 import Header from "../components/Header"
 import YohdevSection from "../components/reusuables/sections/YohdevSection"
-import { Row, Col } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import ImageCard from "../components/reusuables/cards/ImageCard"
 import ServiceCard from "../components/reusuables/cards/ServiceCard"
-import YohDevButton from "../components/YohDevButton"
+import ContentCard from "../components/reusuables/cards/ContentCard"
 
 const Home = () => {
   return (
@@ -15,7 +15,11 @@ const Home = () => {
         heading="Who's Your Dev?"
         subtitle="YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals."
       />
-      <YohdevSection style={{ backgroundColor: "#F0F0F0" }}>
+      <YohdevSection
+        style="services"
+        button="true"
+        btnText="Learn More About Us"
+      >
         <Row className="justify-content-md-between">
           <Col lg={3}>
             <h3 className="heading-lrg">Our Services</h3>
@@ -36,7 +40,7 @@ const Home = () => {
               number="02"
               arrow="true"
               heading="DevOps"
-              text="Maximize your team’s efficiency with ready workflows for your software development operations."
+              text="Maximize your team's efficiency with ready workflows for your software development operations."
             />
             <ServiceCard
               number="03"
@@ -48,13 +52,68 @@ const Home = () => {
               number="04"
               arrow="true"
               heading="IT"
-              text="Whether it’s automation, data, email, dev, cloud – we have you covered."
+              text="Whether it's automation, data, email, dev, cloud - we have you covered."
             />
           </Col>
         </Row>
-        <div className="btn-container text-center mt-3">
-          <YohDevButton type="gradient-btn" title="Learn More About Us" />
-        </div>
+      </YohdevSection>
+      <YohdevSection
+        style="workflow"
+        sectionHeading="true"
+        heading="Our Workflow"
+        color="white"
+        button="true"
+        btnText="Contact Us"
+      >
+        <Container>
+          <Row className="justify-content-md-evenly">
+            <Col md={4}>
+              <ContentCard
+                number="01"
+                heading="Research &amp; Discovery"
+                text="Based on your requirements, we conduct research to discover the best
+                ways to help you meet your business goals while also help your clients
+                meet theirs."
+              />
+            </Col>
+            <Col md={4}>
+              <ContentCard
+                number="02"
+                heading="UX/UI Design"
+                text="Based on your requirements, we conduct research to discover the best
+                ways to help you meet your business goals while also help your clients
+                meet theirs."
+              />
+            </Col>
+            <Col md={4}>
+              <ContentCard
+                number="03"
+                heading="Development"
+                text="Based on your requirements, we conduct research to discover the best
+                ways to help you meet your business goals while also help your clients
+                meet theirs."
+              />
+            </Col>
+            <Col md={4}>
+              <ContentCard
+                number="04"
+                heading="Testing"
+                text="Based on your requirements, we conduct research to discover the best
+                ways to help you meet your business goals while also help your clients
+                meet theirs."
+              />
+            </Col>
+            <Col md={4}>
+              <ContentCard
+                number="05"
+                heading="Deployment &amp; Monitoring"
+                text="Based on your requirements, we conduct research to discover the best
+                ways to help you meet your business goals while also help your clients
+                meet theirs."
+              />
+            </Col>
+          </Row>
+        </Container>
       </YohdevSection>
     </div>
   )

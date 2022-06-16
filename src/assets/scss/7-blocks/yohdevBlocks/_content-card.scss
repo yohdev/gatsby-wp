@@ -1,0 +1,28 @@
+.content-card {
+  background: $light;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 290px;
+  margin-bottom: 30px;
+  .num-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .num {
+      font-family: $font__main;
+      font-size: 30px;
+      font-weight: 700;
+      color: $warning;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
+
+    .arrow {
+    }
+  }
+
+  .content-card-heading {
+    font-weight: 700;
+    max-width: 210px;
+  }
+}
