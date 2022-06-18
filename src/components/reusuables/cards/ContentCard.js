@@ -14,7 +14,7 @@ const ContentCard = (props) => {
               </span>
             ) : (
               <span className="arrow">
-                <StaticImage src="../../../assets/images/check.svg" />
+                <StaticImage src="../../../assets/images/yohArrowLong.svg" />
               </span>
             )}
           </div>

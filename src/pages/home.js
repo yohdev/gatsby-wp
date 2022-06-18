@@ -9,6 +9,79 @@ import ContentCard from "../components/reusuables/cards/ContentCard"
 import CarouselSection from "../components/reusuables/sections/CarouselSection"
 
 const Home = () => {
+  const ServiceCardData = [
+    {
+      id: "01",
+      heading: "Web Development",
+      text: "Get online with our custom websites, web apps, and internal applications.",
+      arrow: "true",
+    },
+    {
+      id: "02",
+      heading: "DevOps",
+      text: "Maximize your team's efficiency with ready workflows for your software development operations.",
+      arrow: "true",
+    },
+    {
+      id: "03",
+      heading: "UI.UX",
+      text: "Amaze your clients with beautiful interfaces that will make them stay.",
+      arrow: "true",
+    },
+    {
+      id: "04",
+      heading: "IT",
+      text: "Whether it's automation, data, email, dev, cloud - we have you covered.",
+      arrow: "true",
+    },
+  ]
+
+  const SectionHeadingData = [
+    {
+      sectionTitle: "Our Workflow",
+      sectionSubtitle:
+        "From the moment we start working together, the journey to outstanding results begins and in 5 steps, you'll soon be able to reach your business goals faster and more efficiently.",
+      sectionHeading: "true",
+    },
+  ]
+
+  const WorkflowCardData = [
+    {
+      id: "01",
+      heading: "Research & Discovery",
+      text: "Based on your requirements, we conduct research to discover the best ways to help you meet your business goals while also help your clients meet theirs.",
+      numArrow: "true",
+      arrow: "true",
+    },
+    {
+      id: "02",
+      heading: "UX/UI Design",
+      text: "Maximize your team's efficiency with ready workflows for your software development operations.",
+      numArrow: "true",
+      arrow: "true",
+    },
+    {
+      id: "03",
+      heading: "Development",
+      text: "Amaze your clients with beautiful interfaces that will make them stay.",
+      numArrow: "true",
+      arrow: "true",
+    },
+    {
+      id: "04",
+      heading: "Testing",
+      text: "Whether it's automation, data, email, dev, cloud - we have you covered.",
+      numArrow: "true",
+      arrow: "true",
+    },
+    {
+      id: "05",
+      heading: "Deployment & Monitoring",
+      text: "Whether it's automation, data, email, dev, cloud - we have you covered.",
+      numArrow: "false",
+    },
+  ]
+
   return (
     <div className="page-container">
       <Header />
@@ -22,7 +95,7 @@ const Home = () => {
         btnText="Learn More About Us"
       >
         <Row className="justify-content-md-between">
-          <Col lg={3}>
+          <Col lg={3} className="mb-4">
             <h3 className="heading-lrg">Our Services</h3>
             <p className="subtitle">
               We provide web development, devops, UIUX, and IT service.
@@ -30,34 +103,20 @@ const Home = () => {
             <ImageCard />
           </Col>
           <Col lg={8}>
-            <ServiceCard
-              number="01"
-              arrow="true"
-              heading="Web Development"
-              text="Get online with our custom websites, web apps, and internal
-          applications."
-            />
-            <ServiceCard
-              number="02"
-              arrow="true"
-              heading="DevOps"
-              text="Maximize your team's efficiency with ready workflows for your software development operations."
-            />
-            <ServiceCard
-              number="03"
-              arrow="true"
-              heading="UI.UX"
-              text="Amaze your clients with beautiful interfaces that will make them stay."
-            />
-            <ServiceCard
-              number="04"
-              arrow="true"
-              heading="IT"
-              text="Whether it's automation, data, email, dev, cloud - we have you covered."
-            />
+            {ServiceCardData.map((data) => {
+              return (
+                <ServiceCard
+                  number={data.id}
+                  arrow={data.arrow}
+                  heading={data.heading}
+                  text={data.text}
+                />
+              )
+            })}
           </Col>
         </Row>
       </YohdevSection>
+
       <YohdevSection
         style="workflow"
         sectionHeading="true"
@@ -71,60 +130,19 @@ const Home = () => {
       >
         <Container>
           <Row className="justify-content-md-evenly">
-            <Col md={4}>
-              <ContentCard
-                arrow="true"
-                numArrow="true"
-                number="01"
-                heading="Research &amp; Discovery"
-                text="Based on your requirements, we conduct research to discover the best
-                ways to help you meet your business goals while also help your clients
-                meet theirs."
-              />
-            </Col>
-            <Col md={4}>
-              <ContentCard
-                arrow="true"
-                numArrow="true"
-                number="02"
-                heading="UX/UI Design"
-                text="Based on your requirements, we conduct research to discover the best
-                ways to help you meet your business goals while also help your clients
-                meet theirs."
-              />
-            </Col>
-            <Col md={4}>
-              <ContentCard
-                arrow="true"
-                numArrow="true"
-                number="03"
-                heading="Development"
-                text="Based on your requirements, we conduct research to discover the best
-                ways to help you meet your business goals while also help your clients
-                meet theirs."
-              />
-            </Col>
-            <Col md={4}>
-              <ContentCard
-                arrow="true"
-                numArrow="true"
-                number="04"
-                heading="Testing"
-                text="Based on your requirements, we conduct research to discover the best
-                ways to help you meet your business goals while also help your clients
-                meet theirs."
-              />
-            </Col>
-            <Col md={4}>
-              <ContentCard
-                numArrow="true"
-                number="05"
-                heading="Deployment &amp; Monitoring"
-                text="Based on your requirements, we conduct research to discover the best
-                ways to help you meet your business goals while also help your clients
-                meet theirs."
-              />
-            </Col>
+            {WorkflowCardData.map((data) => {
+              return (
+                <Col md={4}>
+                  <ContentCard
+                    arrow="true"
+                    numArrow="true"
+                    number={data.id}
+                    heading={data.heading}
+                    text={data.text}
+                  />
+                </Col>
+              )
+            })}
           </Row>
         </Container>
       </YohdevSection>

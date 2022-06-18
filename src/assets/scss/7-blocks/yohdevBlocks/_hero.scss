@@ -4,6 +4,7 @@
     display: flex;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 20%;
     @include medium-screen {
       padding-top: 10%;
     }
@@ -14,10 +15,12 @@
     .right {
       .heading {
         font-family: $font__main;
+        font-size: 32px;
         font-weight: 800;
         color: $light;
         letter-spacing: 0;
         text-transform: uppercase;
+
         @include medium-screen {
           font-size: 60px;
           line-height: 66px;
