@@ -1,0 +1,14 @@
+.content-container {
+  &:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+  .heading {
+  }
+  .text {
+    font-family: $font__secondary;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.22px;
+  }
+}

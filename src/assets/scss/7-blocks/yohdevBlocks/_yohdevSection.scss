@@ -1,0 +1,67 @@
+.yohdev-section-container {
+  padding: 50px 0;
+  @include medium-screen {
+    padding: 100px 0;
+  }
+
+  &.services {
+    background-color: #f0f0f0;
+  }
+
+  &.workflow {
+    background-image: url("../images/heroHome.jpg");
+    background-position: center;
+    background-size: cover;
+
+    .text-container {
+      text-align: center;
+      &.white {
+        color: $light;
+      }
+      .section-header {
+        font-size: 45px;
+        font-weight: 700;
+        color: $light;
+        line-height: 52px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .section-text {
+        max-width: 1000px;
+        margin: 0 auto;
+        font-size: 22px;
+        font-family: $font__secondary;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+      }
+    }
+  }
+
+  &.carousel {
+    background-color: #f0f0f0;
+    .text-container {
+      @include medium-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+
+      .section-header {
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 52px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .section-text {
+        max-width: 1000px;
+        font-size: 22px;
+        font-family: $font__secondary;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+      }
+    }
+  }
+}
