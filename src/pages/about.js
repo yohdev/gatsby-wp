@@ -5,6 +5,8 @@ import { Container, Row, Col } from "react-bootstrap"
 import YohdevSection from "../components/reusuables/sections/YohdevSection"
 import ImageWithText from "../components/reusuables/content/ImageWithText"
 import CardVerticalHover from "../components/reusuables/cards/CardVerticalHover"
+import { StaticImage } from "gatsby-plugin-image"
+import TeamSection from "../components/reusuables/sections/TeamSection"
 
 const About = () => {
   return (
@@ -64,8 +66,17 @@ const About = () => {
         sectionHeading={true}
         sectionHeadingAlt={true}
         heading="Mission &amp; Vision"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      ></YohdevSection>
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+      >
+        <StaticImage
+          src={`../assets/images/Mission.png`}
+          className="img-fluid"
+        />
+      </YohdevSection>
+      <TeamSection
+        heading="Our Team"
+        text="20+ Years of combined professional experience. Meet our great team and achieve your business goals."
+      ></TeamSection>
     </div>
   )
 }

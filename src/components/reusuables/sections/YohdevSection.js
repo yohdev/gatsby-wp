@@ -5,7 +5,7 @@ import SectionHeader from "../typography/SectionHeader"
 
 const YohdevSection = (props) => {
   const sectionHeading = props.sectionHeading == true ? true : false
-  const sectionHeadingAlt = props.sectionHeadingAlt === true ? "d-flex" : ""
+  const sectionHeadingAlt = props.sectionHeadingAlt === true ? "d-md-flex" : ""
   const textContainerStyle = props.textContainerColor == "white" ? "white" : ""
   const sectionContainerStyle =
     props.sectionContainerStyle == "default"

@@ -9,6 +9,18 @@
     &.white {
       color: $light;
     }
+
+    &.d-md-flex {
+      text-align: left;
+      .section-header {
+        flex: 1;
+      }
+
+      .section-text {
+        flex: 2;
+        max-width: 675px;
+      }
+    }
     .section-header {
       font-size: 45px;
       font-weight: 700;

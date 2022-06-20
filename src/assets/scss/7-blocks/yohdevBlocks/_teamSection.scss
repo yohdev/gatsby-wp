@@ -1,0 +1,78 @@
+.team-section {
+  background: transparent linear-gradient(180deg, #17152b 0%, #313c4b 100%) 0%
+    0% no-repeat padding-box;
+  padding: 50px 0;
+  @include medium-screen {
+    padding: 100px 0;
+  }
+
+  .heading {
+    font-family: $font__main;
+    @include medium-screen {
+      font-size: 45px;
+      font-weight: 700;
+      color: $white;
+      line-height: 52px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .text {
+    color: $white;
+    max-width: 300px;
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: -0.22px;
+  }
+}
+
+.team-card-container {
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+.team-card {
+  background-color: rgba(#404965, 0.59);
+  max-width: 365px;
+  min-height: 365px;
+  border-radius: 5px;
+
+  .content {
+    position: relative;
+    padding: 20px;
+
+    .title-container {
+      display: flex;
+      justify-content: end;
+      .title {
+        font-size: 22px;
+        color: $secondary;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+      }
+    }
+
+    .image-container {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+
+    .name-container {
+      .name {
+        max-width: 160px;
+        font-size: 30px;
+        font-weight: 700;
+        color: $light;
+        line-height: 36px;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
