@@ -36,9 +36,24 @@ const About = () => {
         heading="Core Values"
         text="Even though we provide custom website development solutions to every partner, our values help us provide the best solutions and make sure that the collaboration is successful for all parties involved."
       >
-        <Row>
+        <Row className="justify-content-md-around">
           <CardVerticalHover
             heading="Passion"
+            text="We believe that the best results are a product of passion and
+              bring it to every project we work on."
+          />
+          <CardVerticalHover
+            heading="Creativity"
+            text="We believe that the best results are a product of passion and
+              bring it to every project we work on."
+          />
+          <CardVerticalHover
+            heading="Transparency"
+            text="We believe that the best results are a product of passion and
+              bring it to every project we work on."
+          />
+          <CardVerticalHover
+            heading="Forgiveness"
             text="We believe that the best results are a product of passion and
               bring it to every project we work on."
           />
