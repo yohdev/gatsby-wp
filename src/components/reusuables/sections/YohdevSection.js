@@ -4,16 +4,28 @@ import YohDevButton from "../../../components/reusuables/YohDevButton"
 import SectionHeader from "../typography/SectionHeader"
 
 const YohdevSection = (props) => {
+  const sectionHeading = props.sectionHeading == true ? true : false
+  const sectionHeadingAlt = props.sectionHeadingAlt === true ? "d-flex" : ""
+  const textContainerStyle = props.textContainerColor == "white" ? "white" : ""
+  const sectionContainerStyle =
+    props.sectionContainerStyle == "default"
+      ? "default"
+      : props.sectionContainerStyle == "secondary"
+      ? "secondary"
+      : ""
+
   return (
-    <section className={`yohdev-section-container ${props.style}`}>
+    <section className={`yohdev-section-container ${sectionContainerStyle}`}>
       <Container>
-        {props.sectionHeading == "true" ? (
-          <div className={`text-container mb-5 ${props.color}`}>
-            <SectionHeader className="test" heading={props.heading} />
+        {sectionHeading && (
+          <div
+            className={`text-container mb-5 ${
+              (textContainerStyle, sectionHeadingAlt)
+            }`}
+          >
+            <SectionHeader heading={props.heading} />
             <p className={`section-text`}>{props.text}</p>
           </div>
-        ) : (
-          ""
         )}
 
         {props.children}

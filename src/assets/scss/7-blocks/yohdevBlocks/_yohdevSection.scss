@@ -27,16 +27,12 @@
     }
   }
 
-  &.services {
+  &.default {
     background-color: #f0f0f0;
   }
 
-  &.core-values {
+  &.secondary {
     background-color: $secondary;
-
-    .text-container {
-      text-align: center;
-    }
   }
 
   &.workflow {

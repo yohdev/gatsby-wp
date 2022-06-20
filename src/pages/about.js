@@ -15,7 +15,7 @@ const About = () => {
         subtitle="YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals."
       />
       <YohdevSection
-        style="services"
+        sectionContainerStyle="default"
         button="true"
         btnText="Contact Us"
         btnUrl="/contact"
@@ -31,8 +31,8 @@ const About = () => {
         />
       </YohdevSection>
       <YohdevSection
-        style="core-values"
-        sectionHeading="true"
+        sectionContainerStyle="secondary"
+        sectionHeading={true}
         heading="Core Values"
         text="Even though we provide custom website development solutions to every partner, our values help us provide the best solutions and make sure that the collaboration is successful for all parties involved."
       >
@@ -59,6 +59,13 @@ const About = () => {
           />
         </Row>
       </YohdevSection>
+      <YohdevSection
+        sectionContainerStyle="default"
+        sectionHeading={true}
+        sectionHeadingAlt={true}
+        heading="Mission &amp; Vision"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      ></YohdevSection>
     </div>
   )
 }
