@@ -18,7 +18,11 @@ const ContentAll = (props) => {
             <div className="text">{props.text}</div>
 
             {props.contentButton == "true" ? (
-              <YohDevButton type="gradient-btn" title={props.btnText} />
+              <YohDevButton
+                type="gradient-btn"
+                title={props.btnText}
+                url={props.url}
+              />
             ) : (
               ""
             )}
@@ -42,14 +46,18 @@ const ContentAll = (props) => {
             <div className="text">{props.text}</div>
 
             {props.contentButton == "true" ? (
-              <YohDevButton type="gradient-btn" title={props.btnText} />
+              <YohDevButton
+                type="gradient-btn"
+                title={props.btnText}
+                url={props.url}
+              />
             ) : (
               ""
             )}
           </Col>
           <Col md={5}>
             <StaticImage
-              src={`../../../assets/images/cityBackground.jpg`}
+              src={`../../../assets/images/code.jpg`}
               className="img-fluid"
             />
           </Col>
