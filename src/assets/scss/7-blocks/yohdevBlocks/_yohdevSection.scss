@@ -47,6 +47,12 @@
     background-color: $secondary;
   }
 
+  &.split {
+    background: linear-gradient(180deg, #313c4b 28%, $gray-150 9%);
+
+    padding-top: 0;
+  }
+
   &.workflow {
     background-image: url("../images/heroHome.jpg");
     background-position: center;

@@ -12,6 +12,8 @@ const YohdevSection = (props) => {
       ? "default"
       : props.sectionContainerStyle == "secondary"
       ? "secondary"
+      : props.sectionContainerStyle == "split"
+      ? "split"
       : ""
 
   return (

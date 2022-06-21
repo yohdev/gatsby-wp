@@ -7,6 +7,7 @@ import ImageWithText from "../components/reusuables/content/ImageWithText"
 import CardVerticalHover from "../components/reusuables/cards/CardVerticalHover"
 import { StaticImage } from "gatsby-plugin-image"
 import TeamSection from "../components/reusuables/sections/TeamSection"
+import ClientLogosInline from "../components/reusuables/content/ClientLogosInline"
 
 const About = () => {
   return (
@@ -76,7 +77,13 @@ const About = () => {
       <TeamSection
         heading="Our Team"
         text="20+ Years of combined professional experience. Meet our great team and achieve your business goals."
+        contactHeading="Have a Question?"
+        contactText="We are here for you. Contact us today!"
+        btnText="Contact Us"
       ></TeamSection>
+      <YohdevSection sectionContainerStyle="split">
+        <ClientLogosInline heading="Our Team has Worked with Companies Big and Small" />
+      </YohdevSection>
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import TeamCard from "../cards/TeamCard"
+import YohDevButton from "../YohDevButton"
+import ClientLogosInline from "../content/ClientLogosInline"
 
 const TeamSection = (props) => {
   const TeamData = [
@@ -60,6 +62,13 @@ const TeamSection = (props) => {
               </Col>
             )
           })}
+          <Col md={4}>
+            <div className="contact-container text-center">
+              <h3 className="contact-heading">{props.contactHeading}</h3>
+              <p className="contact-text">{props.contactText}</p>
+              <YohDevButton type="gradient-btn" title={props.btnText} />
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>
