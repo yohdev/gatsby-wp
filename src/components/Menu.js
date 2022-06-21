@@ -1,6 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "./UniversalLink"
+import { Container, Navbar, Button, Nav } from "react-bootstrap"
+
+
 
 const Menu = () => {
   const { wpMenu } = useStaticQuery(graphql`
@@ -28,40 +31,33 @@ const Menu = () => {
   if (!wpMenu?.menuItems?.nodes || wpMenu.menuItems.nodes === 0) return null
 
   return (
-
-
-    <div
-      className="collapse navbar-collapse"
-      aria-label="Horizontal"
-      role="navigation"
-      id="navbarNav"
-    >
-      <ul className="navbar-nav ms-auto" id="menu-main-nav">
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="ms-auto">
         {wpMenu.menuItems.nodes.map((menuItem, i) => {
           const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
 
           const itemId = "menu-item-" + menuItem.databaseId
 
           return (
-            <li
+            <UniversalLink
+              to={path}
               id={itemId}
               key={i + menuItem.url}
               className={
-                "menu-item menu-item-type-custom menu-item-object-custom menu-item-home " +
+                "nav-link menu-item-type-custom menu-item-object-custom menu-item-home " +
                 itemId
               }
+              activeClassName={"current-menu-item current_page_item nav-link"}
             >
-              <UniversalLink
-                to={path}
-                activeClassName={"current-menu-item current_page_item nav-link"}
-              >
-                {menuItem.label}
-              </UniversalLink>
-            </li>
+              {menuItem.label}
+            </UniversalLink>
           )
         })}
-      </ul>
-    </div>
+        <Button to="/" className="btn gradient-btn">
+          Contact Us
+        </Button>
+      </Nav>
+    </Navbar.Collapse>
   )
 }
 

@@ -103,4 +103,10 @@
   color: $light;
   text-transform: uppercase;
   border: none;
+
+  &:hover {
+    color: $light;
+    text-decoration: none;
+  }
+
 }
