@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { Col } from "react-bootstrap"
 
 const TeamCard = (props) => {
   return (

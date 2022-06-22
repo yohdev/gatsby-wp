@@ -8,13 +8,13 @@
 
   .heading {
     font-family: $font__main;
+    font-weight: 700;
+    color: $white;
+    line-height: 52px;
+    letter-spacing: 0;
+    text-transform: uppercase;
     @include medium-screen {
       font-size: 45px;
-      font-weight: 700;
-      color: $white;
-      line-height: 52px;
-      letter-spacing: 0;
-      text-transform: uppercase;
     }
   }
 
@@ -28,8 +28,26 @@
 }
 
 .team-card-container {
+  display: flex;
+  justify-content: center;
+
+  @include medium-screen {
+    display: block;
+  }
   &:not(:last-of-type) {
     margin-bottom: 30px;
+  }
+}
+
+.team-section-heading-container {
+  .heading-content {
+    width: 50%;
+    margin: 0 auto;
+
+    @include medium-screen {
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 
@@ -81,11 +99,11 @@
 }
 
 .contact-container {
-  color: $white;
   padding: 0 80px;
   .contact-heading {
     font-family: $font__main;
     font-size: 30px;
+    color: $white;
     line-height: 36px;
     letter-spacing: 0;
   }
@@ -93,6 +111,7 @@
   .contact-text {
     font-family: $font__secondary;
     font-size: 22px;
+    color: $white;
     line-height: 36px;
     letter-spacing: -0.22px;
   }
@@ -100,13 +119,14 @@
 
 .client-logo-container {
   background-color: $white;
-  // max-width: 1140px;
-  // min-height: 280px;
   padding: 55px 0;
   text-align: center;
-  -webkit-clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
-  clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  @include medium-screen {
+    -webkit-clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
+    clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
+  }
 
   .cl-heading {
     font-family: $font__main;
@@ -119,14 +139,21 @@
 
   .logos-container {
     margin-top: 50px;
+    padding: 0 20px;
+    display: block;
     @include medium-screen {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+      padding: 0;
     }
     img {
-      height: 50px;
-      flex: 1;
+      @include medium-screen {
+        flex: 1;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
     }
   }
 }

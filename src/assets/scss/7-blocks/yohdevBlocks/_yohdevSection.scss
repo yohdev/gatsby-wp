@@ -22,11 +22,15 @@
       }
     }
     .section-header {
-      font-size: 45px;
+      font-size: 30px;
       font-weight: 700;
       line-height: 52px;
       letter-spacing: 0;
       text-transform: uppercase;
+
+      @include medium-screen {
+        font-size: 45px;
+      }
     }
 
     .section-text {
@@ -48,8 +52,8 @@
   }
 
   &.split {
-    background: linear-gradient(180deg, #313c4b 28%, #f0f0f0 9%);
-
+    background: linear-gradient(180deg, #313c4b 36%, #f0f0f0 9%);
+    padding-bottom: 0;
     padding-top: 0;
   }
 

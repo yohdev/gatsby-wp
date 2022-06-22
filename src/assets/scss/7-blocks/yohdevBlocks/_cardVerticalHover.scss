@@ -5,6 +5,11 @@
   background-position: center;
   position: relative;
   overflow-y: hidden;
+  margin: 0 auto 30px auto;
+
+  @include medium-screen {
+    margin: 0;
+  }
 
   .cvh-content {
     position: absolute;

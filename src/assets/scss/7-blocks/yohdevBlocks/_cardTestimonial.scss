@@ -1,3 +1,11 @@
+.testimonial-carousel-container {
+  .carousel {
+    .slider-wrapper {
+      padding: 50px 0;
+    }
+  }
+}
+
 .testimonial-card {
   background: $white;
   border-radius: 5px;
@@ -15,6 +23,8 @@
     width: 91px;
     height: 91px;
     margin-bottom: 20px;
+    position: relative;
+    margin-top: -50px;
   }
 
   .text-container {

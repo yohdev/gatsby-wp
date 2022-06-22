@@ -54,9 +54,11 @@ const TeamSection = (props) => {
     <section className="team-section">
       <Container>
         <Row>
-          <Col md={4}>
-            <h3 className="heading">{props.heading}</h3>
-            <p className="text">{props.text}</p>
+          <Col className="team-section-heading-container" md={4}>
+            <div className="heading-content">
+              <h3 className="heading">{props.heading}</h3>
+              <p className="text">{props.text}</p>
+            </div>
           </Col>
           {TeamData.map((data) => {
             return (

@@ -25,14 +25,11 @@ const About = () => {
         btnUrl="/contact"
       >
         <ImageWithText
-          alignDefault="true"
+          rowAlign="image-right"
           text="YohDev was founded in 2017 in Winston-Salem North Carolina as a small web marketing agency. The first 3 years of the company’s life was rough and we went through a few business partners, name changes, and service offerings. But during these tough times we were able to make significant connections with key players in the small business sector and began creating a small client base which started to blossom into amazing relationships and awesome web projects."
         />
 
-        <ImageWithText
-          alignDefault=""
-          text="YohDev was founded in 2017 in Winston-Salem North Carolina as a small web marketing agency. The first 3 years of the company’s life was rough and we went through a few business partners, name changes, and service offerings. But during these tough times we were able to make significant connections with key players in the small business sector and began creating a small client base which started to blossom into amazing relationships and awesome web projects."
-        />
+        <ImageWithText text="YohDev was founded in 2017 in Winston-Salem North Carolina as a small web marketing agency. The first 3 years of the company’s life was rough and we went through a few business partners, name changes, and service offerings. But during these tough times we were able to make significant connections with key players in the small business sector and began creating a small client base which started to blossom into amazing relationships and awesome web projects." />
       </YohdevSection>
       <YohdevSection
         sectionContainerStyle="secondary"
@@ -91,7 +88,7 @@ const About = () => {
         heading="Testimonial"
         text="See what our clients say.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         button="true"
-        btnText="Contact Us"
+        btnText="Learn More About Us"
         btnUrl="/contact"
       >
         <TestimonialSection />

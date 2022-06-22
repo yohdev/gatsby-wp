@@ -4,65 +4,36 @@ import { StaticImage } from "gatsby-plugin-image"
 import YohDevButton from "../YohDevButton"
 
 const ContentAll = (props) => {
+  const rowAlign = props.rowAlign === "image-right" ? "flex-md-row-reverse" : ""
   return (
     <div className="content-container">
-      {props.alignDefault == "true" ? (
-        <Row className="justify-content-md-between">
-          <Col md={5}>
-            {props.contentHeading == "true" ? (
-              <h3 className="heading">{props.heading}</h3>
-            ) : (
-              ""
-            )}
+      <Row className={`justify-content-between ${rowAlign}`}>
+        <Col md={5} className="mb-sm-3">
+          <StaticImage
+            src={`../../../assets/images/cityBackground.jpg`}
+            className="img-fluid"
+          />
+        </Col>
+        <Col md={5}>
+          {props.contentHeading == "true" ? (
+            <h3 className="heading">{props.heading}</h3>
+          ) : (
+            ""
+          )}
 
-            <div className="text">{props.text}</div>
+          <div className="text">{props.text}</div>
 
-            {props.contentButton == "true" ? (
-              <YohDevButton
-                type="gradient-btn"
-                title={props.btnText}
-                url={props.url}
-              />
-            ) : (
-              ""
-            )}
-          </Col>
-          <Col md={5}>
-            <StaticImage
-              src={`../../../assets/images/cityBackground.jpg`}
-              className="img-fluid"
+          {props.contentButton == "true" ? (
+            <YohDevButton
+              type="gradient-btn"
+              title={props.btnText}
+              url={props.url}
             />
-          </Col>
-        </Row>
-      ) : (
-        <Row className="justify-content-md-between flex-md-row-reverse">
-          <Col md={5}>
-            {props.contentHeading == "true" ? (
-              <h3 className="heading">{props.heading}</h3>
-            ) : (
-              ""
-            )}
-
-            <div className="text">{props.text}</div>
-
-            {props.contentButton == "true" ? (
-              <YohDevButton
-                type="gradient-btn"
-                title={props.btnText}
-                url={props.url}
-              />
-            ) : (
-              ""
-            )}
-          </Col>
-          <Col md={5}>
-            <StaticImage
-              src={`../../../assets/images/code.jpg`}
-              className="img-fluid"
-            />
-          </Col>
-        </Row>
-      )}
+          ) : (
+            ""
+          )}
+        </Col>
+      </Row>
     </div>
   )
 }
