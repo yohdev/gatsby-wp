@@ -8,38 +8,45 @@ const TeamSection = (props) => {
   const TeamData = [
     {
       id: "01",
-      name: "Andrew Hewitt",
+      firstName: "Andrew",
+      lastName: "Hewitt",
       title: "Founder",
       image: "../../../assets/images/andrew.png",
     },
     {
       id: "02",
-      name: "Von Kaukeano",
+      firstName: "Von",
+      lastName: "Kaukeano",
       title: "Developer",
     },
     {
       id: "03",
-      name: "Travis Davis",
+      firstName: "Travis",
+      lastName: "Davis",
       title: "Frontend Developer",
     },
     {
       id: "04",
-      name: "Yexe Garcia",
+      firstName: "Yexe",
+      lastName: "Garcia",
       title: "Frontend Developer",
     },
     {
       id: "05",
-      name: "Thurston Stone",
+      firstName: "Thurston",
+      lastName: "Stone",
       title: "DevOps Consultant",
     },
     {
       id: "06",
-      name: "Alex Ho",
+      firstName: "Alex",
+      lastName: "Ho",
       title: "UI/UX Designer",
     },
     {
       id: "07",
-      name: "Alyson Jordan",
+      firstName: "Alyson",
+      lastName: "Jordan",
       title: "Quality Assurance",
     },
   ]
@@ -56,7 +63,8 @@ const TeamSection = (props) => {
               <Col className="team-card-container" md={4}>
                 <TeamCard
                   title={data.title}
-                  name={data.name}
+                  firstName={data.firstName}
+                  lastName={data.lastName}
                   image={data.image}
                 />
               </Col>

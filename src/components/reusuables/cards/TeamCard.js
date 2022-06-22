@@ -17,7 +17,10 @@ const TeamCard = (props) => {
         </div>
 
         <div className="name-container">
-          <h3 className="name">{props.name}</h3>
+          <h3 className="name">
+            <span>{props.firstName}</span>
+            <span>{props.lastName}</span>
+          </h3>
         </div>
       </div>
     </div>

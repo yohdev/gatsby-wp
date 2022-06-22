@@ -66,12 +66,15 @@
 
     .name-container {
       .name {
-        max-width: 160px;
         font-size: 30px;
         font-weight: 700;
         color: $light;
         line-height: 36px;
         letter-spacing: 0;
+
+        span {
+          display: block;
+        }
       }
     }
   }
@@ -98,13 +101,12 @@
 .client-logo-container {
   background-color: $white;
   // max-width: 1140px;
-  min-height: 280px;
-  margin: 0 auto;
+  // min-height: 280px;
+  padding: 55px 0;
   text-align: center;
-  padding: 30px 0;
   -webkit-clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
   clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
-  box-shadow: $shadow;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   .cl-heading {
     font-family: $font__main;
@@ -113,5 +115,18 @@
     color: $primary;
     line-height: 36px;
     letter-spacing: 0;
+  }
+
+  .logos-container {
+    margin-top: 50px;
+    @include medium-screen {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    img {
+      height: 50px;
+      flex: 1;
+    }
   }
 }
