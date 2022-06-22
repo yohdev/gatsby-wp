@@ -141,13 +141,17 @@
     margin-top: 50px;
     padding: 0 20px;
     display: block;
+
     @include medium-screen {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-around;
       padding: 0;
     }
     img {
+      width: 50%;
+      height: auto;
+      margin: 0 auto 20px auto;
       @include medium-screen {
         flex: 1;
       }
