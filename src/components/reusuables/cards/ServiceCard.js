@@ -2,28 +2,33 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-const ServiceCard = (props) => {
+const ServiceCard = ({
+  number,
+  showDigit,
+  heading,
+  text,
+  arrow,
+  showArrow,
+}) => {
+  const numberShow = showDigit && showDigit === true ? true : false
+  const arrowShow = showArrow && showArrow === true ? true : false
   return (
     <div className="service-card">
       <Link className="service-card-link">
         <div className="hover-bg"></div>
-        {props.number ? (
+        {numberShow && (
           <div className="digit">
-            <span>{props.number}</span>
+            <span>{number}</span>
           </div>
-        ) : (
-          ""
         )}
         <div className="service-card-content">
-          <h3 className="heading-md">{props.heading}</h3>
-          <p className="service-card-text">{props.text}</p>
+          <h3 className="heading-md">{heading}</h3>
+          <p className="service-card-text">{text}</p>
         </div>
-        {props.arrow == "true" ? (
+        {arrowShow && (
           <div className="arrow">
             <span className="arrow-icon"></span>
           </div>
-        ) : (
-          ""
         )}
       </Link>
     </div>
