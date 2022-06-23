@@ -3,27 +3,33 @@ import { Container, Row, Col } from "react-bootstrap"
 import YohDevButton from "../../YohDevButton"
 import SectionHeader from "../typography/SectionHeader"
 
-const YohdevSection = (props) => {
+const YohdevSection = ({
+  color,
+  heading,
+  text,
+  children,
+  btnText,
+  style,
+  showHeading,
+  showBtn,
+}) => {
+  const headingShow = showHeading && showHeading === true ? true : false
   return (
-    <section className={`yohdev-section-container ${props.style}`}>
+    <section className={`yohdev-section-container ${style}`}>
       <Container>
-        {props.sectionHeading == "true" ? (
-          <div className={`text-container mb-5 ${props.color}`}>
-            <SectionHeader className="test" heading={props.heading} />
-            <p className={`section-text`}>{props.text}</p>
+        {headingShow && (
+          <div className={`text-container mb-5 ${color}`}>
+            <SectionHeader className="test" heading={heading} />
+            <p className={`section-text`}>{text}</p>
           </div>
-        ) : (
-          ""
         )}
 
-        {props.children}
+        {children}
 
-        {props.button == "true" ? (
+        {showBtn && (
           <div className="btn-container text-center mt-3">
-            <YohDevButton type="gradient-btn" title={props.btnText} />
+            <YohDevButton type="gradient-btn" title={btnText} />
           </div>
-        ) : (
-          ""
         )}
       </Container>
     </section>
