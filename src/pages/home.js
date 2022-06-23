@@ -7,6 +7,7 @@ import ImageCard from "../components/reusuables/cards/ImageCard"
 import ServiceCard from "../components/reusuables/cards/ServiceCard"
 import ContentCard from "../components/reusuables/cards/ContentCard"
 import CarouselSection from "../components/reusuables/sections/CarouselSection"
+import yohdevHeroLeft from "../assets/images/yohdevHeroLeft.png"
 
 const Home = () => {
   const ServiceCardData = [
@@ -88,6 +89,7 @@ const Home = () => {
       <Hero
         heading="Who's Your Dev?"
         subtitle="YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals."
+        image={yohdevHeroLeft}
       />
       <YohdevSection
         style="services"
@@ -135,7 +137,7 @@ const Home = () => {
                 <Col md={4}>
                   <ContentCard
                     arrow="true"
-                    numArrow="true"
+                    numArrow={true}
                     number={data.id}
                     heading={data.heading}
                     text={data.text}
