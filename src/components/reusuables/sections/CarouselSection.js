@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 import FeatureWorkCard from "../cards/FeatureWorkCard"
 
-const CarouselSection = (props) => {
+const CarouselSection = () => {
   return (
     <section className="carousel-container">
       <Container>
