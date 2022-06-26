@@ -1,7 +1,9 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-const ContentCard = ({ number, heading, text, numArrow, arrow }) => {
+const ContentCard = ({ number, heading, text, numArrow, arrow, check }) => {
   const numArrowShow = numArrow && numArrow === true ? true : false
+  const showArrow = arrow && arrow === true ? true : false
+  const showCheck = check && check === true ? true : false
 
   return (
     <div className="card-container">
@@ -10,13 +12,14 @@ const ContentCard = ({ number, heading, text, numArrow, arrow }) => {
         {numArrowShow && (
           <div className="num-arrow">
             <span className="num">{number}</span>
-            {arrow == "true" ? (
+            {showArrow && (
               <span className="arrow">
                 <StaticImage src="../../../assets/images/yohArrowLong.svg" />
               </span>
-            ) : (
+            )}
+            {showCheck && (
               <span className="arrow">
-                <StaticImage src="../../../assets/images/yohArrowLong.svg" />
+                <StaticImage src="../../../assets/images/check.svg" />
               </span>
             )}
           </div>
