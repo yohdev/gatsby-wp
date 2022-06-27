@@ -6,7 +6,8 @@ import { Container, Row, Col } from "react-bootstrap"
 import ImageCard from "../components/reusuables/cards/ImageCard"
 import ServiceCard from "../components/reusuables/cards/ServiceCard"
 import ContentCard from "../components/reusuables/cards/ContentCard"
-import CarouselSection from "../components/reusuables/sections/CarouselSection"
+import FeatureWorkSection from "../components/reusuables/sections/FeatureWorkSection"
+import yohdevHeroLeft from "../assets/images/yohdevHeroLeft.png"
 
 const Home = () => {
   const ServiceCardData = [
@@ -50,35 +51,36 @@ const Home = () => {
       id: "01",
       heading: "Research & Discovery",
       text: "Based on your requirements, we conduct research to discover the best ways to help you meet your business goals while also help your clients meet theirs.",
-      numArrow: "true",
-      arrow: "true",
+      arrow: true,
+      numArrow: true,
     },
     {
       id: "02",
       heading: "UX/UI Design",
       text: "Maximize your team's efficiency with ready workflows for your software development operations.",
-      numArrow: "true",
-      arrow: "true",
+      numArrow: true,
+      arrow: true,
     },
     {
       id: "03",
       heading: "Development",
       text: "Amaze your clients with beautiful interfaces that will make them stay.",
-      numArrow: "true",
-      arrow: "true",
+      numArrow: true,
+      arrow: true,
     },
     {
       id: "04",
       heading: "Testing",
       text: "Whether it's automation, data, email, dev, cloud - we have you covered.",
-      numArrow: "true",
-      arrow: "true",
+      numArrow: true,
+      arrow: true,
     },
     {
       id: "05",
       heading: "Deployment & Monitoring",
       text: "Whether it's automation, data, email, dev, cloud - we have you covered.",
-      numArrow: "false",
+      numArrow: true,
+      check: true,
     },
   ]
 
@@ -88,6 +90,7 @@ const Home = () => {
       <Hero
         heading="Who's Your Dev?"
         subtitle="YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals."
+        image={yohdevHeroLeft}
       />
       <YohdevSection
         style="services"
@@ -106,7 +109,9 @@ const Home = () => {
             {ServiceCardData.map((data) => {
               return (
                 <ServiceCard
+                  showDigit={true}
                   number={data.id}
+                  showArrow={true}
                   arrow={data.arrow}
                   heading={data.heading}
                   text={data.text}
@@ -119,13 +124,13 @@ const Home = () => {
 
       <YohdevSection
         style="workflow"
-        sectionHeading="true"
+        showHeading={true}
+        showBtn={true}
         heading="Our Workflow"
         color="white"
         text="From the moment we start working together, the journey to
               outstanding results begins and in 5 steps, you'll soon be able to
               reach your business goals faster and more efficiently."
-        button="true"
         btnText="Contact Us"
       >
         <Container>
@@ -134,8 +139,9 @@ const Home = () => {
               return (
                 <Col md={4}>
                   <ContentCard
-                    arrow="true"
-                    numArrow="true"
+                    arrow={data.arrow}
+                    check={data.check}
+                    numArrow={true}
                     number={data.id}
                     heading={data.heading}
                     text={data.text}
@@ -148,14 +154,14 @@ const Home = () => {
       </YohdevSection>
       <YohdevSection
         style="carousel"
-        sectionHeading="true"
+        showHeading={true}
         heading="Featured Work"
         text="We ensure high quality of work to make our clients be
       satisfy."
-        button="true"
+        showBtn={true}
         btnText="Contact Us"
       >
-        <CarouselSection />
+        <FeatureWorkSection />
       </YohdevSection>
     </div>
   )
