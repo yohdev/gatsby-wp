@@ -7,7 +7,7 @@ import ImageCard from "../components/reusuables/cards/ImageCard"
 import ServiceCard from "../components/reusuables/cards/ServiceCard"
 import ContentCard from "../components/reusuables/cards/ContentCard"
 import FeatureWorkSection from "../components/reusuables/sections/FeatureWorkSection"
-import yohdevHeroLeft from "../assets/images/yohdevHeroLeft.png"
+import heroHome from "../assets/images/heroHome.jpg"
 
 const Home = () => {
   const homeHeroData = [
@@ -151,6 +151,7 @@ const Home = () => {
 
       <YohdevSection
         style="workflow"
+        bgImage={heroHome}
         showHeading={true}
         showBtn={true}
         heading="Our Workflow"
