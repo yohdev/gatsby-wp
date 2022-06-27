@@ -4,6 +4,7 @@ import YohDevButton from "../../YohDevButton"
 import SectionHeader from "../typography/SectionHeader"
 
 const YohdevSection = ({
+  bgImage,
   color,
   heading,
   text,
@@ -15,7 +16,10 @@ const YohdevSection = ({
 }) => {
   const headingShow = showHeading && showHeading === true ? true : false
   return (
-    <section className={`yohdev-section-container ${style}`}>
+    <section
+      className={`yohdev-section-container ${style}`}
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <Container>
         {headingShow && (
           <div className={`text-container mb-5 ${color}`}>
