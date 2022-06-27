@@ -10,6 +10,25 @@ import FeatureWorkSection from "../components/reusuables/sections/FeatureWorkSec
 import yohdevHeroLeft from "../assets/images/yohdevHeroLeft.png"
 
 const Home = () => {
+  const homeHeroData = [
+    {
+      heading: "Who's Your Dev?",
+      subtitle:
+        "YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals.",
+      imgLeft:
+        "http://www.travisdavisdeveloper.com/wp-content/uploads/2022/06/yohdevHeroLeft.png",
+    },
+  ]
+
+  const frontPageData = [
+    {
+      heading: "Our Services",
+      subtitle: "We provide web development, devops, UIUX, and IT service.",
+      imgUrl:
+        "http://www.travisdavisdeveloper.com/wp-content/uploads/2022/06/services-left.png",
+    },
+  ]
+
   const ServiceCardData = [
     {
       id: "01",
@@ -87,24 +106,32 @@ const Home = () => {
   return (
     <div className="page-container">
       <Header />
-      <Hero
-        heading="Who's Your Dev?"
-        subtitle="YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals."
-        image={yohdevHeroLeft}
-      />
+
+      {homeHeroData.map((data) => {
+        return (
+          <Hero
+            heading={data.heading}
+            subtitle={data.subtitle}
+            imgLeft={data.imgLeft}
+          />
+        )
+      })}
       <YohdevSection
         style="services"
         button="true"
         btnText="Learn More About Us"
       >
         <Row className="justify-content-md-between">
-          <Col lg={3} className="mb-4">
-            <h3 className="heading-lrg">Our Services</h3>
-            <p className="subtitle">
-              We provide web development, devops, UIUX, and IT service.
-            </p>
-            <ImageCard />
-          </Col>
+          {frontPageData.map((data) => {
+            return (
+              <Col lg={3} className="mb-4">
+                <h3 className="heading-lrg">{data.heading}</h3>
+                <p className="subtitle">{data.subtitle}</p>
+                <ImageCard imgUrl={data.imgUrl} />
+              </Col>
+            )
+          })}
+
           <Col lg={8}>
             {ServiceCardData.map((data) => {
               return (
