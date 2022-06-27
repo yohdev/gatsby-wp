@@ -31,7 +31,6 @@ const FeatureWorkSection = (data) => {
     <div className="featured-work-section mb-5">
       <Row>
         {FeaturedWorkData.map((data) => {
-          console.log(data)
           return (
             <Col md={4}>
               <FeatureWorkCard
