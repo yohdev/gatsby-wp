@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { Image } from "react-bootstrap"
 
 const FeatureWorkCard = ({ title, text, image }) => {
@@ -7,7 +7,7 @@ const FeatureWorkCard = ({ title, text, image }) => {
   return (
     <div className="feat-work-card">
       <div className="card-img">
-        <Image src={image} />
+        <StaticImage src={"../../../assets/images/kulhiImage.jpg"} />
       </div>
       <div className="feat-work-card-content">
         <h3 className="title">{title}</h3>

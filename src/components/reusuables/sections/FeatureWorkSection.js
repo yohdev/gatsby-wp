@@ -8,22 +8,19 @@ const FeatureWorkSection = (data) => {
       id: "01",
       title: "Kulhi Air",
       text: "Web Development / UI.UX",
-      imageUrl:
-        "http://www.travisdavisdeveloper.com/wp-content/uploads/2022/06/kulhiImage.jpg",
+      imageUrl:""
     },
     {
       id: "02",
       title: "ELM Street Realty",
       text: "Web Development / UI.UX",
-      imageUrl:
-        "http://www.travisdavisdeveloper.com/wp-content/uploads/2022/06/kulhiImage.jpg",
+      imageUrl: ""
     },
     {
       id: "03",
       title: "Kulhi Air",
       text: "Web Development / UI.UX",
-      imageUrl:
-        "http://www.travisdavisdeveloper.com/wp-content/uploads/2022/06/kulhiImage.jpg",
+      imageUrl: ""
     },
   ]
 
