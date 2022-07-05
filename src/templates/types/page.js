@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
-import Seo from 'gatsby-plugin-wpgraphql-seo';
+import Seo from "gatsby-plugin-wpgraphql-seo"
 import FeaturedMedia from "../../components/FeaturedMedia"
 
 const page = ({ data }) => {
   const { page } = data
-  const { title, content, featuredImage, excerpt, databaseId, uri } = page;
+  const { title, content, featuredImage, excerpt, databaseId, uri } = page
 
   return (
     <Layout
@@ -56,4 +56,4 @@ export const query = graphql`
   }
 `
 
-export default page;
+export default page

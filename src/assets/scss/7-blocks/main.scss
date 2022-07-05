@@ -19,7 +19,11 @@
 @import "4-layouts/patterns/_patterns";
 
 // Components
-.wp-block-cover.hide-on-mobile { display: none; }
+.wp-block-cover.hide-on-mobile {
+  display: none;
+}
 @media (min-width: 480px) {
-	.wp-block-cover.hide-on-mobile { display: block; }
+  .wp-block-cover.hide-on-mobile {
+    display: block;
+  }
 }

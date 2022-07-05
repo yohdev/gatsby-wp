@@ -1,0 +1,25 @@
+.feat-work-card {
+  background-color: $white;
+
+  .feat-work-card-content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    .title {
+      font-family: $font__secondary;
+      font-size: 22px;
+      line-height: 36px;
+      letter-spacing: -0.22px;
+    }
+
+    .type {
+      font-family: $font__secondary;
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
+  }
+}

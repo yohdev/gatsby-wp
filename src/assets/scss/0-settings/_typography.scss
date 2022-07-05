@@ -137,3 +137,29 @@ $body-text: (
     font-family: $font__notation;
   }
 }
+
+.heading-lrg {
+  font-family: $font__main;
+  font-size: 40px;
+  font-weight: 800;
+  color: $dark;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.heading-md {
+  font-family: $font__main;
+  font-size: 30px;
+  font-weight: 700;
+  color: $dark;
+  line-height: 36px;
+  letter-spacing: 0;
+  margin-top: 0;
+}
+
+.subtitle {
+  font-family: $font__secondary;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: -0.22px;
+}
