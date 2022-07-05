@@ -7,18 +7,18 @@ import ImageCard from "../components/reusuables/cards/ImageCard"
 import ServiceCard from "../components/reusuables/cards/ServiceCard"
 import ContentCard from "../components/reusuables/cards/ContentCard"
 import FeatureWorkSection from "../components/reusuables/sections/FeatureWorkSection"
+import heroImgLeft from "../assets/images/yohdevHeroLeft.png"
 import heroHome from "../assets/images/heroHome.jpg"
 
+console.log(heroImgLeft)
 const Home = () => {
-  const homeHeroData = [
+  const homeHeroData =
     {
       heading: "Who's Your Dev?",
       subtitle:
         "YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals.",
-      imgLeft:
-        "http://www.travisdavisdeveloper.com/wp-content/uploads/2022/06/yohdevHeroLeft.png",
-    },
-  ]
+      imgLeft: "",
+    }
 
   const frontPageData = [
     {
@@ -106,16 +106,11 @@ const Home = () => {
   return (
     <div className="page-container">
       <Header />
-
-      {homeHeroData.map((data) => {
-        return (
-          <Hero
-            heading={data.heading}
-            subtitle={data.subtitle}
-            imgLeft={data.imgLeft}
-          />
-        )
-      })}
+      <Hero
+        heading={homeHeroData.heading}
+        subtitle={homeHeroData.subtitle}
+        imgLeft={homeHeroData.imgLeft}
+      />
       <YohdevSection
         style="services"
         button="true"
