@@ -7,10 +7,9 @@ import ImageCard from "../components/reusuables/cards/ImageCard"
 import ServiceCard from "../components/reusuables/cards/ServiceCard"
 import ContentCard from "../components/reusuables/cards/ContentCard"
 import FeatureWorkSection from "../components/reusuables/sections/FeatureWorkSection"
-import heroImgLeft from "../assets/images/yohdevHeroLeft.png"
 import heroHome from "../assets/images/heroHome.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
-console.log(heroImgLeft)
 const Home = () => {
   const homeHeroData =
     {
@@ -20,14 +19,12 @@ const Home = () => {
       imgLeft: "",
     }
 
-  const frontPageData = [
+  const frontPageData =
     {
       heading: "Our Services",
       subtitle: "We provide web development, devops, UIUX, and IT service.",
-      imgUrl:
-        "http://www.travisdavisdeveloper.com/wp-content/uploads/2022/06/services-left.png",
-    },
-  ]
+      imgUrl: "",
+    }
 
   const ServiceCardData = [
     {
@@ -117,16 +114,11 @@ const Home = () => {
         btnText="Learn More About Us"
       >
         <Row className="justify-content-md-between">
-          {frontPageData.map((data) => {
-            return (
-              <Col lg={3} className="mb-4">
-                <h3 className="heading-lrg">{data.heading}</h3>
-                <p className="subtitle">{data.subtitle}</p>
-                <ImageCard imgUrl={data.imgUrl} />
-              </Col>
-            )
-          })}
-
+          <Col lg={3} className="mb-4">
+            <h3 className="heading-lrg">{frontPageData.heading}</h3>
+            <p className="subtitle">{frontPageData.subtitle}</p>
+            <StaticImage src={"../assets/images/servicesLeft.png"} />
+          </Col>
           <Col lg={8}>
             {ServiceCardData.map((data) => {
               return (
