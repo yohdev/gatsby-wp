@@ -25,12 +25,12 @@ exports.createPages = async (props) => {
 
   const perPage = wpSettings.wp.readingSettings.postsPerPage || 10
   const blogURI = "/blog"
-  // const cptURI = "/partners"
+  const cptURI = "/partners"
   const templates = getTemplates()
 
   await createContentTypes(props, { templates })
   await createBlog(props, { perPage, blogURI })
-  // await createPartnerArchive(props, { perPage, cptURI })
+  await createPartnerArchive(props, { perPage, cptURI })
   await createCategories(props, { perPage })
   await createAuthors(props, { perPage })
 }
