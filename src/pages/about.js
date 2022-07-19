@@ -17,10 +17,13 @@ const About = () => {
       <Hero
         heading="Who's Your Dev?"
         subtitle="YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals."
+        btnType="gradient-btn"
+        btnTitle="Contact Us"
       />
       <YohdevSection
         sectionContainerStyle="default"
-        button="true"
+        button={true}
+        btnType="gradient-btn"
         btnText="Contact Us"
         btnUrl="/contact"
       >
@@ -77,7 +80,9 @@ const About = () => {
         text="20+ Years of combined professional experience. Meet our great team and achieve your business goals."
         contactHeading="Have a Question?"
         contactText="We are here for you. Contact us today!"
+        btnType="gradient-btn"
         btnText="Contact Us"
+        btnUrl="/contact"
       ></TeamSection>
       <YohdevSection sectionContainerStyle="split">
         <ClientLogosInline heading="Our Team has Worked with Companies Big and Small" />
@@ -87,9 +92,10 @@ const About = () => {
         sectionHeading={true}
         heading="Testimonial"
         text="See what our clients say.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        button="true"
+        button={true}
         btnText="Learn More About Us"
         btnUrl="/contact"
+        btnType="gradient-btn"
       >
         <TestimonialSection />
       </YohdevSection>

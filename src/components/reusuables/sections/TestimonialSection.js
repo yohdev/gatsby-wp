@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel"
 import Testimonialcard from "../cards/Testimonialcard"
 import { Row } from "react-bootstrap"
 
-const TestimonialSection = (props) => {
+const TestimonialSection = () => {
   return (
     <div className="testimonial-carousel-container">
       <Carousel

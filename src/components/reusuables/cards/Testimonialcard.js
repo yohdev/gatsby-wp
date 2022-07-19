@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Testimonialcard = (props) => {
+const Testimonialcard = ({ text }) => {
   return (
     <div className="testimonial-card">
       <div className="logo-container">
@@ -11,7 +11,7 @@ const Testimonialcard = (props) => {
         />
       </div>
       <div className="text-container">
-        <p className="text">{props.text}</p>
+        <p className="text">{text}</p>
       </div>
     </div>
   )

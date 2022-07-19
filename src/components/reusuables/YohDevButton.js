@@ -2,10 +2,10 @@ import React from "react"
 import { Button } from "react-bootstrap"
 import { Link } from "gatsby"
 
-const YohDevButton = (props) => {
+const YohDevButton = ({ type, url, title }) => {
   return (
-    <Button className={`${props.type}`} to={props.url}>
-      {props.title}
+    <Button className={`${type}`} to={url}>
+      {title}
     </Button>
   )
 }

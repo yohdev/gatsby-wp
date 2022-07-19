@@ -3,16 +3,24 @@ import { Container, Row, Col } from "react-bootstrap"
 import YohDevButton from "../../../components/reusuables/YohDevButton"
 import SectionHeader from "../typography/SectionHeader"
 
-const YohdevSection = (props) => {
-  const sectionHeading = props.sectionHeading == true ? true : false
-  const sectionHeadingAlt = props.sectionHeadingAlt === true ? "d-md-flex" : ""
-  const textContainerStyle = props.textContainerColor == "white" ? "white" : ""
+const YohdevSection = ({
+  heading,
+  text,
+  children,
+  button,
+  btnType,
+  btnText,
+  textContainerColor,
+}) => {
+  const sectionHeading = sectionHeading == true ? true : false
+  const sectionHeadingAlt = sectionHeadingAlt === true ? "d-md-flex" : ""
+  const textContainerStyle = textContainerColor == "white" ? "white" : ""
   const sectionContainerStyle =
-    props.sectionContainerStyle == "default"
+    sectionContainerStyle == "default"
       ? "default"
-      : props.sectionContainerStyle == "secondary"
+      : sectionContainerStyle == "secondary"
       ? "secondary"
-      : props.sectionContainerStyle == "split"
+      : sectionContainerStyle == "split"
       ? "split"
       : ""
 
@@ -25,19 +33,17 @@ const YohdevSection = (props) => {
               (textContainerStyle, sectionHeadingAlt)
             }`}
           >
-            <SectionHeader heading={props.heading} />
-            <p className={`section-text`}>{props.text}</p>
+            <SectionHeader heading={heading} />
+            <p className={`section-text`}>{text}</p>
           </div>
         )}
 
-        {props.children}
+        {children}
 
-        {props.button == "true" ? (
+        {button && (
           <div className="btn-container text-center mt-3">
-            <YohDevButton type="gradient-btn" title={props.btnText} />
+            <YohDevButton type={btnType} title={btnText} />
           </div>
-        ) : (
-          ""
         )}
       </Container>
     </section>

@@ -8,7 +8,7 @@ const sectionStyle = {
   backgroundImage: `url(${heroHome})`,
 }
 
-const Hero = (props) => {
+const Hero = ({ heading, subtitle, btnType, btnTitle }) => {
   return (
     <section className="hero frontpage" style={sectionStyle}>
       <Container>
@@ -20,9 +20,9 @@ const Hero = (props) => {
             />
           </Col>
           <Col lg={6} className="right text-center">
-            <h3 className="heading">{props.heading}</h3>
-            <p className="subtitle">{props.subtitle}</p>
-            <YohDevButton type="gradient-btn" title="Contact Us" />
+            <h3 className="heading">{heading}</h3>
+            <p className="subtitle">{subtitle}</p>
+            <YohDevButton type={btnType} title={btnTitle} />
           </Col>
         </Row>
       </Container>
