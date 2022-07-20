@@ -1,14 +1,12 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Testimonialcard = ({ text }) => {
+const Testimonialcard = ({ text, image }) => {
   return (
-    <div className="carousel-card">
+    <div className="testimonial-card">
       <div className="logo-container">
-        <StaticImage
-          src={`https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/wellsfargo.png`}
-          className="img-fluid"
-        />
+        <img src={image} className="img-fluid" />
       </div>
       <div className="text-container">
         <p className="text">{text}</p>

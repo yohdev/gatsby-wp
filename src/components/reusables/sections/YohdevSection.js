@@ -17,10 +17,7 @@ const YohdevSection = ({
 }) => {
   const headingShow = showHeading && showHeading === true ? true : false
   return (
-    <section
-      className={`yohdev-section-container ${style}`}
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <section className={`yohdev-section-container ${style}`}>
       <Container>
         {headingShow && (
           <div className={`text-container mb-5 ${color}`}>
