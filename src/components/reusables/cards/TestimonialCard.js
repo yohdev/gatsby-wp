@@ -3,10 +3,10 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Testimonialcard = ({ text }) => {
   return (
-    <div className="testimonial-card">
+    <div className="carousel-card">
       <div className="logo-container">
         <StaticImage
-          src={`../../../assets/images/wellsfargo.png`}
+          src={`https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/wellsfargo.png`}
           className="img-fluid"
         />
       </div>
