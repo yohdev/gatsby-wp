@@ -10,6 +10,7 @@ const YohdevSection = ({
   text,
   children,
   btnText,
+  btnType,
   style,
   showHeading,
   showBtn,
@@ -32,7 +33,7 @@ const YohdevSection = ({
 
         {showBtn && (
           <div className="btn-container text-center mt-3">
-            <YohDevButton type="gradient-btn" title={btnText} />
+            <YohDevButton type={btnType} title={btnText} />
           </div>
         )}
       </Container>

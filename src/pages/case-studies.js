@@ -2,6 +2,7 @@ import React from "react"
 import Hero from "../components/Hero"
 import YohDevSection from "../components/reusables/sections/YohdevSection"
 import CaseStudyArchive from "../components/reusables/sections/CaseStudyArchive"
+import TestimonialSection from "../components/reusables/sections/TestimonialSection"
 
 const caseStudies = () => {
   return (
@@ -14,6 +15,18 @@ const caseStudies = () => {
       />
       <YohDevSection style="case-study">
         <CaseStudyArchive />
+      </YohDevSection>
+      <YohDevSection
+        style="testimonials"
+        showHeading={true}
+        heading="Testimonial"
+        text="See what our clients say.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        showBtn={true}
+        btnText="Contact Us"
+        btnUrl="/contact"
+        btnType="gradient-btn"
+      >
+        <TestimonialSection />
       </YohDevSection>
     </div>
   )
