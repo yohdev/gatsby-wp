@@ -1,5 +1,7 @@
 import React from "react"
 import Hero from "../components/Hero"
+import YohDevSection from "../components/reusables/sections/YohdevSection"
+import CaseStudyArchive from "../components/reusables/sections/CaseStudyArchive"
 
 const caseStudies = () => {
   return (
@@ -10,6 +12,9 @@ const caseStudies = () => {
         btnType="gradient-btn"
         btnTitle="Contact Us"
       />
+      <YohDevSection style="case-study">
+        <CaseStudyArchive />
+      </YohDevSection>
     </div>
   )
 }
