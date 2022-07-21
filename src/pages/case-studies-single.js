@@ -1,12 +1,12 @@
 import React from "react"
 import Header from "../components/Header"
-import Footer from "../components/Footer"
+import HeroSingle from "../components/reusables/heros/HeroSingle"
 
 const caseStudiesSingle = () => {
   return (
     <div className="page-container">
       <Header />
-      case-studies-single
+      <HeroSingle />
     </div>
   )
 }
