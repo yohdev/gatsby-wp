@@ -12,9 +12,7 @@ const HeroSingle = ({ csType, csTitle }) => {
       { id: "1", catTitle: "Custom Design" },
     ],
   }
-  // const sectionStyle = {
-  //   backgroundImage: `url(${heroHome})`,
-  // }
+
   return (
     <section
       className="hero case-study-single"
