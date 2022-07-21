@@ -1,4 +1,6 @@
 .about-project-container {
+  max-width: 1100px;
+  margin: 0 auto;
   .about-project-heading {
     margin-top: 0 !important;
 
@@ -37,5 +39,38 @@
     &:hover {
       text-decoration: none;
     }
+  }
+}
+
+.about-project-list {
+  background-color: $gray-400;
+  padding: 100px 0;
+
+  .row {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+      border-bottom: 2px solid $dark;
+      padding-bottom: 30px;
+    }
+  }
+
+  .digit {
+    font-family: $font__main;
+    font-size: 30px;
+    font-weight: 700;
+    color: $secondary;
+  }
+
+  .heading {
+    margin-top: 0;
+    font-family: $font__main;
+    font-size: 30px;
+    font-weight: 700;
+    color: $dark;
+    line-height: 36px;
+    letter-spacing: 0;
   }
 }

@@ -5,6 +5,23 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 
 const caseStudiesSingle = () => {
+  const projectListData = [
+    {
+      id: "01",
+      heading: "Client & Business Goals",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
+      id: "02",
+      heading: "Product Description",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
+      id: "03",
+      heading: "Applied Technologies",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+  ]
   return (
     <div className="page-container">
       <Header />
@@ -25,6 +42,23 @@ const caseStudiesSingle = () => {
               </p>
             </Col>
           </Row>
+        </Container>
+      </div>
+      <div className="about-project-list">
+        <Container>
+          {projectListData.map((data) => {
+            return (
+              <Row>
+                <Col sm={1}>
+                  <span className="digit">{data.id}</span>
+                </Col>
+                <Col sm={10}>
+                  <h3 className="heading">{data.heading}</h3>
+                  <p className="text">{data.text}</p>
+                </Col>
+              </Row>
+            )
+          })}
         </Container>
       </div>
     </div>
