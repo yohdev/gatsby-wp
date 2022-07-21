@@ -1,0 +1,22 @@
+.carousel-container {
+  .carousel-card {
+    background-color: $white;
+    max-width: 550px;
+    border-radius: 5px;
+    box-shadow: $shadow;
+
+    .carousel-card-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      .title {
+        font-family: $font__secondary;
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+      }
+    }
+  }
+}
