@@ -11,11 +11,14 @@ const YohdevSection = ({
   btnType,
   btnText,
   textContainerColor,
+  sectionHeadingBool,
+  sectionHeadingAltBool,
+  sectionContainerStyle
 }) => {
-  const sectionHeading = sectionHeading == true ? true : false
-  const sectionHeadingAlt = sectionHeadingAlt === true ? "d-md-flex" : ""
+  const sectionHeading = sectionHeadingBool == true ? true : false
+  const sectionHeadingAlt = sectionHeadingAltBool === true ? "d-md-flex" : ""
   const textContainerStyle = textContainerColor == "white" ? "white" : ""
-  const sectionContainerStyle =
+  const sectionContainerStyleClass =
     sectionContainerStyle == "default"
       ? "default"
       : sectionContainerStyle == "secondary"
@@ -25,7 +28,7 @@ const YohdevSection = ({
       : ""
 
   return (
-    <section className={`yohdev-section-container ${sectionContainerStyle}`}>
+    <section className={`yohdev-section-container ${sectionContainerStyleClass}`}>
       <Container>
         {sectionHeading && (
           <div

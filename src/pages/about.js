@@ -36,7 +36,7 @@ const About = () => {
       </YohdevSection>
       <YohdevSection
         sectionContainerStyle="secondary"
-        sectionHeading={true}
+        sectionHeadingBool={true}
         heading="Core Values"
         text="Even though we provide custom website development solutions to every partner, our values help us provide the best solutions and make sure that the collaboration is successful for all parties involved."
       >
@@ -65,8 +65,8 @@ const About = () => {
       </YohdevSection>
       <YohdevSection
         sectionContainerStyle="default"
-        sectionHeading={true}
-        sectionHeadingAlt={true}
+        sectionHeadingBool={true}
+        sectionHeadingAltBool={true}
         heading="Mission &amp; Vision"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
       >
@@ -89,7 +89,7 @@ const About = () => {
       </YohdevSection>
       <YohdevSection
         sectionContainerStyle="default"
-        sectionHeading={true}
+        sectionHeadingBool={true}
         heading="Testimonial"
         text="See what our clients say.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         button={true}
