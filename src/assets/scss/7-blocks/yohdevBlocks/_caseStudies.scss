@@ -2,10 +2,18 @@
   .filter-container {
     max-width: 1000px;
     margin: 0 auto;
+    display: block;
     @include medium-screen {
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    .filter-btn {
+      display: block;
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
     }
   }
 }

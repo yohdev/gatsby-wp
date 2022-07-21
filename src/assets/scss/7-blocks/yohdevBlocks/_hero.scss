@@ -5,8 +5,10 @@
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 20%;
+    padding-bottom: 10%;
     @include medium-screen {
       padding-top: 10%;
+      padding-bottom: 0;
     }
 
     .right {

@@ -74,11 +74,7 @@
     background-repeat: no-repeat;
 
     .text-container {
-      @include medium-screen {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+      text-align: center;
 
       .section-header {
         font-size: 45px;
