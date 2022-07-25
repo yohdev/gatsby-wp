@@ -64,4 +64,31 @@
       }
     }
   }
+
+  &.carousel-alt {
+    background-color: $white;
+    .text-container {
+      @include medium-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+
+      .section-header {
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 52px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .section-text {
+        max-width: 1000px;
+        font-size: 22px;
+        font-family: $font__secondary;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+      }
+    }
+  }
 }

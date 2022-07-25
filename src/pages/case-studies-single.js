@@ -7,6 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import HeroSingle from "../components/reusables/heros/HeroSingle"
 import YohdevSection from "../components/reusables/sections/YohdevSection"
 import YohDevButton from "../components/YohDevButton"
+import FeatureWorkSection from "../components/reusables/sections/FeatureWorkSection"
 
 const caseStudiesSingle = () => {
   const projectListData = [
@@ -79,6 +80,9 @@ const caseStudiesSingle = () => {
             )
           })}
         </Container>
+      </div>
+      <div className="screen-carousel">
+        <StaticImage src="https://picsum.photos/id/1026/1500/600" />
       </div>
       <YohdevSection style="grey">
         <div className="project-highlights">
@@ -154,6 +158,17 @@ const caseStudiesSingle = () => {
             </Row>
           </Container>
         </div>
+      </YohdevSection>
+      <YohdevSection
+        style="carousel-alt"
+        showHeading={true}
+        heading="Featured Work"
+        text="We ensure high quality of work to make our clients be
+      satisfy."
+        showBtn={true}
+        btnText="Contact Us"
+      >
+        <FeatureWorkSection />
       </YohdevSection>
     </div>
   )
