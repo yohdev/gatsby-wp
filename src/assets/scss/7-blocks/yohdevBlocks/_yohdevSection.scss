@@ -4,8 +4,9 @@
     padding: 100px 0;
   }
 
-  &.services {
-    background-color: #f0f0f0;
+  &.services,
+  &.grey {
+    background-color: $gray-400;
   }
 
   &.workflow {
@@ -38,7 +39,7 @@
   }
 
   &.carousel {
-    background-color: #f0f0f0;
+    background-color: $gray-400;
     .text-container {
       @include medium-screen {
         display: flex;

@@ -1,8 +1,12 @@
 import React from "react"
 import Header from "../components/Header"
-import HeroSingle from "../components/reusables/heros/HeroSingle"
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
+import HeroSingle from "../components/reusables/heros/HeroSingle"
+import YohdevSection from "../components/reusables/sections/YohdevSection"
+import YohDevButton from "../components/YohDevButton"
 
 const caseStudiesSingle = () => {
   const projectListData = [
@@ -20,6 +24,21 @@ const caseStudiesSingle = () => {
       id: "03",
       heading: "Applied Technologies",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+  ]
+
+  const projectHighlightData = [
+    {
+      id: "01",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    },
+    {
+      id: "02",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    },
+    {
+      id: "03",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     },
   ]
   return (
@@ -61,6 +80,81 @@ const caseStudiesSingle = () => {
           })}
         </Container>
       </div>
+      <YohdevSection style="grey">
+        <div className="project-highlights">
+          <Container>
+            <Row className="top">
+              <Col md={6}>
+                <div className="left-side">
+                  <h3 className="heading">Project Highlights</h3>
+                  {projectHighlightData.map((data) => {
+                    return (
+                      <div className="project-highlight">
+                        <p className="ph-text">
+                          <span className="icon"></span>
+                          {data.text}
+                        </p>
+                      </div>
+                    )
+                  })}
+                </div>
+              </Col>
+              <Col md={6}>
+                <div className="right-side">
+                  <StaticImage src="https://picsum.photos/id/1029/500/350" />
+                </div>
+              </Col>
+            </Row>
+
+            <Row className="bottom">
+              <Col md={6}>
+                <div className="left-side">
+                  <div className="image-container">
+                    <StaticImage src="https://picsum.photos/id/1048/500/900" />
+                  </div>
+                </div>
+              </Col>
+              <Col md={6}>
+                <div className="right-side">
+                  <div className="text-block">
+                    <h3 className="heading">A Comprehensive Feature</h3>
+                    <p className="text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                  <div className="text-block">
+                    <h3 className="heading">A Comprehensive Feature</h3>
+                    <p className="text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                  <div className="btn-container">
+                    <YohDevButton
+                      title="Get Started"
+                      btnUrl="/contact"
+                      type="gradient-btn"
+                    />
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </YohdevSection>
     </div>
   )
 }
