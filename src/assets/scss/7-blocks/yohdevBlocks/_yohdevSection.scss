@@ -12,13 +12,14 @@
 
     &.d-md-flex {
       text-align: left;
+      max-width: 1100px;
+      margin: 0 auto;
       .section-header {
         flex: 1;
       }
 
       .section-text {
-        flex: 2;
-        max-width: 675px;
+        flex: 1;
       }
     }
     .section-header {

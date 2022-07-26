@@ -72,7 +72,7 @@ const TeamSection = (props) => {
               </Col>
             )
           })}
-          <Col md={4}>
+          <Col md={4} className="contact-block">
             <div className="contact-container text-center">
               <h3 className="contact-heading">{props.contactHeading}</h3>
               <p className="contact-text">{props.contactText}</p>

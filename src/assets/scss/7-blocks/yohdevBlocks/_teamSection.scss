@@ -20,7 +20,6 @@
 
   .text {
     color: $white;
-    max-width: 300px;
     font-size: 22px;
     line-height: 36px;
     letter-spacing: -0.22px;
@@ -35,7 +34,7 @@
     display: block;
   }
   &:not(:last-of-type) {
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -53,7 +52,6 @@
 
 .team-card {
   background-color: rgba(#404965, 0.59);
-  max-width: 365px;
   min-height: 365px;
   border-radius: 5px;
 
@@ -98,22 +96,26 @@
   }
 }
 
-.contact-container {
-  padding: 0 80px;
-  .contact-heading {
-    font-family: $font__main;
-    font-size: 30px;
-    color: $white;
-    line-height: 36px;
-    letter-spacing: 0;
-  }
+.contact-block {
+  display: flex;
+  align-items: center;
+  .contact-container {
+    padding: 0 90px;
+    .contact-heading {
+      font-family: $font__main;
+      font-size: 30px;
+      color: $white;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
 
-  .contact-text {
-    font-family: $font__secondary;
-    font-size: 22px;
-    color: $white;
-    line-height: 36px;
-    letter-spacing: -0.22px;
+    .contact-text {
+      font-family: $font__secondary;
+      font-size: 22px;
+      color: $white;
+      line-height: 36px;
+      letter-spacing: -0.22px;
+    }
   }
 }
 
