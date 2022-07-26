@@ -1,15 +1,16 @@
 import React from "react"
+import { useState } from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 import CaseStudyCard from "../cards/CaseStudyCard"
 
 const CaseStudyArchive = () => {
+  const [isActive, setActive] = useState(false)
+
+  const handleToggle = () => {
+    setActive(!isActive)
+  }
   const filters = [
-    {
-      id: "0",
-      title: "View All",
-      url: "/",
-    },
     {
       id: "1",
       title: "E-Commerce",
@@ -37,21 +38,21 @@ const CaseStudyArchive = () => {
       id: "0",
       title: "Kuhli Air",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/1/500",
     },
     {
       id: "1",
       title: "Elm Street Realty",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/2/500",
     },
     {
       id: "2",
       title: "AeroX",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/3/500",
       logo: "https://aeroxventures.com/wp-content/uploads/2022/02/cropped-47df8df2-aerox-logo-white.png",
     },
@@ -59,21 +60,21 @@ const CaseStudyArchive = () => {
       id: "0",
       title: "Kuhli Air",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/1/500",
     },
     {
       id: "1",
       title: "Elm Street Realty",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/2/500",
     },
     {
       id: "2",
       title: "AeroX",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/3/500",
       logo: "https://aeroxventures.com/wp-content/uploads/2022/02/cropped-47df8df2-aerox-logo-white.png",
     },
@@ -81,21 +82,21 @@ const CaseStudyArchive = () => {
       id: "0",
       title: "Kuhli Air",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/1/500",
     },
     {
       id: "1",
       title: "Elm Street Realty",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/2/500",
     },
     {
       id: "2",
       title: "AeroX",
       type: "Web Development / UI.UX",
-      url: "/",
+      url: "#",
       bgImage: "https://picsum.photos/id/3/500",
       logo: "https://aeroxventures.com/wp-content/uploads/2022/02/cropped-47df8df2-aerox-logo-white.png",
     },
@@ -104,9 +105,20 @@ const CaseStudyArchive = () => {
   return (
     <div className="cs-archive-container">
       <div className="filter-container mb-5">
+        <Link
+          to="#"
+          className={`btn filter-btn active ${isActive ? "active" : ""}`}
+          onClick={handleToggle}
+        >
+          View All
+        </Link>
         {filters.map((data) => {
           return (
-            <Link to={data.url} className="btn filter-btn">
+            <Link
+              to={data.url}
+              className={`btn filter-btn ${isActive ? "active" : ""}`}
+              onClick={handleToggle}
+            >
               {data.title}
             </Link>
           )
