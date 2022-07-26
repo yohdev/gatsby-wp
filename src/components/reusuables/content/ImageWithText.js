@@ -7,7 +7,7 @@ const ContentAll = (props) => {
   const rowAlign = props.rowAlign === "image-right" ? "flex-md-row-reverse" : ""
   return (
     <div className="content-container">
-      <Row className={`justify-content-between ${rowAlign}`}>
+      <Row className={`justify-content-around ${rowAlign}`}>
         <Col md={5} className="mb-sm-3">
           <StaticImage
             src={`../../../assets/images/cityBackground.jpg`}
