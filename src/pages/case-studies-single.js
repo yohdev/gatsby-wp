@@ -1,9 +1,10 @@
 import React from "react"
-import Header from "../components/Header"
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import HeroSingle from "../components/reusables/heros/HeroSingle"
 import YohdevSection from "../components/reusables/sections/YohdevSection"
 import YohDevButton from "../components/YohDevButton"
@@ -170,6 +171,7 @@ const caseStudiesSingle = () => {
       >
         <FeatureWorkSection />
       </YohdevSection>
+      <Footer />
     </div>
   )
 }
