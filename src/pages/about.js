@@ -1,6 +1,7 @@
 import React from "react"
 import Hero from "../components/Hero"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 import { Container, Row, Col } from "react-bootstrap"
 import YohdevSection from "../components/reusuables/sections/YohdevSection"
 import ImageWithText from "../components/reusuables/content/ImageWithText"
@@ -99,6 +100,7 @@ const About = () => {
       >
         <TestimonialSection />
       </YohdevSection>
+      <Footer />
     </div>
   )
 }
