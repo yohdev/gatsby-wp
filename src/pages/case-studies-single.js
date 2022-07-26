@@ -33,14 +33,17 @@ const caseStudiesSingle = () => {
     {
       id: "01",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      icon: "https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/yohArrowRight.svg",
     },
     {
       id: "02",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      icon: "https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/yohArrowRight.svg",
     },
     {
       id: "03",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      icon: "https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/yohArrowRight.svg",
     },
   ]
   return (
@@ -95,10 +98,8 @@ const caseStudiesSingle = () => {
                   {projectHighlightData.map((data) => {
                     return (
                       <div className="project-highlight">
-                        <p className="ph-text">
-                          <span className="icon"></span>
-                          {data.text}
-                        </p>
+                        <div className="icon"></div>
+                        <p className="ph-text">{data.text}</p>
                       </div>
                     )
                   })}

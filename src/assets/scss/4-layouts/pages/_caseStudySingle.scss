@@ -76,7 +76,6 @@
 }
 
 .screen-carousel {
-  min-height: 570px;
   img {
     object-fit: cover;
     width: 100%;
@@ -95,6 +94,11 @@
   }
 
   .top {
+    flex-direction: column-reverse;
+
+    @include medium-screen {
+      flex-direction: initial;
+    }
     .left-side {
       .heading {
         font-weight: 700;
@@ -102,23 +106,25 @@
         margin-bottom: 20px;
       }
       .project-highlight {
+        display: flex;
         &:not(:last-of-type) {
           margin-bottom: 20px;
         }
 
+        .icon {
+          background-image: url("https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/yohArrowRight.svg");
+          background-repeat: no-repeat;
+
+          width: 75px;
+          height: 30px;
+          display: block;
+          margin-right: 15px;
+        }
+
         .ph-text {
-          display: flex;
           font-size: 22px;
           line-height: 36px;
           letter-spacing: -0.22px;
-          .icon {
-            background-image: url("https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/yohArrowRight.svg");
-            background-repeat: no-repeat;
-            width: 39px;
-            height: 30px;
-            display: block;
-            margin-right: 15px;
-          }
         }
       }
     }
