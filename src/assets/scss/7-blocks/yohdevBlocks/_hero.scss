@@ -10,8 +10,39 @@
       padding-top: 10%;
     }
 
+    .left-side {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
 
-    .right {
+      @include medium-screen {
+        margin-bottom: 0;
+      }
+
+      @include large-screen {
+        display: block;
+      }
+      .gatsby-image-wrapper {
+        img {
+          width: 70%;
+          margin: 0 auto !important;
+          @include medium-screen {
+          }
+
+          @include large-screen {
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      padding: 0 20px;
+
+      @include medium-screen {
+        padding: 0;
+      }
       .heading {
         font-family: $font__main;
         font-size: 32px;

@@ -38,20 +38,9 @@
   }
 }
 
-.team-section-heading-container {
-  .heading-content {
-    width: 50%;
-    margin: 0 auto;
-
-    @include medium-screen {
-      width: 100%;
-      margin: 0;
-    }
-  }
-}
-
 .team-card {
   background-color: rgba(#404965, 0.59);
+  width: 100%;
   min-height: 365px;
   border-radius: 5px;
 
@@ -153,12 +142,9 @@
     img {
       width: 50%;
       height: auto;
-      margin: 0 auto 20px auto;
+      margin: 0 auto 40px;
       @include medium-screen {
         flex: 1;
-      }
-      &:not(:last-of-type) {
-        margin-bottom: 20px;
       }
     }
   }

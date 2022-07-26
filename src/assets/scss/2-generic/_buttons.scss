@@ -98,8 +98,8 @@
   background: transparent linear-gradient(282deg, #39306f 0%, #10d1d3 100%) 0%
     0% no-repeat padding-box;
   border-radius: 27px;
-  padding: 5px 40px;
-  font-size: 20px;
+  padding: 5px 30px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 36px;
   letter-spacing: -0.2px;
@@ -107,6 +107,11 @@
   text-transform: uppercase;
   border: none;
   transition: 0.4s ease-in;
+
+  @include medium-screen {
+    font-size: 20px;
+    padding: 5px 40px;
+  }
 
   &:hover {
     background: $secondary !important;

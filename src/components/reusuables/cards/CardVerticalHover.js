@@ -8,7 +8,7 @@ const cardOneStyle = {
 
 const CardVerticalHover = ({ heading, text }) => {
   return (
-    <Col lg={3} md={6} sm={12} className="">
+    <Col lg={3} md={6} sm={12} className="cvh-card-container">
       <div className="cvh-container" style={cardOneStyle}>
         <div className="cvh-content">
           <div className="content">

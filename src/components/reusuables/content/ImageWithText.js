@@ -8,7 +8,7 @@ const ContentAll = (props) => {
   return (
     <div className="content-container">
       <Row className={`justify-content-around ${rowAlign}`}>
-        <Col md={5} className="mb-sm-3">
+        <Col md={5} className="mb-sm-3 image-container">
           <StaticImage
             src={`../../../assets/images/cityBackground.jpg`}
             className="img-fluid"

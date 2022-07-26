@@ -1,9 +1,21 @@
 .content-container {
+  padding: 0 20px;
+
+  @include medium-screen {
+    padding: 0;
+  }
   &:not(:last-of-type) {
     margin-bottom: 50px;
   }
-  .heading {
+
+  .image-container {
+    margin-bottom: 20px;
+
+    @include medium-screen {
+      margin: 0;
+    }
   }
+
   .text {
     font-family: $font__secondary;
     font-size: 22px;

@@ -13,13 +13,13 @@ const Hero = ({ heading, subtitle, btnType, btnTitle }) => {
     <section className="hero frontpage" style={sectionStyle}>
       <Container>
         <Row className="align-items-md-center">
-          <Col lg={6} className="left">
+          <Col lg={6} className="left-side">
             <StaticImage
               src={`../assets/images/yohdevHeroLeft.png`}
               className="img-fluid"
             />
           </Col>
-          <Col lg={6} className="right text-center">
+          <Col lg={6} className="right-side text-center">
             <h3 className="heading">{heading}</h3>
             <p className="subtitle">{subtitle}</p>
             <YohDevButton type={btnType} title={btnTitle} />
