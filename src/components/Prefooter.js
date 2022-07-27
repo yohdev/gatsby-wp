@@ -1,9 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-import logo from "../assets/images/logo.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faListCheck } from "@fortawesome/free-solid-svg-icons"
-import { fa } from "@fortawesome/free-solid-svg-icons"
 
 const Prefooter = () => {
   return (

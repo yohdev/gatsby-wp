@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-import YohDevButton from "../../YohDevButton"
 
 const HeroSingle = ({ csType, csTitle }) => {
   const csHeroSingleData = {
