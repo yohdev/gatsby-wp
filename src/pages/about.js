@@ -9,7 +9,6 @@ import CardVerticalHover from "../components/reusuables/cards/CardVerticalHover"
 import { StaticImage } from "gatsby-plugin-image"
 import TeamSection from "../components/reusuables/sections/TeamSection"
 import ClientLogosInline from "../components/reusuables/content/ClientLogosInline"
-import TestimonialSection from "../components/reusuables/sections/TestimonialSection"
 
 const About = () => {
   return (
@@ -97,9 +96,7 @@ const About = () => {
         btnText="Learn More About Us"
         btnUrl="/contact"
         btnType="gradient-btn"
-      >
-        <TestimonialSection />
-      </YohdevSection>
+      ></YohdevSection>
       <Footer />
     </div>
   )
