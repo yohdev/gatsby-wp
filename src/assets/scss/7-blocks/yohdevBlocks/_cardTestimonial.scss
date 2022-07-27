@@ -1,0 +1,80 @@
+.testimonial-carousel-container {
+  .carousel {
+    .slider-wrapper {
+      padding: 50px 0;
+    }
+  }
+
+  .control-arrow {
+    background-color: $white !important;
+    box-shadow: $shadow;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    opacity: 1 !important;
+    top: 40% !important;
+
+    &.control-next {
+      &:before {
+        content: "";
+        background-image: url("https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/frontpage/src/assets/images/yohArrowRight.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        width: 30px;
+        height: 32px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-left: none !important;
+      }
+    }
+
+    &.control-prev {
+      &:before {
+        content: "";
+        background-image: url("https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/frontpage/src/assets/images/yohArrowRight.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        width: 30px;
+        height: 32px;
+        top: 25%;
+        right: 20%;
+        transform: rotate(180deg);
+        border-left: none !important;
+      }
+    }
+  }
+}
+
+.testimonial-card {
+  background: $white;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  max-width: 360px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .logo-container {
+    border: 5px solid $dark;
+    border-radius: 50%;
+    width: 91px;
+    height: 91px;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: -50px;
+  }
+
+  .text-container {
+    .text {
+      font-family: $font__secondary;
+      font-size: 16px;
+      line-height: 23px;
+      letter-spacing: 0;
+    }
+  }
+}

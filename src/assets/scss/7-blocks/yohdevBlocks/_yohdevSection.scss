@@ -4,7 +4,8 @@
     padding: 100px 0;
   }
 
-  &.services {
+  &.services,
+  &.case-study {
     background-color: #f0f0f0;
   }
 
@@ -58,6 +59,37 @@
         max-width: 1000px;
         font-size: 22px;
         font-family: $font__secondary;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+      }
+    }
+  }
+
+  &.testimonials {
+  }
+
+  &.testimonials-alt {
+    background-image: url("https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/frontpage/src/assets/images/heroHome.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .text-container {
+      text-align: center;
+
+      .section-header {
+        font-size: 45px;
+        font-weight: 700;
+        color: $white;
+        line-height: 52px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .section-text {
+        max-width: 1000px;
+        font-size: 22px;
+        font-family: $font__secondary;
+        color: $white;
         line-height: 36px;
         letter-spacing: -0.22px;
       }

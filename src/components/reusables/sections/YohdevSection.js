@@ -10,16 +10,14 @@ const YohdevSection = ({
   text,
   children,
   btnText,
+  btnType,
   style,
   showHeading,
   showBtn,
 }) => {
   const headingShow = showHeading && showHeading === true ? true : false
   return (
-    <section
-      className={`yohdev-section-container ${style}`}
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <section className={`yohdev-section-container ${style}`}>
       <Container>
         {headingShow && (
           <div className={`text-container mb-5 ${color}`}>
@@ -32,7 +30,7 @@ const YohdevSection = ({
 
         {showBtn && (
           <div className="btn-container text-center mt-3">
-            <YohDevButton type="gradient-btn" title={btnText} />
+            <YohDevButton type={btnType} title={btnText} />
           </div>
         )}
       </Container>
