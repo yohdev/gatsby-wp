@@ -1,0 +1,151 @@
+.team-section {
+  background: transparent linear-gradient(180deg, #17152b 0%, #313c4b 100%) 0%
+    0% no-repeat padding-box;
+  padding: 50px 0;
+  @include medium-screen {
+    padding: 100px 0;
+  }
+
+  .heading {
+    font-family: $font__main;
+    font-weight: 700;
+    color: $white;
+    line-height: 52px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    @include medium-screen {
+      font-size: 45px;
+    }
+  }
+
+  .text {
+    color: $white;
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: -0.22px;
+  }
+}
+
+.team-card-container {
+  display: flex;
+  justify-content: center;
+
+  @include medium-screen {
+    display: block;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.team-card {
+  background-color: rgba(#404965, 0.59);
+  width: 100%;
+  min-height: 365px;
+  border-radius: 5px;
+
+  .content {
+    position: relative;
+    padding: 20px;
+
+    .title-container {
+      display: flex;
+      justify-content: end;
+      .title {
+        font-size: 22px;
+        color: $secondary;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+      }
+    }
+
+    .image-container {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+
+    .name-container {
+      .name {
+        font-size: 30px;
+        font-weight: 700;
+        color: $light;
+        line-height: 36px;
+        letter-spacing: 0;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.contact-block {
+  display: flex;
+  align-items: center;
+  .contact-container {
+    padding: 0 90px;
+    .contact-heading {
+      font-family: $font__main;
+      font-size: 30px;
+      color: $white;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
+
+    .contact-text {
+      font-family: $font__secondary;
+      font-size: 22px;
+      color: $white;
+      line-height: 36px;
+      letter-spacing: -0.22px;
+    }
+  }
+}
+
+.client-logo-container {
+  background-color: $white;
+  padding: 55px 0;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  @include medium-screen {
+    -webkit-clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
+    clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0 100%, 0% 38%);
+  }
+
+  .cl-heading {
+    font-family: $font__main;
+    font-size: 30px;
+    font-weight: 700;
+    color: $primary;
+    line-height: 36px;
+    letter-spacing: 0;
+  }
+
+  .logos-container {
+    margin-top: 50px;
+    padding: 0 20px;
+    display: block;
+
+    @include medium-screen {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0;
+    }
+    img {
+      width: 50%;
+      height: auto;
+      margin: 0 auto 40px;
+      @include medium-screen {
+        flex: 1;
+      }
+    }
+  }
+}

@@ -1,38 +1,51 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-import YohDevButton from "../../YohDevButton"
+import YohDevButton from "../../../components/reusuables/YohDevButton"
 import SectionHeader from "../typography/SectionHeader"
 
 const YohdevSection = ({
-  bgImage,
-  color,
   heading,
   text,
   children,
+  button,
+  btnType,
   btnText,
-  style,
-  showHeading,
-  showBtn,
+  textContainerColor,
+  sectionHeadingBool,
+  sectionHeadingAltBool,
+  sectionContainerStyle
 }) => {
-  const headingShow = showHeading && showHeading === true ? true : false
+  const sectionHeading = sectionHeadingBool == true ? true : false
+  const sectionHeadingAlt = sectionHeadingAltBool === true ? "d-md-flex" : ""
+  const textContainerStyle = textContainerColor == "white" ? "white" : ""
+  const sectionContainerStyleClass =
+    sectionContainerStyle == "default"
+      ? "default"
+      : sectionContainerStyle == "secondary"
+      ? "secondary"
+      : sectionContainerStyle == "split"
+      ? "split"
+      : ""
+
   return (
-    <section
-      className={`yohdev-section-container ${style}`}
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <section className={`yohdev-section-container ${sectionContainerStyleClass}`}>
       <Container>
-        {headingShow && (
-          <div className={`text-container mb-5 ${color}`}>
-            <SectionHeader className="test" heading={heading} />
+        {sectionHeading && (
+          <div
+            className={`text-container mb-5 ${
+              (textContainerStyle, sectionHeadingAlt)
+            }`}
+          >
+            <SectionHeader heading={heading} />
             <p className={`section-text`}>{text}</p>
           </div>
         )}
 
         {children}
 
-        {showBtn && (
+        {button && (
           <div className="btn-container text-center mt-3">
-            <YohDevButton type="gradient-btn" title={btnText} />
+            <YohDevButton type={btnType} title={btnText} />
           </div>
         )}
       </Container>

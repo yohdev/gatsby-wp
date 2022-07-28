@@ -4,11 +4,62 @@
     padding: 100px 0;
   }
 
-  &.services {
+  .text-container {
+    text-align: center;
+    &.white {
+      color: $light;
+    }
+
+    &.d-md-flex {
+      text-align: left;
+      max-width: 1100px;
+      margin: 0 auto;
+      .section-header {
+        flex: 1;
+      }
+
+      .section-text {
+        flex: 1;
+      }
+    }
+    .section-header {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 52px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+
+      @include medium-screen {
+        font-size: 45px;
+      }
+    }
+
+    .section-text {
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 22px;
+      font-family: $font__secondary;
+      line-height: 36px;
+      letter-spacing: -0.22px;
+    }
+  }
+
+  &.default {
     background-color: #f0f0f0;
   }
 
+  &.secondary {
+    background-color: $secondary;
+  }
+
+  &.split {
+    background: linear-gradient(180deg, #313c4b 36%, #f0f0f0 9%);
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
   &.workflow {
+    background-image: url("../images/heroHome.jpg");
     background-position: center;
     background-size: cover;
 
