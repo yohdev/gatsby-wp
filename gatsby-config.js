@@ -63,6 +63,7 @@ module.exports = {
           }
         },
       },
+      excludes: ['/test']
     },
     {
       resolve: `gatsby-source-filesystem`,
