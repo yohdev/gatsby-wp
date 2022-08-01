@@ -1,6 +1,6 @@
 import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import YohDevButton from "../../../components/reusuables/YohDevButton"
+import { Container } from "react-bootstrap"
+import YohDevButton from "../../YohDevButton"
 import SectionHeader from "../typography/SectionHeader"
 
 const YohdevSection = ({

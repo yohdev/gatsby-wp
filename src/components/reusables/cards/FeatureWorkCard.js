@@ -1,6 +1,5 @@
 import React from "react"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import { Image } from "react-bootstrap"
+import { getImage, StaticImage } from "gatsby-plugin-image"
 
 const FeatureWorkCard = ({ title, text, image }) => {
   const showImage = getImage(image)

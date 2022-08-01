@@ -1,30 +1,27 @@
 import React from "react"
 import Hero from "../components/Hero"
 import Header from "../components/Header"
-import YohdevSection from "../components/reusuables/sections/YohdevSection"
+import YohdevSection from "../components/reusables/sections/YohdevSection"
 import { Container, Row, Col } from "react-bootstrap"
-import ImageCard from "../components/reusuables/cards/ImageCard"
-import ServiceCard from "../components/reusuables/cards/ServiceCard"
-import ContentCard from "../components/reusuables/cards/ContentCard"
-import FeatureWorkSection from "../components/reusuables/sections/FeatureWorkSection"
+import ServiceCard from "../components/reusables/cards/ServiceCard"
+import ContentCard from "../components/reusables/cards/ContentCard"
+import FeatureWorkSection from "../components/reusables/sections/FeatureWorkSection"
 import heroHome from "../assets/images/heroHome.jpg"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Home = () => {
-  const homeHeroData =
-    {
-      heading: "Who's Your Dev?",
-      subtitle:
-        "YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals.",
-      imgLeft: "",
-    }
+  const homeHeroData = {
+    heading: "Who's Your Dev?",
+    subtitle:
+      "YohDev is your one-stop shop for outstanding web solutions that help you reach your business goals.",
+    imgLeft: "",
+  }
 
-  const frontPageData =
-    {
-      heading: "Our Services",
-      subtitle: "We provide web development, devops, UIUX, and IT service.",
-      imgUrl: "",
-    }
+  const frontPageData = {
+    heading: "Our Services",
+    subtitle: "We provide web development, devops, UIUX, and IT service.",
+    imgUrl: "",
+  }
 
   const ServiceCardData = [
     {

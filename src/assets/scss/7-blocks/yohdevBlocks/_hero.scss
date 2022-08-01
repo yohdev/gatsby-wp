@@ -70,4 +70,66 @@
       }
     }
   }
+
+  &.case-study-single {
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($dark, 0.55);
+    }
+
+    .hero-single-content {
+      position: relative;
+      z-index: 1;
+      color: $white;
+      text-align: center;
+      .cs-type {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        margin-top: 0;
+      }
+
+      .cs-title {
+        @include medium-screen {
+          font-size: 60px;
+          font-weight: 800;
+          line-height: 66px;
+          letter-spacing: 0;
+        }
+      }
+
+      .cat-filter-container {
+        .cat-title {
+          border: 3px solid $secondary;
+          border-radius: 27px;
+          padding: 10px 20px;
+          color: $secondary;
+          background-color: rgba($white, 0.3);
+          backdrop-filter: blur(30px);
+          -webkit-backdrop-filter: blur(30px);
+
+          &:not(:last-of-type) {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
 }

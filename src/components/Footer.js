@@ -2,10 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col, Button } from "react-bootstrap"
-import logo from "../assets/images/logo.svg"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faListCheck } from "@fortawesome/free-solid-svg-icons"
-import { fa } from "@fortawesome/free-solid-svg-icons"
 
 const Footer = ({}) => {
   return (
