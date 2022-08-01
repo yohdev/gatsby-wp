@@ -4,7 +4,6 @@ import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import YohDevSection from "../components/reusables/sections/YohdevSection"
 import CaseStudyArchive from "../components/reusables/sections/CaseStudyArchive"
-import TestimonialSection from "../components/reusables/sections/TestimonialSection"
 
 const caseStudyData = []
 
@@ -21,18 +20,7 @@ const caseStudies = () => {
       <YohDevSection style="case-study">
         <CaseStudyArchive />
       </YohDevSection>
-      <YohDevSection
-        style="testimonials-alt"
-        showHeading={true}
-        heading="Testimonial"
-        text="See what our clients say.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        showBtn={true}
-        btnText="Learn More About Us"
-        btnUrl="/contact"
-        btnType="gradient-btn"
-      >
-        <TestimonialSection />
-      </YohDevSection>
+
       <Footer />
     </div>
   )

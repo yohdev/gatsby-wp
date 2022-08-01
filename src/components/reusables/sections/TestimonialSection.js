@@ -1,6 +1,5 @@
 import React from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css"
-import { Carousel } from "react-responsive-carousel"
+
 import TestimonialCard from "../cards/TestimonialCard"
 
 const TestimonialSection = () => {
@@ -24,23 +23,7 @@ const TestimonialSection = () => {
         "https://raw.githubusercontent.com/yohdev/gatsby-wp/feature/about/src/assets/images/wellsfargo.png",
     },
   ]
-  return (
-    <div className="testimonial-carousel-container">
-      <Carousel
-        showArrows={true}
-        autoPlay={true}
-        showIndicators={true}
-        centerMode={true}
-        centerSlidePercentage="30"
-        infiniteLoop={true}
-        showStatus={false}
-      >
-        {testimonials.map((data) => {
-          return <TestimonialCard image={data.image} text={data.text} />
-        })}
-      </Carousel>
-    </div>
-  )
+  return <div className="testimonial-carousel-container"></div>
 }
 
 export default TestimonialSection
