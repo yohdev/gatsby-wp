@@ -56,6 +56,7 @@ module.exports = {
             return { ...page, ...wpNodeMap[page.path] }
           })
         },
+        excludes: ['/test'],
         serialize: ({ path, modifiedGmt }) => {
           return {
             url: path,
@@ -63,7 +64,6 @@ module.exports = {
           }
         },
       },
-      excludes: ['/test']
     },
     {
       resolve: `gatsby-source-filesystem`,
